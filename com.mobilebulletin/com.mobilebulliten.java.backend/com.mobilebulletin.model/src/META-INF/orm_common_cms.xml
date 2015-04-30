@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings version="2.0" xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_2_0.xsd">
+	<mapped-superclass class="com.common.cms.SuperPerson">
+		<attributes>
+			<id name="id">
+			<generated-value strategy="SEQUENCE" generator="cm_seq_person"/>
+				<sequence-generator allocation-size="1" initial-value="1" name="cm_seq_person" sequence-name="cm_seq_person"></sequence-generator>
+			</id>
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.common.cms.Person">
+		<table schema="CMSDB" name="PERSON"/>
+		<inheritance strategy="JOINED"/>
+		
+		<attributes>
+			<basic name="fullnameAndSurname"></basic>
+			<basic name="firstname"></basic>
+			<basic name="middleName"></basic>
+			<basic name="lastname"></basic>
+			<basic name="dateOfBirth"></basic>
+			<basic name="emailOptOut"></basic>
+			<many-to-one name="disabilityType" target-entity="com.common.type.TypeHierarchy" fetch="LAZY" >
+				<join-column name="DISABILITYTYPE_ID"/>
+				<cascade>
+					<cascade-refresh/>
+					<cascade-detach/>
+				</cascade>
+			</many-to-one>	
+			<many-to-one name="raceType" target-entity="com.common.type.TypeHierarchy" fetch="LAZY" >
+				<join-column name="RACETYPE_ID"/>
+				<cascade>
+					<cascade-refresh/>
+					<cascade-detach/>
+				</cascade>
+			</many-to-one>	
+			<many-to-one name="genderType" target-entity="com.common.type.TypeHierarchy" fetch="LAZY" >
+				<join-column name="GENDER_ID"/>
+				<cascade>
+					<cascade-refresh/>
+					<cascade-detach/>
+				</cascade>
+			</many-to-one>		
+			<many-to-one name="titleType" target-entity="com.common.type.TypeHierarchy" fetch="LAZY" >
+				<join-column name="TITLE_ID"/>
+				<cascade>
+					<cascade-refresh/>
+					<cascade-detach/>
+				</cascade>
+			</many-to-one>			
+				
+			<one-to-one name="addressInfomation" target-entity="com.common.communication.AddressInfomation" fetch="LAZY" >
+				<cascade>
+					<cascade-all/>
+				</cascade>
+			</one-to-one>
+			
+			<one-to-one name="contactInformation" target-entity="com.common.communication.ContactInformation" fetch="LAZY" >
+				<cascade>
+					<cascade-all/>
+				</cascade>
+			</one-to-one>
+			
+			<one-to-one name="logActivity" target-entity="com.common.log.LogActivity" fetch="LAZY" >
+				<cascade>
+					<cascade-all/>
+				</cascade>
+			</one-to-one>
+		</attributes>
+	</entity>
+		<entity class="com.common.cms.UserInformation">
+			<table schema="CMSDB" name="USER_INFO"/>
+			<inheritance strategy="JOINED"/>
+			<attributes>
+				<basic name="password"></basic>
+				<basic name="userActive"></basic>
+				<basic name="uniqueUsername"></basic>
+				<basic name="activationCode"></basic>
+				
+				
+				<many-to-one name="activationStatus" target-entity="com.common.type.TypeHierarchy" fetch="LAZY" >
+					<join-column name="ACTIVATIONSTATUS_ID"/>
+					<cascade>
+						<cascade-refresh/>
+						<cascade-detach/>
+					</cascade>
+				</many-to-one>	
+		
+				
+				<many-to-one name="username" target-entity="com.common.communication.ContactReference" fetch="LAZY" >
+					<join-column name="USERNAME_ID"/>
+					<cascade>
+						<cascade-all/>	
+					</cascade>
+				</many-to-one>
+			    
+			    <many-to-many name="userRoles" target-entity="com.common.type.TypeHierarchy" fetch="LAZY" >
+					<join-table name="USER_COMPANY_ROLE">
+						<join-column name="ID"/>
+						<inverse-join-column name="USERCOMPANYROLE_ID"/>
+					</join-table>
+					<cascade>
+						<cascade-refresh/>
+						<cascade-detach/>
+					</cascade>
+				</many-to-many>	
+				
+				
+		</attributes>
+	</entity>
+
+	<entity class="com.common.cms.GuestInformation">
+			<table schema="CMSDB" name="GUEST_INFO"/>
+			<inheritance strategy="JOINED"/>
+			<attributes>
+				
+		</attributes>
+	</entity>
+	
+	
+	
+</entity-mappings>

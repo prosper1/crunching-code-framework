@@ -1,0 +1,44 @@
+<project basedir="." default="build-jar" name="jpa.enhancement">
+	<property environment="env" />
+	<property name="debuglevel" value="source,lines,vars" />
+	<property name="target" value="1.6" />
+	<property name="source" value="1.6" />
+	<property name="build.base" value="/tmp/build" />
+	<property name="build.this" value="${build.base}/${ant.project.name}" />
+	<!-- 	<property name="spring.project.banana"
+			value="../com.banana.mobilebulletin.spring/WebContent/WEB-INF/lib" />
+		
+	<property name="spring.project.strawberry"
+		value="../com.mobilebulletin.spring.strawberry/WebContent/WEB-INF/lib" />
+	<property name="spring.project.coconut"
+		value="../com.mobilebulletin.spring.coconut/WebContent/WEB-INF/lib" /> -->
+	<property name="test.project.mobilebulletin"
+			value="../../mobilebulliten/com.mobilebulletin.test/lib" />
+	<target name="init">
+		<!-- <mkdir dir="jar"/> -->
+		<!-- Copy the persistence.xml file to the build dir when we run enhancement -->
+		<copy includeemptydirs="false" todir="build/classes">
+			<fileset dir="src" excludes="**/*.launch, **/*.java" />
+		</copy>
+	</target>
+
+	<target name="build-jar">
+		<!--<jar destfile="${spring.project.banana}/com.mobilebulletin.webservice.jar"
+					basedir="bin" includes="com/**">
+
+				</jar>
+				
+		<jar destfile="${spring.project.strawberry}/com.mobilebulletin.webservice.jar"
+			basedir="bin" includes="com/**">
+
+		</jar>
+		<jar destfile="${spring.project.coconut}/com.mobilebulletin.webservice.jar"
+			basedir="bin" includes="com/**">
+
+		</jar>-->
+		<jar destfile="${test.project.mobilebulletin}/com.mobilebulletin.webservice.jar"
+					basedir="bin" includes="com/**">
+
+				</jar>
+	</target>
+</project>

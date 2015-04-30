@@ -1,0 +1,10 @@
+1430397816144	Encapsulate field 'userRoles'
+1430398494178	Rename package 'com.mobilebulletin.groups'
+1430398559385	Rename type 'EmployeeCompanyInfo'
+1430398736704	Copy compilation unit
+1430398760308	Rename type 'EmployeeCompanyInformation'
+1430398853138	Copy compilation unit
+1430398868398	Rename type 'EmployeeDepartmentInformation'
+1430398898204	Encapsulate field 'groupInformation'
+1430398936406	Delete element
+1430403916467	Delete element

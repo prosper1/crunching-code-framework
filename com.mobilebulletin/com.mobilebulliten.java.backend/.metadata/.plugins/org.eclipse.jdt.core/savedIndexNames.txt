@@ -1,0 +1,19 @@
+INDEX VERSION 1.127+/opt/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.java.backend/.metadata/.plugins/org.eclipse.jdt.core
+1702729109.index
+1054433645.index
+1217758402.index
+1267513865.index
+247023958.index
+3887477314.index
+252623712.index
+3755940946.index
+1465920229.index
+1392807302.index
+3119618826.index
+1118489501.index
+1318919588.index
+491829857.index
+1846429398.index
+1500593343.index
+3812551746.index
+1226676644.index

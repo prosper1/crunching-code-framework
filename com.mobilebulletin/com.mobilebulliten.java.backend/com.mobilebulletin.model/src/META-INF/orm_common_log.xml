@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings version="2.0" xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_2_0.xsd">
+	
+	<entity class="com.common.log.LogActivity">
+		<table schema="LOGDB" name="LOG_ACTIVITY"/>
+		<attributes>
+			<id name="id">
+			<generated-value strategy="SEQUENCE" generator="cm_seq_log_activity"/>
+				<sequence-generator allocation-size="1" initial-value="1" name="cm_seq_log_activity" sequence-name="cm_seq_log_activity"></sequence-generator>
+			</id>
+			<basic name="createdOn" >
+				<column insertable="true"/>
+				
+			</basic>
+			<basic name="methodName"></basic>
+			<many-to-one name="createdBy" target-entity="com.common.cms.Person" fetch="EAGER" >
+				<join-column name="CREATEDBY_ID"/>
+				<cascade>
+					<cascade-refresh/>
+					<cascade-detach/>
+				</cascade>
+			</many-to-one>
+			<many-to-one name="systemNameType" target-entity="com.common.type.TypeHierarchy" fetch="EAGER" >
+				<join-column name="CONTACT_TYPE_ID"/>
+				<cascade>
+					<cascade-refresh/>
+					<cascade-detach/>
+				</cascade>
+			</many-to-one>
+			<one-to-many name="loggerUpdates" target-entity="com.common.log.LoggerUpdate" fetch="EAGER" >
+				<join-table name="LOGACTIVITY_LOGGERUPDATE">
+					<join-column name="LOGACTIVITY_ID"/>
+					<inverse-join-column name="LOGGERUPDATE_ID"/>
+				</join-table>
+				<cascade>
+					<cascade-all/>
+				</cascade>
+			</one-to-many>
+		</attributes>
+	</entity>
+	
+	<entity class="com.common.log.LoggerUpdate">
+		<table schema="LOGDB" name="LOGGER_UPDATE"/>
+		<attributes>
+			<id name="id">
+			<generated-value strategy="SEQUENCE" generator="cm_seq_logger_update"/>
+				<sequence-generator allocation-size="1" initial-value="1" name="cm_seq_logger_update" sequence-name="cm_seq_logger_update"></sequence-generator>
+			</id>
+			<basic name="lastUpdated" >
+				<column insertable="true"/>
+				
+			</basic>
+			<basic name="methodName"></basic>
+			<many-to-one name="lastUpdatedBy" target-entity="com.common.cms.Person" fetch="EAGER" >
+				<join-column name="LASTUPDATEDBY_ID"/>
+				<cascade>
+					<cascade-refresh/>
+					<cascade-detach/>
+				</cascade>
+			</many-to-one>
+			<many-to-one name="systemNameType" target-entity="com.common.type.TypeHierarchy" fetch="EAGER" >
+				<join-column name="CONTACT_TYPE_ID"/>
+				<cascade>
+					<cascade-refresh/>
+					<cascade-detach/>
+				</cascade>
+			</many-to-one>
+		</attributes>
+	</entity>
+</entity-mappings>

@@ -1,0 +1,16 @@
+1430387678534	Copy compilation units
+1430387825414	Rename type 'SecurityJmsReplyUtil'
+1430387872002	Rename type 'SecurityJmsRequestUtil'
+1430387896195	Rename type 'SecurityListObjects'
+1430387919538	Rename type 'SecurityLocalUtil'
+1430387944252	Rename type 'SecurityTestUtil'
+1430387966162	Rename type 'SecurityRequestReplyUtil'
+1430387989648	Rename type 'SecurityRemoteUtil'
+1430391445151	Copy package
+1430391473397	Rename type 'SupportJmsReplyUtil'
+1430391487261	Rename type 'SupportJmsRequestUtil'
+1430391498831	Rename type 'SupportListObjects'
+1430391512233	Rename type 'SupportLocalUtil'
+1430391524696	Rename type 'SupportTestUtil'
+1430391536029	Rename type 'SupportRequestReplyUtil'
+1430391547124	Rename type 'SupportRemoteUtil'

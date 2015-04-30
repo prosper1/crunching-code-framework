@@ -1,0 +1,75 @@
+<project basedir="." default="enhance" name="jpa.enhancement">
+    <property environment="env"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.6"/>
+    <property name="source" value="1.6"/>
+	<property name="jpa.lib.path" location="/opt/jpa_lib"/>
+	<property name="openJPA-jar" value="${jpa.lib.path}/openjpa-2.1.0.jar"/>
+	<property name="build.base" value="/tmp/build" />
+	<property name="build.this" value="${build.base}/${ant.project.name}" />
+	<path id="jpa.enhancement.classpath">
+        <pathelement location="build/classes"/>
+        <fileset dir="${jpa.lib.path}">
+                <include name="**/*.jar"/>
+        </fileset>
+    </path>
+    <target name="init">
+        <mkdir dir="build/classes"/>
+        <!-- Copy the persistence.xml file to the build dir when we run enhancement -->
+        <copy includeemptydirs="false" todir="build/classes">
+            <fileset dir="src" excludes="**/*.launch, **/*.java"/>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="build/classes"/>
+    	<delete dir="${build.this}" includes="**/*" />
+    </target>
+
+        <target name="enhance" depends="build">
+                <!-- define the openjpac task; this can be done at the top of the    -->
+                <taskdef name="openjpac" classname="org.apache.openjpa.ant.PCEnhancerTask">
+                        <classpath refid="jpa.enhancement.classpath"/>
+                </taskdef>
+        
+                <!-- invoke enhancer the enhancer -->
+                <openjpac>
+                        <classpath refid="jpa.enhancement.classpath"/>
+                </openjpac>
+                <echo message="Enhancing complete."/>
+        </target>
+
+    <target name="build" depends="init">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="build/classes" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="jpa.enhancement.classpath"/>
+        </javac>
+    </target>
+    <target name="drive_no_enhancement" depends="clean, build">
+    	<echo message="Running test with no enhancement."/>
+	    <java classname="main.Driver" failonerror="true" fork="yes">
+	        <classpath refid="jpa.enhancement.classpath"/>
+	    </java>
+	</target>
+    <target name="drive_runtime_enhancement" depends="clean, build">
+    	<echo message="Running test with run time enhancement."/>
+	    <java classname="main.Driver" failonerror="true" fork="yes">
+	        <jvmarg value="-javaagent:${openJPA-jar}"/>
+	        <classpath refid="jpa.enhancement.classpath"/>
+	    </java>
+		</target>
+    <target name="drive_buildtime_enhancement" depends="clean, enhance">
+    	<echo message="Running test with build time enhancement."/>
+	    <java classname="main.Driver" failonerror="true" fork="yes">
+	        <classpath refid="jpa.enhancement.classpath"/>
+	    </java>
+	</target>
+	
+	
+    <target name="drive">
+	<!--	<antcall target="drive_no_enhancement"/> -->
+    	<!--          <antcall target="drive_runtime_enhancement"/>-->
+      	<antcall target="drive_buildtime_enhancement"/> 
+
+	</target>
+</project>

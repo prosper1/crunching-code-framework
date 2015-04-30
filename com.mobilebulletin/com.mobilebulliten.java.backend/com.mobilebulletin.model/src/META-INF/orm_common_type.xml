@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings version="2.0" xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_2_0.xsd">
+
+	<entity class="com.common.type.TypeHierarchy">
+		<table schema="TYPEDB" name="TYPE_HIER" />
+		<attributes>
+			<id name="id">
+			<generated-value strategy="SEQUENCE" generator="seq_type_hier"/>
+				<sequence-generator allocation-size="1" initial-value="1" name="seq_type_hier" sequence-name="seq_type_hier"></sequence-generator>
+			</id>
+			<basic name="ordinal"></basic>
+			<basic name="description"></basic>
+			<basic name="code"></basic>
+			<one-to-many name="children" target-entity="com.common.type.TypeHierarchy" fetch="EAGER" >
+				<join-table name="TYPEPARENT_TYPECHILD">
+					<join-column name="TYPEPARENT_ID"/>
+					<inverse-join-column name="TYPECHILD_ID"/>
+				</join-table>
+				<cascade>
+					<cascade-persist/>
+					<cascade-refresh/>
+					<cascade-detach/>
+				</cascade>
+			</one-to-many>
+			<one-to-one name="parent" target-entity="com.common.type.TypeHierarchy" fetch="LAZY" >
+				<join-column name="PARENT_ID"/>
+				<cascade>
+					<cascade-persist/>
+					<cascade-refresh/>
+					<cascade-detach/>
+				</cascade>
+			</one-to-one>
+		</attributes>
+	</entity>
+
+</entity-mappings>

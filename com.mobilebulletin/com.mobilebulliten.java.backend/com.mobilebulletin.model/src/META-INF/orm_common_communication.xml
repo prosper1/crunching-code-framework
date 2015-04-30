@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings version="2.0" xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_2_0.xsd">
+		<entity class="com.common.communication.AddressInfomation">
+		<table schema="COMMDB" name="ADDRESS_INFO" />
+		<attributes>
+			<id name="id">
+			<generated-value strategy="SEQUENCE" generator="my_seq_adress_info"/>
+				<sequence-generator allocation-size="1" initial-value="1" name="my_seq_adress_info" sequence-name="my_seq_adress_info"></sequence-generator>
+			</id>
+			<one-to-many name="addresses" target-entity="com.common.communication.Address" fetch="EAGER" >
+				<join-table name="ADDRESSINFO_ADDRESS">
+					<join-column name="ADDRESSINFO_ID"/>
+					<inverse-join-column name="ADDRESS_ID"/>
+				</join-table>
+				<cascade>
+					<cascade-all/>
+				</cascade>
+			</one-to-many>
+		</attributes>
+	</entity>
+	
+	<entity class="com.common.communication.ContactInformation">
+		<table schema="COMMDB" name="CONTACT_INFORMATION" />
+		<attributes>
+			<id name="id">
+			<generated-value strategy="SEQUENCE" generator="my_seq_contact_info"/>
+				<sequence-generator allocation-size="1" initial-value="1" name="my_seq_contact_info" sequence-name="my_seq_contact_info"></sequence-generator>
+			</id>
+			<one-to-many name="contactReferences" target-entity="com.common.communication.ContactReference" fetch="EAGER" >
+				<join-table name="CONTACTINFO_CONTACTREF">
+					<join-column name="CONTACTINFO_ID"/>
+					<inverse-join-column name="CONTACTREF_ID"/>
+				</join-table>
+				<cascade>
+					<cascade-all/>
+				</cascade>
+			</one-to-many>
+		</attributes>
+	</entity>
+	
+		<entity class="com.common.communication.ContactReference">
+		<table schema="COMMDB" name="CONTACT_REFERENCE" />
+		<attributes>
+			<id name="id">
+			<generated-value strategy="SEQUENCE" generator="my_seq_contact_ref"/>
+				<sequence-generator allocation-size="1" initial-value="1" name="my_seq_contact_ref" sequence-name="my_seq_contact_ref"></sequence-generator>
+			</id>
+			<basic name="contact"></basic>
+			<many-to-one name="contactType" target-entity="com.common.type.TypeHierarchy" fetch="EAGER" >
+				<join-column name="CONTACT_TYPE_ID"/>
+				<cascade>
+					<cascade-refresh/>
+					<cascade-detach/>
+				</cascade>
+			</many-to-one>
+		</attributes>
+	</entity>
+	<entity class="com.common.communication.Address">
+		<table schema="COMMDB" name="ADDRESS"/>
+		<attributes>
+			<id name="id">
+			<generated-value strategy="SEQUENCE" generator="my_seq_address"/>
+				<sequence-generator allocation-size="1" initial-value="1" name="my_seq_address" sequence-name="my_seq_address"></sequence-generator>
+			</id>
+			<basic name="line1"></basic>
+			<basic name="line2"></basic>
+			<basic name="line3"></basic>
+			<basic name="line4"></basic>
+			<basic name="line5"></basic>
+			<basic name="postalCode"></basic>
+			<many-to-one name="addressType" target-entity="com.common.type.TypeHierarchy" fetch="LAZY" >
+				<join-column name="ADDRESS_ID"/>
+				<cascade>
+									
+					<cascade-refresh/>
+					<cascade-detach/>
+				</cascade>
+			</many-to-one>
+		</attributes>
+	</entity>
+</entity-mappings>
