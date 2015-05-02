@@ -1,0 +1,8 @@
+createdb mobbulletin;
+create schema cmsdb;
+create schema logdb;
+create schema typedb;
+create schema commdb;
+create schema depdb;
+create schema grpdb;
+create schema compdb;

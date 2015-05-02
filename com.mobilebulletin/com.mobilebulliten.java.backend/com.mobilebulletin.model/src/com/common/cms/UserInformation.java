@@ -20,7 +20,6 @@ public class UserInformation extends Person implements Serializable {
 	private String password;
 	private String activationCode;
 	private boolean userActive;
-	private List<TypeHierarchy> userRoles;
 	private TypeHierarchy activationStatus;
 	private String uniqueUsername;
 	
@@ -64,11 +63,6 @@ public class UserInformation extends Person implements Serializable {
 	public void setActivationStatus(TypeHierarchy activationStatus) {
 		this.activationStatus = activationStatus;
 	}
-	public List<TypeHierarchy> getUserRoles() {
-		return userRoles;
-	}
-	public void setUserRoles(List<TypeHierarchy> userRoles) {
-		this.userRoles = userRoles;
-	}
+	
 
 }

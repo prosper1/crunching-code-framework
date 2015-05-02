@@ -1,0 +1,14 @@
+<!-- MOBILE BUlletin -->
+
+        <queue name="SupportMOBBRequestQueue">
+               <entry name="/queue/SupportMOBBRequestQueue"/>
+        </queue>
+        <queue name="SupportMOBBReplyQueue">
+               <entry name="/queue/SupportMOBBReplyQueue"/>
+        </queue>
+        <queue name="SecurityMOBBRequestQueue">
+               <entry name="/queue/SecurityMOBBRequestQueue"/>
+        </queue>
+        <queue name="SecurityMOBBReplyQueue">
+               <entry name="/queue/SecurityMOBBReplyQueue"/>
+        </queue>

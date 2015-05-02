@@ -11,6 +11,7 @@ import javax.naming.InitialContext;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Test;
 
 import com.mobilebulletin.remote.security.ActivateAccountRequest;
 import com.mobilebulletin.remote.security.ActivateAccountResponse;
@@ -144,7 +145,7 @@ public class SecurityServiceTest
 	    //assertEquals("Result", SERVRESPONSE.Successful.getDescription(),response.getResponse().getDescription());
 	}
 
-	//@Test
+	@Test
 	public void testGenerateTypes() 
 	{
 		SecurityRemoteService securityRemoteService = new SecurityRemoteServiceProxy();
@@ -159,7 +160,7 @@ public class SecurityServiceTest
 		{
 			e.printStackTrace();
 		}
-	    //assertEquals("Result", SERVRESPONSE.Successful.getDescription(),response.getResponse().getDescription());
+	    assertEquals("Result", "Successful",response.getResponse().getDescription());
 	}
 
 	//@Test

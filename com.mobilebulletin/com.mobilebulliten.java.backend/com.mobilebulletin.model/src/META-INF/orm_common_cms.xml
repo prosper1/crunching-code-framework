@@ -93,16 +93,7 @@
 					</cascade>
 				</many-to-one>
 			    
-			    <many-to-many name="userRoles" target-entity="com.common.type.TypeHierarchy" fetch="LAZY" >
-					<join-table name="USER_COMPANY_ROLE">
-						<join-column name="ID"/>
-						<inverse-join-column name="USERCOMPANYROLE_ID"/>
-					</join-table>
-					<cascade>
-						<cascade-refresh/>
-						<cascade-detach/>
-					</cascade>
-				</many-to-many>	
+			
 				
 				
 		</attributes>

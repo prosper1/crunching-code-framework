@@ -1,7 +1,7 @@
 package com.mobilebulletin.response.security;
 
 import java.io.Serializable;
-
+import java.util.List;
 
 import com.mobilebulletin.response.util.SystemSuperResponse;
 
@@ -13,34 +13,12 @@ public class SignInResponse extends SystemSuperResponse implements Serializable{
 */
 private static final long serialVersionUID = 1L;
 
-private boolean userExist;
-private boolean userActive;
-private String userFullName;
+private String email;
 private String username;
 private String cellNo;
 private String activationStatus;
-private String userRole;
-private String imagePath;
+private List<String> userRoles;
 private String userId;
-private String gender;
-public boolean isUserExist() {
-	return userExist;
-}
-public void setUserExist(boolean userExist) {
-	this.userExist = userExist;
-}
-public boolean isUserActive() {
-	return userActive;
-}
-public void setUserActive(boolean userActive) {
-	this.userActive = userActive;
-}
-public String getUserFullName() {
-	return userFullName;
-}
-public void setUserFullName(String userFullName) {
-	this.userFullName = userFullName;
-}
 
 public String getUsername() {
 	return username;
@@ -66,23 +44,18 @@ public void setActivationStatus(String activationStatus) {
 public String getActivationStatus() {
 	return activationStatus;
 }
-public void setUserRole(String userRole) {
-	this.userRole = userRole;
+public List<String> getUserRoles() {
+	return userRoles;
 }
-public String getUserRole() {
-	return userRole;
+public void setUserRoles(List<String> userRoles) {
+	this.userRoles = userRoles;
 }
-public void setImagePath(String imagePath) {
-	this.imagePath = imagePath;
+public String getEmail() {
+	return email;
 }
-public String getImagePath() {
-	return imagePath;
+public void setEmail(String email) {
+	this.email = email;
 }
-public void setGender(String gender) {
-	this.gender = gender;
-}
-public String getGender() {
-	return gender;
-}
+
 
 }

@@ -12,19 +12,11 @@ public class SignInResponse  extends com.mobilebulletin.remote.security.SystemSu
 
     private java.lang.String cellNo;
 
-    private java.lang.String gender;
-
-    private java.lang.String imagePath;
-
-    private boolean userActive;
-
-    private boolean userExist;
-
-    private java.lang.String userFullName;
+    private java.lang.String email;
 
     private java.lang.String userId;
 
-    private java.lang.String userRole;
+    private java.lang.String[] userRoles;
 
     private java.lang.String username;
 
@@ -37,13 +29,9 @@ public class SignInResponse  extends com.mobilebulletin.remote.security.SystemSu
            java.lang.String servValidation,
            java.lang.String activationStatus,
            java.lang.String cellNo,
-           java.lang.String gender,
-           java.lang.String imagePath,
-           boolean userActive,
-           boolean userExist,
-           java.lang.String userFullName,
+           java.lang.String email,
            java.lang.String userId,
-           java.lang.String userRole,
+           java.lang.String[] userRoles,
            java.lang.String username) {
         super(
             response,
@@ -51,13 +39,9 @@ public class SignInResponse  extends com.mobilebulletin.remote.security.SystemSu
             servValidation);
         this.activationStatus = activationStatus;
         this.cellNo = cellNo;
-        this.gender = gender;
-        this.imagePath = imagePath;
-        this.userActive = userActive;
-        this.userExist = userExist;
-        this.userFullName = userFullName;
+        this.email = email;
         this.userId = userId;
-        this.userRole = userRole;
+        this.userRoles = userRoles;
         this.username = username;
     }
 
@@ -103,102 +87,22 @@ public class SignInResponse  extends com.mobilebulletin.remote.security.SystemSu
 
 
     /**
-     * Gets the gender value for this SignInResponse.
+     * Gets the email value for this SignInResponse.
      * 
-     * @return gender
+     * @return email
      */
-    public java.lang.String getGender() {
-        return gender;
+    public java.lang.String getEmail() {
+        return email;
     }
 
 
     /**
-     * Sets the gender value for this SignInResponse.
+     * Sets the email value for this SignInResponse.
      * 
-     * @param gender
+     * @param email
      */
-    public void setGender(java.lang.String gender) {
-        this.gender = gender;
-    }
-
-
-    /**
-     * Gets the imagePath value for this SignInResponse.
-     * 
-     * @return imagePath
-     */
-    public java.lang.String getImagePath() {
-        return imagePath;
-    }
-
-
-    /**
-     * Sets the imagePath value for this SignInResponse.
-     * 
-     * @param imagePath
-     */
-    public void setImagePath(java.lang.String imagePath) {
-        this.imagePath = imagePath;
-    }
-
-
-    /**
-     * Gets the userActive value for this SignInResponse.
-     * 
-     * @return userActive
-     */
-    public boolean isUserActive() {
-        return userActive;
-    }
-
-
-    /**
-     * Sets the userActive value for this SignInResponse.
-     * 
-     * @param userActive
-     */
-    public void setUserActive(boolean userActive) {
-        this.userActive = userActive;
-    }
-
-
-    /**
-     * Gets the userExist value for this SignInResponse.
-     * 
-     * @return userExist
-     */
-    public boolean isUserExist() {
-        return userExist;
-    }
-
-
-    /**
-     * Sets the userExist value for this SignInResponse.
-     * 
-     * @param userExist
-     */
-    public void setUserExist(boolean userExist) {
-        this.userExist = userExist;
-    }
-
-
-    /**
-     * Gets the userFullName value for this SignInResponse.
-     * 
-     * @return userFullName
-     */
-    public java.lang.String getUserFullName() {
-        return userFullName;
-    }
-
-
-    /**
-     * Sets the userFullName value for this SignInResponse.
-     * 
-     * @param userFullName
-     */
-    public void setUserFullName(java.lang.String userFullName) {
-        this.userFullName = userFullName;
+    public void setEmail(java.lang.String email) {
+        this.email = email;
     }
 
 
@@ -223,22 +127,30 @@ public class SignInResponse  extends com.mobilebulletin.remote.security.SystemSu
 
 
     /**
-     * Gets the userRole value for this SignInResponse.
+     * Gets the userRoles value for this SignInResponse.
      * 
-     * @return userRole
+     * @return userRoles
      */
-    public java.lang.String getUserRole() {
-        return userRole;
+    public java.lang.String[] getUserRoles() {
+        return userRoles;
     }
 
 
     /**
-     * Sets the userRole value for this SignInResponse.
+     * Sets the userRoles value for this SignInResponse.
      * 
-     * @param userRole
+     * @param userRoles
      */
-    public void setUserRole(java.lang.String userRole) {
-        this.userRole = userRole;
+    public void setUserRoles(java.lang.String[] userRoles) {
+        this.userRoles = userRoles;
+    }
+
+    public java.lang.String getUserRoles(int i) {
+        return this.userRoles[i];
+    }
+
+    public void setUserRoles(int i, java.lang.String _value) {
+        this.userRoles[i] = _value;
     }
 
 
@@ -279,23 +191,15 @@ public class SignInResponse  extends com.mobilebulletin.remote.security.SystemSu
             ((this.cellNo==null && other.getCellNo()==null) || 
              (this.cellNo!=null &&
               this.cellNo.equals(other.getCellNo()))) &&
-            ((this.gender==null && other.getGender()==null) || 
-             (this.gender!=null &&
-              this.gender.equals(other.getGender()))) &&
-            ((this.imagePath==null && other.getImagePath()==null) || 
-             (this.imagePath!=null &&
-              this.imagePath.equals(other.getImagePath()))) &&
-            this.userActive == other.isUserActive() &&
-            this.userExist == other.isUserExist() &&
-            ((this.userFullName==null && other.getUserFullName()==null) || 
-             (this.userFullName!=null &&
-              this.userFullName.equals(other.getUserFullName()))) &&
+            ((this.email==null && other.getEmail()==null) || 
+             (this.email!=null &&
+              this.email.equals(other.getEmail()))) &&
             ((this.userId==null && other.getUserId()==null) || 
              (this.userId!=null &&
               this.userId.equals(other.getUserId()))) &&
-            ((this.userRole==null && other.getUserRole()==null) || 
-             (this.userRole!=null &&
-              this.userRole.equals(other.getUserRole()))) &&
+            ((this.userRoles==null && other.getUserRoles()==null) || 
+             (this.userRoles!=null &&
+              java.util.Arrays.equals(this.userRoles, other.getUserRoles()))) &&
             ((this.username==null && other.getUsername()==null) || 
              (this.username!=null &&
               this.username.equals(other.getUsername())));
@@ -316,22 +220,22 @@ public class SignInResponse  extends com.mobilebulletin.remote.security.SystemSu
         if (getCellNo() != null) {
             _hashCode += getCellNo().hashCode();
         }
-        if (getGender() != null) {
-            _hashCode += getGender().hashCode();
-        }
-        if (getImagePath() != null) {
-            _hashCode += getImagePath().hashCode();
-        }
-        _hashCode += (isUserActive() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        _hashCode += (isUserExist() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        if (getUserFullName() != null) {
-            _hashCode += getUserFullName().hashCode();
+        if (getEmail() != null) {
+            _hashCode += getEmail().hashCode();
         }
         if (getUserId() != null) {
             _hashCode += getUserId().hashCode();
         }
-        if (getUserRole() != null) {
-            _hashCode += getUserRole().hashCode();
+        if (getUserRoles() != null) {
+            for (int i=0;
+                 i<java.lang.reflect.Array.getLength(getUserRoles());
+                 i++) {
+                java.lang.Object obj = java.lang.reflect.Array.get(getUserRoles(), i);
+                if (obj != null &&
+                    !obj.getClass().isArray()) {
+                    _hashCode += obj.hashCode();
+                }
+            }
         }
         if (getUsername() != null) {
             _hashCode += getUsername().hashCode();
@@ -361,34 +265,8 @@ public class SignInResponse  extends com.mobilebulletin.remote.security.SystemSu
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("gender");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "gender"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("imagePath");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "imagePath"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("userActive");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "userActive"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("userExist");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "userExist"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("userFullName");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "userFullName"));
+        elemField.setFieldName("email");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "email"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
@@ -401,11 +279,12 @@ public class SignInResponse  extends com.mobilebulletin.remote.security.SystemSu
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("userRole");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "userRole"));
+        elemField.setFieldName("userRoles");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "userRoles"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
-        elemField.setNillable(false);
+        elemField.setNillable(true);
+        elemField.setMaxOccursUnbounded(true);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("username");

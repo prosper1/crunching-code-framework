@@ -8,6 +8,9 @@
 		<mapping-file>META-INF/orm_common_log.xml</mapping-file>
 		<mapping-file>META-INF/orm_common_communication.xml</mapping-file>
 		<mapping-file>META-INF/orm_common_cms.xml</mapping-file>	
+		<mapping-file>META-INF/orm_company.xml</mapping-file>
+		<mapping-file>META-INF/orm_group.xml</mapping-file>
+		<mapping-file>META-INF/orm_department.xml</mapping-file>	
 		<exclude-unlisted-classes>true</exclude-unlisted-classes>
 		<properties>
 			<property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(foreignKeys=true, SchemaAction='add')"/>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings version="2.0" xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_2_0.xsd">
+	
+	<entity class="com.mobilebulletin.company.CompanyInformation">
+		<table schema="COMPDB" name="COMPANY_INFORMATION"/>
+		<attributes>
+			<id name="id">
+			<generated-value strategy="SEQUENCE" generator="seq_comp_info"/>
+				<sequence-generator allocation-size="1" initial-value="1" name="seq_comp_info" sequence-name="seq_comp_info"></sequence-generator>
+			</id>
+			
+			<basic name="tradingName"></basic>
+						<one-to-one name="addressInfomation" target-entity="com.common.communication.AddressInfomation" fetch="LAZY" >
+				<cascade>
+					<cascade-all/>
+				</cascade>
+			</one-to-one>
+			
+			<one-to-one name="contactInformation" target-entity="com.common.communication.ContactInformation" fetch="LAZY" >
+				<cascade>
+					<cascade-all/>
+				</cascade>
+			</one-to-one>
+			
+			<one-to-one name="logActivity" target-entity="com.common.log.LogActivity" fetch="LAZY" >
+				<cascade>
+					<cascade-all/>
+				</cascade>
+			</one-to-one>
+			<many-to-many name="roles" target-entity="com.common.type.TypeHierarchy" fetch="LAZY" >
+					<join-table name="COMPANY_ROLE">
+						<join-column name="ID"/>
+						<inverse-join-column name="COMPANYROLE_ID"/>
+					</join-table>
+					<cascade>
+						<cascade-refresh/>
+						<cascade-detach/>
+					</cascade>
+				</many-to-many>	
+		</attributes>
+	</entity>
+	
+	<entity class="com.mobilebulletin.company.EmployeeCompanyInformation">
+		<table schema="COMPDB" name="EMPLOYEE_COMPANY_INFORMATION"/>
+		<attributes>
+			<id name="id">
+			<generated-value strategy="SEQUENCE" generator="seq_emp_comp_info"/>
+				<sequence-generator allocation-size="1" initial-value="1" name="seq_emp_comp_info" sequence-name="seq_emp_comp_info"></sequence-generator>
+			</id>
+			
+			
+			<many-to-one name="companyInformation" target-entity="com.mobilebulletin.company.CompanyInformation" fetch="LAZY" >
+				<join-column name="COMPANYINFO_ID"/>
+				<cascade>
+					<cascade-persist/>
+					<cascade-refresh/>
+					<cascade-detach/>
+				</cascade>
+			</many-to-one>	
+			<many-to-one name="userInformation" target-entity="com.common.cms.UserInformation" fetch="LAZY" >
+				<join-column name="USERINFO_ID"/>
+				<cascade>
+					<cascade-persist/>
+					<cascade-refresh/>
+					<cascade-detach/>
+				</cascade>
+			</many-to-one>	
+			
+			
+			<one-to-one name="logActivity" target-entity="com.common.log.LogActivity" fetch="LAZY" >
+				<cascade>
+					<cascade-all/>
+				</cascade>
+			</one-to-one>
+			
+			<many-to-many name="userRoles" target-entity="com.common.type.TypeHierarchy" fetch="LAZY" >
+					<join-table name="USER_COMPANY_ROLE">
+						<join-column name="ID"/>
+						<inverse-join-column name="USERCOMPANYROLE_ID"/>
+					</join-table>
+					<cascade>
+						<cascade-refresh/>
+						<cascade-detach/>
+					</cascade>
+				</many-to-many>	
+		</attributes>
+	</entity>
+</entity-mappings>

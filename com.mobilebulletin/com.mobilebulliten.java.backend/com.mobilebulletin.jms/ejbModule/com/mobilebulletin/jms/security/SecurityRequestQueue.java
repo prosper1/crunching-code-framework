@@ -64,8 +64,8 @@ public class SecurityRequestQueue implements Runnable
 	 {		 
 		  ctx = new InitialContext();
 		  
-		  String requestQueueName ="queue/SecurityRequestQueue";
-		  replyQueueName ="queue/SecurityReplyQueue";
+		  String requestQueueName ="queue/SecurityMOBBRequestQueue";
+		  replyQueueName ="queue/SecurityMOBBReplyQueue";
 		  String connectionFactoryName = "/ConnectionFactory";
 		  
 		  //Sending Message MDB

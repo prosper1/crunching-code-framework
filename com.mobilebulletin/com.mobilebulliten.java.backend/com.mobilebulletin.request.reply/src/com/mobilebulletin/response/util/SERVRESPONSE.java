@@ -35,6 +35,8 @@ public class SERVRESPONSE  extends Lookup implements Serializable {
 	  public static SERVRESPONSE TimeSlotExist =new SERVRESPONSE(20, "TSE", "Time Slot Exist");
 	  public static SERVRESPONSE AccountNotVerified = new SERVRESPONSE(21, "ACT_NOT", "Account Not Verified");
 	  public static SERVRESPONSE AccountVerified = new SERVRESPONSE(22, "ACT_VER", "Account Verified");
+	 
+	  public static SERVRESPONSE InvalidUsernamePassword = new SERVRESPONSE(23, "INV_USE", "Invalid Username/Password");
 	  public SERVRESPONSE(){}
 	    public SERVRESPONSE(int ordinal, String code, String description) {
 	      super(ordinal, code, description);
