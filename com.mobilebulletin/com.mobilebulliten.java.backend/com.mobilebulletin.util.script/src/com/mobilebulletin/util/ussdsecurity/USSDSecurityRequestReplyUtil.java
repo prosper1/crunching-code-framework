@@ -12,7 +12,7 @@ public class USSDSecurityRequestReplyUtil extends RequestReplyUtil{
 		// TODO Auto-generated constructor stub
 	}
 	private static String _PACKAGE_LINE = "package com.mobilebulletin";
-	private static String _PATH_LINE = "/opt/crunchingcode/workspace/mobilebulliten/com.mobilebulletin.request.reply/src/com/mobilebulletin";
+	private static String _PATH_LINE = "/opt/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.java.backend/com.mobilebulletin.request.reply/src/com/mobilebulletin";
 	private static String _CATEGORY_LINE = "Security";
 	private static List<String> constractList(){		
 		return USSDSecurityListObjects.constractList();

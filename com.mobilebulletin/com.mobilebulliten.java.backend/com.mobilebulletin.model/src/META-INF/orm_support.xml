@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings version="2.0" xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_2_0.xsd">
+	
+	<entity class="com.common.support.SupportTicket">
+		<table schema="SUPPDB" name="SUPPORT_TICKET" />
+		<attributes>
+			<id name="id">
+			<generated-value strategy="SEQUENCE" generator="seq_supp_ticket"/>
+				<sequence-generator allocation-size="1" initial-value="1" name="seq_supp_ticket" sequence-name="seq_supp_ticket"></sequence-generator>
+			</id>
+			<basic name="fullname"></basic>
+			<basic name="email"></basic>
+			<basic name="heading"></basic>
+			<basic name="supportContent"><column name="support_content" length="8192"/></basic>
+			<basic name="supportTickectId"></basic>
+			<basic name="createdByGuest"></basic>
+			<many-to-one name="person" target-entity="com.common.cms.Person" fetch="EAGER" >
+				<join-column name="USERINFO_ID"/>
+				<cascade>
+					<cascade-persist/>					
+					<cascade-refresh/>
+					<cascade-detach/>
+				</cascade>
+			</many-to-one>
+			<many-to-one name="supportStatus" target-entity="com.common.type.TypeHierarchy" fetch="EAGER" >
+				<join-column name="SUPPORT_STATUS_ID"/>
+				<cascade>
+					<cascade-refresh/>
+					<cascade-detach/>
+				</cascade>
+				
+			</many-to-one>
+			<many-to-one name="supportModule" target-entity="com.common.type.TypeHierarchy" fetch="EAGER" >
+				<join-column name="SUPPORT_MODULE_ID"/>
+				<cascade>
+					<cascade-refresh/>
+					<cascade-detach/>
+				</cascade>
+				
+			</many-to-one>
+			<one-to-many name="additionalNotes" target-entity="com.common.notes.AdditionalNotes" fetch="EAGER" >
+				<join-table name="SUPPTICK_ADDNOTES">
+					<join-column name="SUPPTICK_ID"/>
+					<inverse-join-column name="ADDNOTES_ID"/>
+				</join-table>
+				<cascade>
+					<cascade-all/>
+				</cascade>
+			</one-to-many>
+			<one-to-one name="logActivity" target-entity="com.common.log.LogActivity" fetch="EAGER" >
+				<cascade>
+					<cascade-all/>
+				</cascade>
+			</one-to-one>
+		</attributes>
+	</entity>
+</entity-mappings>

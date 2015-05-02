@@ -791,3 +791,21 @@ java.lang.ClassCastException: org.eclipse.e4.ui.model.application.ui.basic.impl.
 
 !ENTRY org.eclipse.jdt.ui 2 0 2015-05-02 11:00:57.719
 !MESSAGE The 'org.eclipse.mylyn.java.ui.javaAllCompletionProposalComputer' proposal computer from the 'org.eclipse.mylyn.java.ui' plug-in did not complete normally. The extension took too long to return from the 'computeCompletionProposals()' operation.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-02 13:43:48.487
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-02 13:43:48.491
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-02 13:44:00.469
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-02 13:44:00.472
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-02 13:44:02.405
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-02 13:44:02.410
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp

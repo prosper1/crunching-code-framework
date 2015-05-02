@@ -7,7 +7,7 @@ import com.mobilebulletin.util.JmsRequestUtil;
 public class USSDSecurityJmsRequestUtil extends JmsRequestUtil{
 	
 	private static String _PACKAGE_LINE = "package com.mobilebulletin.jms.security;";
-	private static String _PATH_LINE = "/opt/crunchingcode/workspace/mobilebulliten/com.mobilebulletin.jms/ejbModule/com/mobilebulletin/jms/security";
+	private static String _PATH_LINE = "/opt/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.java.backend/com.mobilebulletin.jms/ejbModule/com/mobilebulletin/jms/security";
 	private static String _CLASS_NAME_LINE = "Security";
 	private static String _REQUEST_PACKAGE_IMPORT = "import com.mobilebulletin.request.security.*;";
 	

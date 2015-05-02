@@ -47,6 +47,14 @@
 					<cascade-detach/>
 				</cascade>
 			</many-to-one>			
+			<many-to-one name="langaugeType" target-entity="com.common.type.TypeHierarchy" fetch="LAZY" >
+				<join-column name="LANGAUGE_ID"/>
+				<cascade>
+					<cascade-refresh/>
+					<cascade-detach/>
+				</cascade>
+			</many-to-one>		
+				
 				
 			<one-to-one name="addressInfomation" target-entity="com.common.communication.AddressInfomation" fetch="LAZY" >
 				<cascade>
@@ -75,6 +83,7 @@
 				<basic name="userActive"></basic>
 				<basic name="uniqueUsername"></basic>
 				<basic name="activationCode"></basic>
+				<basic name="employeeNo"></basic>
 				
 				
 				<many-to-one name="activationStatus" target-entity="com.common.type.TypeHierarchy" fetch="LAZY" >

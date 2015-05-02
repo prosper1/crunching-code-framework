@@ -9,36 +9,37 @@ public class CommonRequest  implements Serializable{
 */
 private static final long serialVersionUID = 1L;
 
-private String clientName;
-private String userId;
-private String companyId;
-private String cellNumber;
+private String requestClientName;
+private String requestUserId;
+private String requestCompanyId;
+private String requestCellNumber;
+public String getRequestClientName() {
+	return requestClientName;
+}
+public void setRequestClientName(String requestClientName) {
+	this.requestClientName = requestClientName;
+}
+public String getRequestUserId() {
+	return requestUserId;
+}
+public void setRequestUserId(String requestUserId) {
+	this.requestUserId = requestUserId;
+}
+public String getRequestCompanyId() {
+	return requestCompanyId;
+}
+public void setRequestCompanyId(String requestCompanyId) {
+	this.requestCompanyId = requestCompanyId;
+}
+public String getRequestCellNumber() {
+	return requestCellNumber;
+}
+public void setRequestCellNumber(String requestCellNumber) {
+	this.requestCellNumber = requestCellNumber;
+}
 
 
-public String getCompanyId() {
-	return companyId;
-}
-public void setCompanyId(String companyId) {
-	this.companyId = companyId;
-}
-public String getCellNumber() {
-	return cellNumber;
-}
-public void setCellNumber(String cellNumber) {
-	this.cellNumber = cellNumber;
-}
-public String getClientName() {
-	return clientName;
-}
-public void setClientName(String clientName) {
-	this.clientName = clientName;
-}
-public String getUserId() {
-	return userId;
-}
-public void setUserId(String userId) {
-	this.userId = userId;
-}
+
 
 
 

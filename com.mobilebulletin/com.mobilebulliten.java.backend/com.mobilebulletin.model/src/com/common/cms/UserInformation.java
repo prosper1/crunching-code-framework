@@ -22,6 +22,7 @@ public class UserInformation extends Person implements Serializable {
 	private boolean userActive;
 	private TypeHierarchy activationStatus;
 	private String uniqueUsername;
+	private String employeeNo;
 	
 	
 	
@@ -62,6 +63,12 @@ public class UserInformation extends Person implements Serializable {
 	}
 	public void setActivationStatus(TypeHierarchy activationStatus) {
 		this.activationStatus = activationStatus;
+	}
+	public String getEmployeeNo() {
+		return employeeNo;
+	}
+	public void setEmployeeNo(String employeeNo) {
+		this.employeeNo = employeeNo;
 	}
 	
 

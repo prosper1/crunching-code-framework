@@ -16,11 +16,19 @@ public abstract class Person extends SuperPerson implements Serializable{
 	private String firstname;
 	private String middleName;
 	private String lastname;
+	private String initials;
 	private Date dateOfBirth;
 	private TypeHierarchy genderType;
 	private TypeHierarchy titleType;
 	private TypeHierarchy disabilityType;
 	private TypeHierarchy raceType;
+	private TypeHierarchy langaugeType;
+	public TypeHierarchy getLangaugeType() {
+		return langaugeType;
+	}
+	public void setLangaugeType(TypeHierarchy langaugeType) {
+		this.langaugeType = langaugeType;
+	}
 	public TypeHierarchy getDisabilityType() {
 		return disabilityType;
 	}
@@ -120,6 +128,12 @@ public abstract class Person extends SuperPerson implements Serializable{
 	}
 	public void setFullnameAndSurname(String fullnameAndSurname) {
 		this.fullnameAndSurname = fullnameAndSurname;
+	}
+	public String getInitials() {
+		return initials;
+	}
+	public void setInitials(String initials) {
+		this.initials = initials;
 	}
 	
 	

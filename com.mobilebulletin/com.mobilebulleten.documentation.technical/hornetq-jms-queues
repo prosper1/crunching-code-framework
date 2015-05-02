@@ -1,6 +1,6 @@
 <!-- MOBILE BUlletin -->
 
-        <queue name="SupportMOBBRequestQueue">
+                <queue name="SupportMOBBRequestQueue">
                <entry name="/queue/SupportMOBBRequestQueue"/>
         </queue>
         <queue name="SupportMOBBReplyQueue">
@@ -11,4 +11,10 @@
         </queue>
         <queue name="SecurityMOBBReplyQueue">
                <entry name="/queue/SecurityMOBBReplyQueue"/>
+        </queue>
+        <queue name="EmployeeMOBBRequestQueue">
+               <entry name="/queue/EmployeeMOBBRequestQueue"/>
+        </queue>
+        <queue name="EmployeeMOBBReplyQueue">
+               <entry name="/queue/EmployeeMOBBReplyQueue"/>
         </queue>

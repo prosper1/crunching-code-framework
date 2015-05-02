@@ -6,7 +6,7 @@ import com.mobilebulletin.util.TestUtil;
 
 public class UssdTestUtil extends TestUtil{
 	private static String _PACKAGE_LINE = "package com.mobilebulletin.test;";
-	private static String _PATH_LINE = "/Users/vutlhari/git2/pop-business/backend/com.mobilebulletin.test/test/com/mobilebulletin/test";
+	private static String _PATH_LINE = "/opt/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.java.backend/com.mobilebulletin.test/test/com/mobilebulletin/test";
 	private static String _CATEGORY_LINE = "Support";
 	private static String _REQUEST_PACKAGE_IMPORT = "import com.mobilebulletin.request.support.*;";
 	private static String _RESPONSE_PACKAGE_IMPORT = "import com.mobilebulletin.response.support.*;";

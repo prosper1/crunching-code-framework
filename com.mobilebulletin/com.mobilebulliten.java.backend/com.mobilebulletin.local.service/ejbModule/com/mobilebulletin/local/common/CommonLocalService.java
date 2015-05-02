@@ -5,6 +5,7 @@ import javax.ejb.Local;
 import com.common.cms.Person;
 import com.common.cms.UserInformation;
 import com.common.type.TypeHierarchy;
+import com.mobilebulletin.company.CompanyInformation;
 
 @Local
 public interface CommonLocalService {
@@ -20,9 +21,13 @@ public interface CommonLocalService {
 	
 	public boolean checkEmailExistByName(String email) throws Exception;
 	
+	public boolean checkCellNoExistByCellNo(String cellNo) throws Exception;
+	
 	public boolean checkUsernameExistByName(String username) throws Exception;
 	
 	public UserInformation getUserByUsername(String username) throws Exception;
+	
+	public CompanyInformation getCompanyById(long id) throws Exception;
 	
 	
 }

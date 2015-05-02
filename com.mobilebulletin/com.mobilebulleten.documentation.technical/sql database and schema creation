@@ -6,3 +6,5 @@ create schema commdb;
 create schema depdb;
 create schema grpdb;
 create schema compdb;
+create schema notedb;
+create schema suppdb;

@@ -445,7 +445,7 @@ public class SecurityLocalBean implements SecurityLocalService
 					LogActivity logActivity = new LogActivity();
 					logActivity.setCreatedBy(userInformation);
 					logActivity.setCreatedOn(LocalHelper.getCurrentTime());
-					userInformation.setLogActivity(logActivity);
+					
 					companyInformation.setLogActivity(logActivity);
 					if(request.getWebsite() != null){
 						ContactReference contactReference = new ContactReference();
@@ -465,7 +465,6 @@ public class SecurityLocalBean implements SecurityLocalService
 					logActivity = new LogActivity();
 					logActivity.setCreatedBy(userInformation);
 					logActivity.setCreatedOn(LocalHelper.getCurrentTime());
-					userInformation.setLogActivity(logActivity);
 					employeeCompanyInformation.setLogActivity(logActivity);
 					TypeHierarchy roleType = commonLocalService
 							.getTypeHierarchyByDescription(ROLE_TYPE.Admin

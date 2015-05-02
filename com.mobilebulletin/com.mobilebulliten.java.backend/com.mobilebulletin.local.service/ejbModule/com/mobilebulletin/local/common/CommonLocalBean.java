@@ -249,5 +249,51 @@ public class CommonLocalBean implements CommonLocalService{
 	}
 
 
+	@Override
+	public boolean checkCellNoExistByCellNo(String cellNo) throws Exception {
+		ContactReference contactReference = null;
+		try
+		{
+			String queryString = "SELECT x FROM ContactReference x where lower(x.contact) = :contactParam";    	
+			Query query =  em.createQuery(queryString);
+			query.setParameter("contactParam", cellNo.toLowerCase());
+			List<Object> objList = (List<Object>)query.getResultList();
+			
+			if(objList.size() > 0)
+			{
+				for(Object o : objList)
+				{
+					contactReference = (ContactReference)o;
+					return true;
+				}
+			}
+		}catch (Exception e) 
+		{
+			String errorMessage = e.getMessage();
+			log.error(errorMessage);
+			
+		}
+		return false;
+	}
+
+
+	@Override
+	public CompanyInformation getCompanyById(long id) throws Exception {
+		CompanyInformation results = null;
+		
+		try
+		{
+			//Use the entity manager to find the user information by id
+			results = em.find(CompanyInformation.class, id);
+		}catch (Exception e)
+		{
+			e.printStackTrace();
+			throw e;
+		}
+		//Return the user
+		return results;
+	}
+
+
 	
 }

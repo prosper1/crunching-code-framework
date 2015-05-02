@@ -15,7 +15,7 @@ public class SupportListObjects {
 		
 		list.add("GetSupportStartUp");
 	
-		list.add("GetSupportNameIdList");
+		list.add("GetSupportTicketsByStatus");
 		
 		//5 last visited places
 		
