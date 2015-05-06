@@ -25,6 +25,8 @@ import com.mobilebulletin.company.EmployeeCompanyInformation;
 import com.mobilebulletin.enumerator.CONTACTTYPE;
 import com.mobilebulletin.enumerator.LANGUAGE_TYPE;
 import com.mobilebulletin.enumerator.ROLE_TYPE;
+import com.mobilebulletin.group.EmployeeGroupInformation;
+import com.mobilebulletin.group.GroupInformation;
 import com.mobilebulletin.local.common.CommonLocalService;
 import com.mobilebulletin.local.utils.FreshHelper;
 import com.mobilebulletin.local.utils.LocalHelper;
@@ -36,7 +38,9 @@ import com.mobilebulletin.response.util.SERVRESPONSE;
 
 import com.mobilebulletin.request.employee.*;
 import com.mobilebulletin.request.security.CheckUserRequest;
+import com.mobilebulletin.response.department.model.DepartmentInfo;
 import com.mobilebulletin.response.employee.*;
+import com.mobilebulletin.response.employee.model.EmployeeInfo;
 
 
 
@@ -270,7 +274,35 @@ public class EmployeeLocalBean implements EmployeeLocalService
 		try
 		{
 			
-			
+			response.setEmployeeInfoList(new ArrayList<EmployeeInfo>());
+			List<EmployeeCompanyInformation> employeeCompanyInformations = commonLocalService.getCompanyMembers(FreshHelper.decryptPrimaryKeyBytes(request.getRequestCompanyId()));
+			for(EmployeeCompanyInformation employeeGroupInfo:employeeCompanyInformations){
+				EmployeeInfo employeeInfo =new EmployeeInfo();
+				if(employeeGroupInfo.getUserInformation() !=null){
+					UserInformation userInformation = employeeGroupInfo.getUserInformation();
+					if(userInformation.getContactInformation() != null 
+							&& userInformation.getContactInformation().getContactReferences() != null){
+						for(ContactReference contactReference:userInformation.getContactInformation().getContactReferences()){
+							if(contactReference.getContactType() != null)
+								if(contactReference.getContactType().getDescription().equalsIgnoreCase(CONTACTTYPE.Cell.getDescription()))
+									employeeInfo.setCellNo(contactReference.getContact());
+								else if(contactReference.getContactType().getDescription().equalsIgnoreCase(CONTACTTYPE.Email.getDescription()))
+									employeeInfo.setEmail(contactReference.getContact());
+						}
+					}
+					employeeInfo.setEmployeeNo(userInformation.getEmployeeNo());
+					employeeInfo.setFirstname(userInformation.getFirstname());
+					employeeInfo.setId(FreshHelper.encryptPrimaryKeyBytes(userInformation.getId()));
+					employeeInfo.setInitials(userInformation.getInitials());
+					if(userInformation.getLangaugeType() != null)
+						employeeInfo.setLangauge(userInformation.getLangaugeType().getDescription());
+					employeeInfo.setLastname(userInformation.getLastname());
+					if(employeeGroupInfo.getUserRoles() != null)
+						employeeInfo.setRole(employeeGroupInfo.getUserRoles().get(0).getDescription());
+					response.getEmployeeInfoList().add(employeeInfo);
+				}
+				
+			}
 			response.setResponse(SERVRESPONSE.Successful);
 		}catch(Exception e)
 		{

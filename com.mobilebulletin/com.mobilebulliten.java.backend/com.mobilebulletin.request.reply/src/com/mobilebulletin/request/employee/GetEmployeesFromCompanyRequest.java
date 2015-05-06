@@ -2,8 +2,10 @@ package com.mobilebulletin.request.employee;
 
 import java.io.Serializable;
 
+import com.mobilebulletin.request.util.CommonRequest;
 
-public class GetEmployeesFromCompanyRequest implements Serializable{
+
+public class GetEmployeesFromCompanyRequest extends CommonRequest implements Serializable{
 
 /**
 * 

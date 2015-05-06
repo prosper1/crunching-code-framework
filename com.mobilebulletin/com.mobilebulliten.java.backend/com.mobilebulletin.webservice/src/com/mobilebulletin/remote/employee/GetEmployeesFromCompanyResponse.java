@@ -8,17 +8,49 @@
 package com.mobilebulletin.remote.employee;
 
 public class GetEmployeesFromCompanyResponse  extends com.mobilebulletin.remote.employee.SystemSuperResponse  implements java.io.Serializable {
+    private com.mobilebulletin.remote.employee.EmployeeInfo[] employeeInfoList;
+
     public GetEmployeesFromCompanyResponse() {
     }
 
     public GetEmployeesFromCompanyResponse(
            com.mobilebulletin.remote.employee.Servresponse response,
            java.lang.String responseTo,
-           java.lang.String servValidation) {
+           java.lang.String servValidation,
+           com.mobilebulletin.remote.employee.EmployeeInfo[] employeeInfoList) {
         super(
             response,
             responseTo,
             servValidation);
+        this.employeeInfoList = employeeInfoList;
+    }
+
+
+    /**
+     * Gets the employeeInfoList value for this GetEmployeesFromCompanyResponse.
+     * 
+     * @return employeeInfoList
+     */
+    public com.mobilebulletin.remote.employee.EmployeeInfo[] getEmployeeInfoList() {
+        return employeeInfoList;
+    }
+
+
+    /**
+     * Sets the employeeInfoList value for this GetEmployeesFromCompanyResponse.
+     * 
+     * @param employeeInfoList
+     */
+    public void setEmployeeInfoList(com.mobilebulletin.remote.employee.EmployeeInfo[] employeeInfoList) {
+        this.employeeInfoList = employeeInfoList;
+    }
+
+    public com.mobilebulletin.remote.employee.EmployeeInfo getEmployeeInfoList(int i) {
+        return this.employeeInfoList[i];
+    }
+
+    public void setEmployeeInfoList(int i, com.mobilebulletin.remote.employee.EmployeeInfo _value) {
+        this.employeeInfoList[i] = _value;
     }
 
     private java.lang.Object __equalsCalc = null;
@@ -32,7 +64,10 @@ public class GetEmployeesFromCompanyResponse  extends com.mobilebulletin.remote.
         }
         __equalsCalc = obj;
         boolean _equals;
-        _equals = super.equals(obj);
+        _equals = super.equals(obj) && 
+            ((this.employeeInfoList==null && other.getEmployeeInfoList()==null) || 
+             (this.employeeInfoList!=null &&
+              java.util.Arrays.equals(this.employeeInfoList, other.getEmployeeInfoList())));
         __equalsCalc = null;
         return _equals;
     }
@@ -44,6 +79,17 @@ public class GetEmployeesFromCompanyResponse  extends com.mobilebulletin.remote.
         }
         __hashCodeCalc = true;
         int _hashCode = super.hashCode();
+        if (getEmployeeInfoList() != null) {
+            for (int i=0;
+                 i<java.lang.reflect.Array.getLength(getEmployeeInfoList());
+                 i++) {
+                java.lang.Object obj = java.lang.reflect.Array.get(getEmployeeInfoList(), i);
+                if (obj != null &&
+                    !obj.getClass().isArray()) {
+                    _hashCode += obj.hashCode();
+                }
+            }
+        }
         __hashCodeCalc = false;
         return _hashCode;
     }
@@ -54,6 +100,14 @@ public class GetEmployeesFromCompanyResponse  extends com.mobilebulletin.remote.
 
     static {
         typeDesc.setXmlType(new javax.xml.namespace.QName("http://employee.remote.mobilebulletin.com/", "getEmployeesFromCompanyResponse"));
+        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("employeeInfoList");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "employeeInfoList"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://employee.remote.mobilebulletin.com/", "employeeInfo"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(true);
+        elemField.setMaxOccursUnbounded(true);
+        typeDesc.addFieldDesc(elemField);
     }
 
     /**

@@ -10,13 +10,21 @@
 			</id>
 			
 			<basic name="name"></basic>
+			<basic name="description"></basic>
 		
-			
+			<many-to-one name="companyInformation" target-entity="com.mobilebulletin.company.CompanyInformation" fetch="LAZY" >
+				<join-column name="COMPANYINFO_ID"/>
+				<cascade>
+					<cascade-refresh/>
+					<cascade-detach/>
+				</cascade>
+			</many-to-one>	
 			<one-to-one name="logActivity" target-entity="com.common.log.LogActivity" fetch="LAZY" >
 				<cascade>
 					<cascade-all/>
 				</cascade>
 			</one-to-one>
+			
 			
 		</attributes>
 	</entity>

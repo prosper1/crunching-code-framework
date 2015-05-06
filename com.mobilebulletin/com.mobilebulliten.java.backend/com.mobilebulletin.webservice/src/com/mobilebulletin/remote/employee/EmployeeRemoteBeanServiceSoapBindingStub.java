@@ -152,6 +152,13 @@ public class EmployeeRemoteBeanServiceSoapBindingStub extends org.apache.axis.cl
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
+            qName = new javax.xml.namespace.QName("http://employee.remote.mobilebulletin.com/", "employeeInfo");
+            cachedSerQNames.add(qName);
+            cls = com.mobilebulletin.remote.employee.EmployeeInfo.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
             qName = new javax.xml.namespace.QName("http://employee.remote.mobilebulletin.com/", "getEmployeeByIdRequest");
             cachedSerQNames.add(qName);
             cls = com.mobilebulletin.remote.employee.GetEmployeeByIdRequest.class;

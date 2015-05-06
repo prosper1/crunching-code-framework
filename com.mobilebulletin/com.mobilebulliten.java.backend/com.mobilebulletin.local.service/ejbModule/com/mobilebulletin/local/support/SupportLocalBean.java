@@ -18,6 +18,7 @@ import com.common.cms.Person;
 import com.common.communication.ContactInformation;
 import com.common.communication.ContactReference;
 import com.common.log.LogActivity;
+import com.common.notes.AdditionalNotes;
 import com.common.support.SupportTicket;
 import com.common.type.TypeHierarchy;
 import com.mobilebulletin.enumerator.CONTACTTYPE;
@@ -227,9 +228,35 @@ public class SupportLocalBean implements SupportLocalService
 		
 		try
 		{
+			Person currentUser = commonLocalService.getPersonById(FreshHelper.decryptPrimaryKeyBytes(request.getRequestUserId()));
+    		
+			SupportTicket supportTicket = commonLocalService.getSupportTicketById(FreshHelper.decryptPrimaryKeyBytes(request.getSupportId()));
+    		
+			if(currentUser != null && supportTicket != null){
+				AdditionalNotes additionalNotes = new AdditionalNotes();
+				if(supportTicket.getAdditionalNotes() == null || supportTicket.getAdditionalNotes().isEmpty()){
+					supportTicket.setAdditionalNotes(new ArrayList<AdditionalNotes>());
+					if(request.getSupportComment() != null && !request.getSupportComment().isEmpty() ){
+						supportTicket.getAdditionalNotes().add(additionalNotes);
+						additionalNotes.setNotes(request.getSupportComment());
+						LogActivity logActivity = LocalHelper.getLogActivity(currentUser, null);
+						additionalNotes.setLogActivity(logActivity);
+					}
+				}
+				
+				if(request.getSupportStatus() != null){
+					TypeHierarchy typeHierarchy = commonLocalService.getTypeHierarchyByDescription(request.getSupportStatus());
+					supportTicket.setSupportStatus(typeHierarchy);
+				}
+				LogActivity logActivity = LocalHelper.getLogActivity(currentUser, supportTicket.getLogActivity());
+				supportTicket.setLogActivity(logActivity);
+				em.merge(supportTicket);
+				response.setResponse(SERVRESPONSE.Successful);
+			}else{
 			
+				response.setResponse(SERVRESPONSE.ServerError);
+			}
 			
-			response.setResponse(SERVRESPONSE.Successful);
 		}catch(Exception e)
 		{
 			response.setResponse(SERVRESPONSE.ServerError);

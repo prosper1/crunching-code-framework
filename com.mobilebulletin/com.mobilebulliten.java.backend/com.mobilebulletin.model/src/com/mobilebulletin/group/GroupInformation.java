@@ -3,6 +3,7 @@ package com.mobilebulletin.group;
 import java.io.Serializable;
 
 import com.common.log.LogActivity;
+import com.mobilebulletin.company.CompanyInformation;
 
 public class GroupInformation   implements Serializable{
 	
@@ -19,6 +20,8 @@ public class GroupInformation   implements Serializable{
 	}
 	private String name;
 	private LogActivity logActivity;
+	private String description;
+	private CompanyInformation companyInformation;
 	public String getName() {
 		return name;
 	}
@@ -30,6 +33,18 @@ public class GroupInformation   implements Serializable{
 	}
 	public void setLogActivity(LogActivity logActivity) {
 		this.logActivity = logActivity;
+	}
+	public CompanyInformation getCompanyInformation() {
+		return companyInformation;
+	}
+	public void setCompanyInformation(CompanyInformation companyInformation) {
+		this.companyInformation = companyInformation;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
 	}
 	
 

@@ -7,8 +7,20 @@
 
 package com.mobilebulletin.remote.employee;
 
-public class GetEmployeesFromCompanyRequest  implements java.io.Serializable {
+public class GetEmployeesFromCompanyRequest  extends com.mobilebulletin.remote.employee.CommonRequest  implements java.io.Serializable {
     public GetEmployeesFromCompanyRequest() {
+    }
+
+    public GetEmployeesFromCompanyRequest(
+           java.lang.String requestCellNumber,
+           java.lang.String requestClientName,
+           java.lang.String requestCompanyId,
+           java.lang.String requestUserId) {
+        super(
+            requestCellNumber,
+            requestClientName,
+            requestCompanyId,
+            requestUserId);
     }
 
     private java.lang.Object __equalsCalc = null;
@@ -22,7 +34,7 @@ public class GetEmployeesFromCompanyRequest  implements java.io.Serializable {
         }
         __equalsCalc = obj;
         boolean _equals;
-        _equals = true;
+        _equals = super.equals(obj);
         __equalsCalc = null;
         return _equals;
     }
@@ -33,7 +45,7 @@ public class GetEmployeesFromCompanyRequest  implements java.io.Serializable {
             return 0;
         }
         __hashCodeCalc = true;
-        int _hashCode = 1;
+        int _hashCode = super.hashCode();
         __hashCodeCalc = false;
         return _hashCode;
     }

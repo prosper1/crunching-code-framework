@@ -94,7 +94,7 @@ public class TestUtil {
 		results+="		{"+_NEXT_LINE;
 		results+="			e.printStackTrace();"+_NEXT_LINE;
 		results+="		}"+_NEXT_LINE;
-		results+="	    assertEquals(\"Result\", SERVRESPONSE.Successful.getDescription(),response.getResponse().getDescription());"+_NEXT_LINE;
+		results+="	    assertEquals(\"Result\", \"Successful\",response.getResponse().getDescription());"+_NEXT_LINE;
 		results+="	}"+_NEXT_LINE;
 		return results;
 	}
