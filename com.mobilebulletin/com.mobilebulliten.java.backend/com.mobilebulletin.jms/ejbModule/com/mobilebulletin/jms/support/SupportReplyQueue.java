@@ -46,12 +46,12 @@ import com.mobilebulletin.response.support.*;
 
 
 
-@MessageDriven(name = "SupportReplyQueue",  
+@MessageDriven(name = "SupportMOBBReplyQueue",  
         activationConfig =  
              {  
                  @ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Queue"), 
-                 @ActivationConfigProperty(propertyName = "destination", propertyValue = "queue/SupportReplyQueue"),
-                 @ActivationConfigProperty(propertyName = "destination", propertyValue = "queue/SupportRequestQueue"), 
+                 @ActivationConfigProperty(propertyName = "destination", propertyValue = "queue/SupportMOBBReplyQueue"),
+                 @ActivationConfigProperty(propertyName = "destination", propertyValue = "queue/SupportMOBBRequestQueue"), 
               })  
 @ResourceAdapter("jms-ra.rar") 
 @SuppressWarnings("serial")

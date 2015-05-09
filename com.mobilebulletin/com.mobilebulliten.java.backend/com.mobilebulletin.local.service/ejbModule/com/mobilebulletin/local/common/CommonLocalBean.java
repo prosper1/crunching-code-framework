@@ -373,15 +373,15 @@ public class CommonLocalBean implements CommonLocalService{
 			{
 				for(Object o : objList)
 				{
-					EmployeeGroupInformation employeeGroupInformation = (EmployeeGroupInformation)o;
-					return employeeGroupInformation.getId();
+					Long employeeGroupInformation = (Long)o;
+					return employeeGroupInformation;
 				}
 			}
 		}catch (Exception e) 
 		{
 			String errorMessage = e.getMessage();
 			log.error(errorMessage);
-			
+			throw e;
 		}
 		return 0L;
 	}
@@ -411,7 +411,7 @@ public class CommonLocalBean implements CommonLocalService{
 		{
 			String errorMessage = e.getMessage();
 			log.error(errorMessage);
-			
+			throw e;
 		}
 		return 0L;
 	}

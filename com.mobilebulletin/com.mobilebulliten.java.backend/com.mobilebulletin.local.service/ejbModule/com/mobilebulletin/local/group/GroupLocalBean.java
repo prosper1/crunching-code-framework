@@ -122,7 +122,7 @@ public class GroupLocalBean implements GroupLocalService
 						UserInformation userInformation = commonLocalService.getUserById(FreshHelper.decryptPrimaryKeyBytes(groupMemberInfo.getMemberId()));
 						if(userInformation != null){
 							EmployeeGroupInformation employeeGroupInfo;
-							long id = commonLocalService.checkUserExistInDepartmentInformation(userInformation.getId(), groupInformation.getId());
+							long id = commonLocalService.checkUserExistInGroupInformation(userInformation.getId(), groupInformation.getId());
 							if(id <= 0){
 								employeeGroupInfo = new EmployeeGroupInformation();
 							}else{
@@ -130,12 +130,13 @@ public class GroupLocalBean implements GroupLocalService
 							}
 							employeeGroupInfo.setGroupInformation(groupInformation);
 							employeeGroupInfo.setUserInformation(userInformation);
-							LogActivity logActivity = LocalHelper.getLogActivity(currentUser, null);
-							employeeGroupInfo.setLogActivity(logActivity);
+							
 							if(groupMemberInfo.getMemberRole() != null){
 								TypeHierarchy typeHierarchy = commonLocalService.getTypeHierarchyByDescription(groupMemberInfo.getMemberRole());
 								employeeGroupInfo.setGroupRole(typeHierarchy);
 							}
+							LogActivity logActivity = LocalHelper.getLogActivity(currentUser, employeeGroupInfo.getLogActivity());
+							employeeGroupInfo.setLogActivity(logActivity);
 							if(id <= 0)
 								em.persist(employeeGroupInfo);
 							else

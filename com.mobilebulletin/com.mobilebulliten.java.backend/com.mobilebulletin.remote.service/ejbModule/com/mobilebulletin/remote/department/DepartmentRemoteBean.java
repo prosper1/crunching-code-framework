@@ -95,7 +95,22 @@ public class DepartmentRemoteBean implements DepartmentRemoteService
 			e.printStackTrace();
 		}
 		return response;
-    }	  
+    }
+
+	@Override
+	public GetDepartmentsByCompanyIdResponse getDepartmentsByCompanyId(
+			GetDepartmentsByCompanyIdRequest request) throws Exception {
+		GetDepartmentsByCompanyIdResponse response = new GetDepartmentsByCompanyIdResponse();
+		
+		try
+		{
+			response = (GetDepartmentsByCompanyIdResponse) new DepartmentRequestQueue().send2Queue(request);
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return response;
+	}	  
 }	  
 
 

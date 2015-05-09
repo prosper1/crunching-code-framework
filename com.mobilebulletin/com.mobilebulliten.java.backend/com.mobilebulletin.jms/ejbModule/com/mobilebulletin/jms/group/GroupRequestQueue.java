@@ -21,7 +21,9 @@ import org.jboss.logging.Logger;
 
 
 
+
 import com.mobilebulletin.request.group.*;
+import com.mobilebulletin.response.group.GetGroupsByCompanyIdResponse;
 
 
 
@@ -122,6 +124,10 @@ public class GroupRequestQueue implements Runnable
 			}else               if(object instanceof ImportGroupFromExcelRequest)
 			{
 				ImportGroupFromExcelRequest request = (ImportGroupFromExcelRequest)object;
+				objMsg = session.createObjectMessage(request);
+			}else               if(object instanceof GetGroupsByCompanyIdRequest)
+			{
+				GetGroupsByCompanyIdRequest request = (GetGroupsByCompanyIdRequest)object;
 				objMsg = session.createObjectMessage(request);
 			}
 

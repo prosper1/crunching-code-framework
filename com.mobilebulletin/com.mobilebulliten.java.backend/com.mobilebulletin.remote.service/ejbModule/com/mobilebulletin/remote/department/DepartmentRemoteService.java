@@ -44,6 +44,8 @@ public interface DepartmentRemoteService
           public GetDepartmentByIdResponse getDepartmentById(GetDepartmentByIdRequest request) throws Exception;
 
           public ImportDepartmentFromExcelResponse importDepartmentFromExcel(ImportDepartmentFromExcelRequest request) throws Exception;
+          
+          public GetDepartmentsByCompanyIdResponse getDepartmentsByCompanyId(GetDepartmentsByCompanyIdRequest request) throws Exception;
 }	  
 
 

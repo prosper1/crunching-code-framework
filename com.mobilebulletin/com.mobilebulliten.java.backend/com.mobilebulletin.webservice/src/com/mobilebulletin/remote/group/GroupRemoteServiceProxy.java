@@ -74,5 +74,11 @@ public class GroupRemoteServiceProxy implements com.mobilebulletin.remote.group.
     return groupRemoteService.getGroupById(arg0);
   }
   
+  public com.mobilebulletin.remote.group.GetGroupsByCompanyIdResponse getGroupsByCompanyId(com.mobilebulletin.remote.group.GetGroupsByCompanyIdRequest arg0) throws java.rmi.RemoteException{
+    if (groupRemoteService == null)
+      _initGroupRemoteServiceProxy();
+    return groupRemoteService.getGroupsByCompanyId(arg0);
+  }
+  
   
 }

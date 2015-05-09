@@ -983,3 +983,264 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.
 
 !ENTRY org.eclipse.core.resources 2 10035 2015-05-06 18:22:56.699
 !MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 18:27:33.796
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 18:27:33.846
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 18:27:50.117
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 18:27:50.120
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 18:27:52.637
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 18:27:52.640
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 18:29:32.715
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 18:29:32.718
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 18:29:47.378
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 18:29:47.380
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 18:29:52.440
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 18:29:52.443
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 18:32:32.266
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 18:32:32.269
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 18:32:42.702
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 18:32:42.704
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 18:32:45.693
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 18:32:45.696
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 18:37:01.819
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 18:37:01.822
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 18:37:11.462
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 18:37:11.465
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 18:37:18.593
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 18:37:18.596
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 18:38:18.262
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 18:38:18.265
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.ui 4 4 2015-05-07 18:43:17.764
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.disable.grammar.constraints
+
+!ENTRY org.eclipse.ui 4 4 2015-05-07 18:43:17.764
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.reload.dependencies
+
+!ENTRY org.eclipse.ui 4 4 2015-05-07 18:43:17.765
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.disable.grammar.constraints
+
+!ENTRY org.eclipse.ui 4 4 2015-05-07 18:43:17.765
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.reload.dependencies
+
+!ENTRY org.eclipse.ui 4 4 2015-05-07 18:43:17.766
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.disable.grammar.constraints
+
+!ENTRY org.eclipse.ui 4 4 2015-05-07 18:43:17.766
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.reload.dependencies
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 16973826 2015-05-07 18:53:21.760
+!MESSAGE The server was shutdown forcefully. All processes were terminated.
+
+!ENTRY org.eclipse.ui 4 4 2015-05-07 18:58:13.077
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.disable.grammar.constraints
+
+!ENTRY org.eclipse.ui 4 4 2015-05-07 18:58:13.086
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.reload.dependencies
+
+!ENTRY org.eclipse.ui 4 4 2015-05-07 18:58:13.093
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.disable.grammar.constraints
+
+!ENTRY org.eclipse.ui 4 4 2015-05-07 18:58:13.093
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.reload.dependencies
+
+!ENTRY org.eclipse.ui 4 4 2015-05-07 18:58:13.094
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.disable.grammar.constraints
+
+!ENTRY org.eclipse.ui 4 4 2015-05-07 18:58:13.094
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.reload.dependencies
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:01:23.832
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:01:23.837
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:01:37.019
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:01:37.021
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:01:44.919
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:01:44.922
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:06:27.334
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:06:27.337
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:06:38.126
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:06:38.128
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:06:43.284
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:06:43.287
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:08:19.354
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:08:19.357
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:08:38.391
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:08:38.394
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:08:41.068
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:08:41.071
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:10:03.809
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:10:03.812
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:10:14.445
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:10:14.448
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:10:17.852
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:10:17.855
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:20:03.921
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:20:03.924
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:20:06.814
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:20:06.817
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:20:11.159
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:20:11.162
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:21:07.219
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:21:07.222
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:21:19.275
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:21:19.278
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:21:24.185
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:21:24.188
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:22:09.070
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:22:09.072
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:23:27.808
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:23:27.811
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:23:29.912
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:23:29.914
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:23:34.421
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:23:34.424
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:23:42.563
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:23:42.566
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:23:44.627
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:23:44.630
+!MESSAGE /wse/wsdl/wsdl_result_content.jsp

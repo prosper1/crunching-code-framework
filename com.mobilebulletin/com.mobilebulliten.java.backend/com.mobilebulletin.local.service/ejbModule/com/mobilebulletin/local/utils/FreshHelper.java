@@ -168,7 +168,7 @@ public static void main(String[] args) {
 			
 		
 		try {
-			System.out.println(FreshHelper.encryptPrimaryKeyBytes(1));
+			System.out.println(FreshHelper.encryptPrimaryKeyBytes(6));
 			//System.out.println(FreshHelper.byteArrayToHexString(FreshHelper.encryptBytes("password")));
 		} catch (InvalidKeyException e) {
 			// TODO Auto-generated catch block

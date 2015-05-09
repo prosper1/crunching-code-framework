@@ -54,7 +54,7 @@
 			</many-to-one>	
 			
 			<many-to-one name="departmentRole" target-entity="com.common.type.TypeHierarchy" fetch="LAZY" >
-				<join-column name="DEPARTMENT_ID"/>
+				<join-column name="DEPARTMENTROLE_ID"/>
 				<cascade>
 					<cascade-refresh/>
 					<cascade-detach/>

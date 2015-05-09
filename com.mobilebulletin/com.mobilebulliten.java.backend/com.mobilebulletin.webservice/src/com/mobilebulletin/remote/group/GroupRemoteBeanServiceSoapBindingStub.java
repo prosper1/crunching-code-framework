@@ -16,13 +16,24 @@ public class GroupRemoteBeanServiceSoapBindingStub extends org.apache.axis.clien
     static org.apache.axis.description.OperationDesc [] _operations;
 
     static {
-        _operations = new org.apache.axis.description.OperationDesc[5];
+        _operations = new org.apache.axis.description.OperationDesc[6];
         _initOperationDesc1();
     }
 
     private static void _initOperationDesc1(){
         org.apache.axis.description.OperationDesc oper;
         org.apache.axis.description.ParameterDesc param;
+        oper = new org.apache.axis.description.OperationDesc();
+        oper.setName("getGroupsByCompanyId");
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg0"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://group.remote.mobilebulletin.com/", "getGroupsByCompanyIdRequest"), com.mobilebulletin.remote.group.GetGroupsByCompanyIdRequest.class, false, false);
+        oper.addParameter(param);
+        oper.setReturnType(new javax.xml.namespace.QName("http://group.remote.mobilebulletin.com/", "getGroupsByCompanyIdResponse"));
+        oper.setReturnClass(com.mobilebulletin.remote.group.GetGroupsByCompanyIdResponse.class);
+        oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
+        oper.setStyle(org.apache.axis.constants.Style.RPC);
+        oper.setUse(org.apache.axis.constants.Use.LITERAL);
+        _operations[0] = oper;
+
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("addGroup");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg0"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://group.remote.mobilebulletin.com/", "addGroupRequest"), com.mobilebulletin.remote.group.AddGroupRequest.class, false, false);
@@ -32,7 +43,7 @@ public class GroupRemoteBeanServiceSoapBindingStub extends org.apache.axis.clien
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[0] = oper;
+        _operations[1] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("updateGroupInfo");
@@ -43,7 +54,7 @@ public class GroupRemoteBeanServiceSoapBindingStub extends org.apache.axis.clien
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[1] = oper;
+        _operations[2] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("updateGroupMembers");
@@ -54,7 +65,7 @@ public class GroupRemoteBeanServiceSoapBindingStub extends org.apache.axis.clien
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[2] = oper;
+        _operations[3] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("importGroupFromExcel");
@@ -65,7 +76,7 @@ public class GroupRemoteBeanServiceSoapBindingStub extends org.apache.axis.clien
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[3] = oper;
+        _operations[4] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getGroupById");
@@ -76,7 +87,7 @@ public class GroupRemoteBeanServiceSoapBindingStub extends org.apache.axis.clien
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[4] = oper;
+        _operations[5] = oper;
 
     }
 
@@ -151,6 +162,20 @@ public class GroupRemoteBeanServiceSoapBindingStub extends org.apache.axis.clien
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
+            qName = new javax.xml.namespace.QName("http://group.remote.mobilebulletin.com/", "getGroupsByCompanyIdRequest");
+            cachedSerQNames.add(qName);
+            cls = com.mobilebulletin.remote.group.GetGroupsByCompanyIdRequest.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
+            qName = new javax.xml.namespace.QName("http://group.remote.mobilebulletin.com/", "getGroupsByCompanyIdResponse");
+            cachedSerQNames.add(qName);
+            cls = com.mobilebulletin.remote.group.GetGroupsByCompanyIdResponse.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
             qName = new javax.xml.namespace.QName("http://group.remote.mobilebulletin.com/", "groupInfo");
             cachedSerQNames.add(qName);
             cls = com.mobilebulletin.remote.group.GroupInfo.class;
@@ -175,6 +200,13 @@ public class GroupRemoteBeanServiceSoapBindingStub extends org.apache.axis.clien
             qName = new javax.xml.namespace.QName("http://group.remote.mobilebulletin.com/", "importGroupFromExcelResponse");
             cachedSerQNames.add(qName);
             cls = com.mobilebulletin.remote.group.ImportGroupFromExcelResponse.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
+            qName = new javax.xml.namespace.QName("http://group.remote.mobilebulletin.com/", "lightGroupInfo");
+            cachedSerQNames.add(qName);
+            cls = com.mobilebulletin.remote.group.LightGroupInfo.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
@@ -294,12 +326,46 @@ public class GroupRemoteBeanServiceSoapBindingStub extends org.apache.axis.clien
         }
     }
 
-    public com.mobilebulletin.remote.group.AddGroupResponse addGroup(com.mobilebulletin.remote.group.AddGroupRequest arg0) throws java.rmi.RemoteException {
+    public com.mobilebulletin.remote.group.GetGroupsByCompanyIdResponse getGroupsByCompanyId(com.mobilebulletin.remote.group.GetGroupsByCompanyIdRequest arg0) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
         _call.setOperation(_operations[0]);
+        _call.setUseSOAPAction(true);
+        _call.setSOAPActionURI("");
+        _call.setEncodingStyle(null);
+        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+        _call.setOperationName(new javax.xml.namespace.QName("http://group.remote.mobilebulletin.com/", "getGroupsByCompanyId"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {arg0});
+
+        if (_resp instanceof java.rmi.RemoteException) {
+            throw (java.rmi.RemoteException)_resp;
+        }
+        else {
+            extractAttachments(_call);
+            try {
+                return (com.mobilebulletin.remote.group.GetGroupsByCompanyIdResponse) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (com.mobilebulletin.remote.group.GetGroupsByCompanyIdResponse) org.apache.axis.utils.JavaUtils.convert(_resp, com.mobilebulletin.remote.group.GetGroupsByCompanyIdResponse.class);
+            }
+        }
+  } catch (org.apache.axis.AxisFault axisFaultException) {
+  throw axisFaultException;
+}
+    }
+
+    public com.mobilebulletin.remote.group.AddGroupResponse addGroup(com.mobilebulletin.remote.group.AddGroupRequest arg0) throws java.rmi.RemoteException {
+        if (super.cachedEndpoint == null) {
+            throw new org.apache.axis.NoEndPointException();
+        }
+        org.apache.axis.client.Call _call = createCall();
+        _call.setOperation(_operations[1]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -333,7 +399,7 @@ public class GroupRemoteBeanServiceSoapBindingStub extends org.apache.axis.clien
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[1]);
+        _call.setOperation(_operations[2]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -367,7 +433,7 @@ public class GroupRemoteBeanServiceSoapBindingStub extends org.apache.axis.clien
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[2]);
+        _call.setOperation(_operations[3]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -401,7 +467,7 @@ public class GroupRemoteBeanServiceSoapBindingStub extends org.apache.axis.clien
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[3]);
+        _call.setOperation(_operations[4]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -435,7 +501,7 @@ public class GroupRemoteBeanServiceSoapBindingStub extends org.apache.axis.clien
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[4]);
+        _call.setOperation(_operations[5]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);

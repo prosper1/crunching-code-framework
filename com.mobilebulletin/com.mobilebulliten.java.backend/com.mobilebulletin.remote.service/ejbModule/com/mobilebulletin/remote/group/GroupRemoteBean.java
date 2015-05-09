@@ -95,7 +95,22 @@ public class GroupRemoteBean implements GroupRemoteService
 			e.printStackTrace();
 		}
 		return response;
-    }	  
+    }
+
+	@Override
+	public GetGroupsByCompanyIdResponse getGroupsByCompanyId(
+			GetGroupsByCompanyIdRequest request) throws Exception {
+		GetGroupsByCompanyIdResponse response = new GetGroupsByCompanyIdResponse();
+		
+		try
+		{
+			response = (GetGroupsByCompanyIdResponse) new GroupRequestQueue().send2Queue(request);
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return response;
+	}	  
 }	  
 
 

@@ -21,9 +21,9 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
-
 import org.jboss.ejb3.annotation.ResourceAdapter;
 import org.jboss.logging.Logger;
+
 
 
 
@@ -172,7 +172,13 @@ public void setCreateReplyObjectMessage(ObjectMessage replyMessage,ObjectMessage
 	                 ImportGroupFromExcelRequest request = (ImportGroupFromExcelRequest)receivedObject.getObject();
 	                 response = groupLocalService.importGroupFromExcel(request);	
 	                 replyMessage.setObject(response);
-                }
+                }else               if(receivedObject.getObject() instanceof GetGroupsByCompanyIdRequest)
+                {
+                	GetGroupsByCompanyIdResponse response = new GetGroupsByCompanyIdResponse();	
+	                 GetGroupsByCompanyIdRequest request = (GetGroupsByCompanyIdRequest)receivedObject.getObject();
+	                 response = groupLocalService.getGroupsByCompanyId(request);	
+	                 replyMessage.setObject(response);
+               }
 
 		  //TODO Autogenerator to complete
 		  

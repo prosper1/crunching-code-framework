@@ -126,12 +126,13 @@ public class DepartmentLocalBean implements DepartmentLocalService
 							}
 							employeeDepartmentInfo.setDepartmentInformation(departmentInformation);
 							employeeDepartmentInfo.setUserInformation(userInformation);
-							LogActivity logActivity = LocalHelper.getLogActivity(currentUser, null);
-							employeeDepartmentInfo.setLogActivity(logActivity);
 							if(departmentMemberInfo.getMemberRole() != null){
 								TypeHierarchy typeHierarchy = commonLocalService.getTypeHierarchyByDescription(departmentMemberInfo.getMemberRole());
 								employeeDepartmentInfo.setDepartmentRole(typeHierarchy);
 							}
+							LogActivity logActivity = LocalHelper.getLogActivity(currentUser, employeeDepartmentInfo.getLogActivity());
+							employeeDepartmentInfo.setLogActivity(logActivity);
+							
 							if(id <= 0)
 								em.persist(employeeDepartmentInfo);
 							else

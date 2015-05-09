@@ -21,7 +21,9 @@ import org.jboss.logging.Logger;
 
 
 
+
 import com.mobilebulletin.request.department.*;
+import com.mobilebulletin.response.department.GetDepartmentsByCompanyIdResponse;
 
 
 
@@ -123,7 +125,12 @@ public class DepartmentRequestQueue implements Runnable
 			{
 				ImportDepartmentFromExcelRequest request = (ImportDepartmentFromExcelRequest)object;
 				objMsg = session.createObjectMessage(request);
+			}else               if(object instanceof GetDepartmentsByCompanyIdRequest)
+			{
+				GetDepartmentsByCompanyIdRequest request = (GetDepartmentsByCompanyIdRequest)object;
+				objMsg = session.createObjectMessage(request);
 			}
+              
 
 		  //TODO Autogenerator to complete
 	

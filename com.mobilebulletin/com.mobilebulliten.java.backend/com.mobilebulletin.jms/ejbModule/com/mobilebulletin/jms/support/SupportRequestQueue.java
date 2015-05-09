@@ -64,8 +64,8 @@ public class SupportRequestQueue implements Runnable
 	 {		 
 		  ctx = new InitialContext();
 		  
-		  String requestQueueName ="queue/SupportRequestQueue";
-		  replyQueueName ="queue/SupportReplyQueue";
+		  String requestQueueName ="queue/SupportMOBBRequestQueue";
+		  replyQueueName ="queue/SupportMOBBReplyQueue";
 		  String connectionFactoryName = "/ConnectionFactory";
 		  
 		  //Sending Message MDB

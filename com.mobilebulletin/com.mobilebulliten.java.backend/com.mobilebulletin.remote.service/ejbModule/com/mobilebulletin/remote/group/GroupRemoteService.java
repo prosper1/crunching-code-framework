@@ -44,6 +44,8 @@ public interface GroupRemoteService
           public GetGroupByIdResponse getGroupById(GetGroupByIdRequest request) throws Exception;
 
           public ImportGroupFromExcelResponse importGroupFromExcel(ImportGroupFromExcelRequest request) throws Exception;
+          
+          public GetGroupsByCompanyIdResponse getGroupsByCompanyId(GetGroupsByCompanyIdRequest request) throws Exception;
 }	  
 
 

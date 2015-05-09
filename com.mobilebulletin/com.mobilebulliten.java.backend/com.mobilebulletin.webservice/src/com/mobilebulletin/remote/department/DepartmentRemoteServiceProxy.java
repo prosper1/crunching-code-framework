@@ -74,5 +74,11 @@ public class DepartmentRemoteServiceProxy implements com.mobilebulletin.remote.d
     return departmentRemoteService.addDepartment(arg0);
   }
   
+  public com.mobilebulletin.remote.department.GetDepartmentsByCompanyIdResponse getDepartmentsByCompanyId(com.mobilebulletin.remote.department.GetDepartmentsByCompanyIdRequest arg0) throws java.rmi.RemoteException{
+    if (departmentRemoteService == null)
+      _initDepartmentRemoteServiceProxy();
+    return departmentRemoteService.getDepartmentsByCompanyId(arg0);
+  }
+  
   
 }
