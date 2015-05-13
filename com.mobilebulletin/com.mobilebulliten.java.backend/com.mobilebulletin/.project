@@ -8,6 +8,7 @@
 		<project>com.mobilebulletin.remote.service</project>
 		<project>com.mobilebulletin.request.reply</project>
 		<project>com.mobilebulletin.model</project>
+		<project>com.mobilebulletin.remote.client</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

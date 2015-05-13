@@ -30,7 +30,7 @@ import com.mobilebulletin.group.GroupInformation;
 import com.mobilebulletin.local.common.CommonLocalService;
 import com.mobilebulletin.local.utils.FreshHelper;
 import com.mobilebulletin.local.utils.LocalHelper;
-import com.mobilebulletin.response.security.CheckUserResponse;
+import com.mobilebulletin.response.security.CheckUserReply;
 import com.mobilebulletin.response.util.SERVRESPONSE;
 
 
@@ -67,8 +67,8 @@ public class EmployeeLocalBean implements EmployeeLocalService
 	@EJB
 	private CommonLocalService commonLocalService;
 
-    public AddEmployeeResponse addEmployee(AddEmployeeRequest request) throws Exception{
-	      		AddEmployeeResponse response = new AddEmployeeResponse();
+    public AddEmployeeReply addEmployee(AddEmployeeRequest request) throws Exception{
+	      		AddEmployeeReply response = new AddEmployeeReply();
 		
 		try
 		{
@@ -178,8 +178,8 @@ public class EmployeeLocalBean implements EmployeeLocalService
 		return response;
     }	  
 
-    public RemoveEmployeeResponse removeEmployee(RemoveEmployeeRequest request) throws Exception{
-	      		RemoveEmployeeResponse response = new RemoveEmployeeResponse();
+    public RemoveEmployeeReply removeEmployee(RemoveEmployeeRequest request) throws Exception{
+	      		RemoveEmployeeReply response = new RemoveEmployeeReply();
 		
 		try
 		{
@@ -196,8 +196,8 @@ public class EmployeeLocalBean implements EmployeeLocalService
 		return response;
     }	  
 
-    public UpdateEmployeeResponse updateEmployee(UpdateEmployeeRequest request) throws Exception{
-	      		UpdateEmployeeResponse response = new UpdateEmployeeResponse();
+    public UpdateEmployeeReply updateEmployee(UpdateEmployeeRequest request) throws Exception{
+	      		UpdateEmployeeReply response = new UpdateEmployeeReply();
 		
 		try
 		{
@@ -214,8 +214,8 @@ public class EmployeeLocalBean implements EmployeeLocalService
 		return response;
     }	  
 
-    public ImportEmployeesResponse importEmployees(ImportEmployeesRequest request) throws Exception{
-	      		ImportEmployeesResponse response = new ImportEmployeesResponse();
+    public ImportEmployeesReply importEmployees(ImportEmployeesRequest request) throws Exception{
+	      		ImportEmployeesReply response = new ImportEmployeesReply();
 		
 		try
 		{
@@ -232,8 +232,8 @@ public class EmployeeLocalBean implements EmployeeLocalService
 		return response;
     }	  
 
-    public ImportEmployeesFromDatabaseResponse importEmployeesFromDatabase(ImportEmployeesFromDatabaseRequest request) throws Exception{
-	      		ImportEmployeesFromDatabaseResponse response = new ImportEmployeesFromDatabaseResponse();
+    public ImportEmployeesFromDatabaseReply importEmployeesFromDatabase(ImportEmployeesFromDatabaseRequest request) throws Exception{
+	      		ImportEmployeesFromDatabaseReply response = new ImportEmployeesFromDatabaseReply();
 		
 		try
 		{
@@ -250,8 +250,8 @@ public class EmployeeLocalBean implements EmployeeLocalService
 		return response;
     }	  
 
-    public GetEmployeeByIdResponse getEmployeeById(GetEmployeeByIdRequest request) throws Exception{
-	      		GetEmployeeByIdResponse response = new GetEmployeeByIdResponse();
+    public GetEmployeeByIdReply getEmployeeById(GetEmployeeByIdRequest request) throws Exception{
+	      		GetEmployeeByIdReply response = new GetEmployeeByIdReply();
 		
 		try
 		{
@@ -268,8 +268,8 @@ public class EmployeeLocalBean implements EmployeeLocalService
 		return response;
     }	  
 
-    public GetEmployeesFromCompanyResponse getEmployeesFromCompany(GetEmployeesFromCompanyRequest request) throws Exception{
-	      		GetEmployeesFromCompanyResponse response = new GetEmployeesFromCompanyResponse();
+    public GetEmployeesFromCompanyReply getEmployeesFromCompany(GetEmployeesFromCompanyRequest request) throws Exception{
+	      		GetEmployeesFromCompanyReply response = new GetEmployeesFromCompanyReply();
 		
 		try
 		{

@@ -13,28 +13,28 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.mobilebulletin.remote.security.ActivateAccountRequest;
-import com.mobilebulletin.remote.security.ActivateAccountResponse;
-import com.mobilebulletin.remote.security.ChangePasswordRequest;
-import com.mobilebulletin.remote.security.ChangePasswordResponse;
-import com.mobilebulletin.remote.security.CheckUserRequest;
-import com.mobilebulletin.remote.security.CheckUserResponse;
-import com.mobilebulletin.remote.security.ForgotPasswordRequest;
-import com.mobilebulletin.remote.security.ForgotPasswordResponse;
-import com.mobilebulletin.remote.security.GenerateTypesRequest;
-import com.mobilebulletin.remote.security.GenerateTypesResponse;
-import com.mobilebulletin.remote.security.GetUserInfoRequest;
-import com.mobilebulletin.remote.security.GetUserInfoResponse;
 import com.mobilebulletin.remote.security.SecurityRemoteService;
-import com.mobilebulletin.remote.security.SecurityRemoteServiceProxy;
-import com.mobilebulletin.remote.security.SignInRequest;
-import com.mobilebulletin.remote.security.SignInResponse;
-import com.mobilebulletin.remote.security.SignUpUserRequest;
-import com.mobilebulletin.remote.security.SignUpUserResponse;
-import com.mobilebulletin.remote.security.UpdateUserInfoRequest;
-import com.mobilebulletin.remote.security.UpdateUserInfoResponse;
-import com.mobilebulletin.remote.security.UpdateUserRoleRequest;
-import com.mobilebulletin.remote.security.UpdateUserRoleResponse;
+import com.mobilebulletin.request.security.ActivateAccountRequest;
+import com.mobilebulletin.request.security.ChangePasswordRequest;
+import com.mobilebulletin.request.security.CheckUserRequest;
+import com.mobilebulletin.request.security.ForgotPasswordRequest;
+import com.mobilebulletin.request.security.GenerateTypesRequest;
+import com.mobilebulletin.request.security.GetUserInfoRequest;
+import com.mobilebulletin.request.security.SignInRequest;
+import com.mobilebulletin.request.security.SignUpUserRequest;
+import com.mobilebulletin.request.security.UpdateUserInfoRequest;
+import com.mobilebulletin.request.security.UpdateUserRoleRequest;
+import com.mobilebulletin.response.security.ActivateAccountReply;
+import com.mobilebulletin.response.security.ChangePasswordReply;
+import com.mobilebulletin.response.security.CheckUserReply;
+import com.mobilebulletin.response.security.ForgotPasswordReply;
+import com.mobilebulletin.response.security.GenerateTypesReply;
+import com.mobilebulletin.response.security.GetUserInfoReply;
+import com.mobilebulletin.response.security.SignInReply;
+import com.mobilebulletin.response.security.SignUpUserReply;
+import com.mobilebulletin.response.security.UpdateUserInfoReply;
+import com.mobilebulletin.response.security.UpdateUserRoleReply;
+import com.mobilebulletin.webservice.client.SecurityServiceConnector;
 
 
 
@@ -76,10 +76,10 @@ public class SecurityServiceTest
 	//@Test
 	public void testActivateAccount() 
 	{
-		SecurityRemoteService securityRemoteService = new SecurityRemoteServiceProxy();
+		SecurityRemoteService securityRemoteService = SecurityServiceConnector.getServicePort();
 		
 		ActivateAccountRequest request = new ActivateAccountRequest();
-		ActivateAccountResponse response = new ActivateAccountResponse();
+		ActivateAccountReply response = new ActivateAccountReply();
 		
 		try
 		{ 
@@ -88,16 +88,16 @@ public class SecurityServiceTest
 		{
 			e.printStackTrace();
 		}
-	   // assertEquals("Result", SERVRESPONSE.Successful.getDescription(),response.getResponse().getDescription());
+	   // assertEquals("Result", SERVRESPONSE.Successful.getDescription(),response.getReply().getDescription());
 	}
 
 	//@Test
 	public void testChangePassword() 
 	{
-		SecurityRemoteService securityRemoteService = new SecurityRemoteServiceProxy();
+		SecurityRemoteService securityRemoteService = SecurityServiceConnector.getServicePort();
 		
 		ChangePasswordRequest request = new ChangePasswordRequest();
-		ChangePasswordResponse response = new ChangePasswordResponse();
+		ChangePasswordReply response = new ChangePasswordReply();
 		
 		try
 		{ 
@@ -106,16 +106,16 @@ public class SecurityServiceTest
 		{
 			e.printStackTrace();
 		}
-	   // assertEquals("Result", SERVRESPONSE.Successful.getDescription(),response.getResponse().getDescription());
+	   // assertEquals("Result", SERVRESPONSE.Successful.getDescription(),response.getReply().getDescription());
 	}
 
 	//@Test
 	public void testCheckUser() 
 	{
-		SecurityRemoteService securityRemoteService = new SecurityRemoteServiceProxy();
+		SecurityRemoteService securityRemoteService = SecurityServiceConnector.getServicePort();
 		
 		CheckUserRequest request = new CheckUserRequest();
-		CheckUserResponse response = new CheckUserResponse();
+		CheckUserReply response = new CheckUserReply();
 		
 		try
 		{ 
@@ -124,16 +124,16 @@ public class SecurityServiceTest
 		{
 			e.printStackTrace();
 		}
-	  //  assertEquals("Result", SERVRESPONSE.Successful.getDescription(),response.getResponse().getDescription());
+	  //  assertEquals("Result", SERVRESPONSE.Successful.getDescription(),response.getReply().getDescription());
 	}
 
 	//@Test
 	public void testUpdateUserRole() 
 	{
-		SecurityRemoteService securityRemoteService = new SecurityRemoteServiceProxy();
+		SecurityRemoteService securityRemoteService = SecurityServiceConnector.getServicePort();
 		
 		UpdateUserRoleRequest request = new UpdateUserRoleRequest();
-		UpdateUserRoleResponse response = new UpdateUserRoleResponse();
+		UpdateUserRoleReply response = new UpdateUserRoleReply();
 		
 		try
 		{ 
@@ -142,16 +142,16 @@ public class SecurityServiceTest
 		{
 			e.printStackTrace();
 		}
-	    //assertEquals("Result", SERVRESPONSE.Successful.getDescription(),response.getResponse().getDescription());
+	    //assertEquals("Result", SERVRESPONSE.Successful.getDescription(),response.getReply().getDescription());
 	}
 
 	@Test
 	public void testGenerateTypes() 
 	{
-		SecurityRemoteService securityRemoteService = new SecurityRemoteServiceProxy();
+		SecurityRemoteService securityRemoteService = SecurityServiceConnector.getServicePort();
 		
 		GenerateTypesRequest request = new GenerateTypesRequest();
-		GenerateTypesResponse response = new GenerateTypesResponse();
+		GenerateTypesReply response = new GenerateTypesReply();
 		
 		try
 		{ 
@@ -166,10 +166,10 @@ public class SecurityServiceTest
 	//@Test
 	public void testUpdateUserInfo() 
 	{
-		SecurityRemoteService securityRemoteService = new SecurityRemoteServiceProxy();
+		SecurityRemoteService securityRemoteService = SecurityServiceConnector.getServicePort();
 		
 		UpdateUserInfoRequest request = new UpdateUserInfoRequest();
-		UpdateUserInfoResponse response = new UpdateUserInfoResponse();
+		UpdateUserInfoReply response = new UpdateUserInfoReply();
 		
 		try
 		{ 
@@ -178,16 +178,16 @@ public class SecurityServiceTest
 		{
 			e.printStackTrace();
 		}
-	   // assertEquals("Result", SERVRESPONSE.Successful.getDescription(),response.getResponse().getDescription());
+	   // assertEquals("Result", SERVRESPONSE.Successful.getDescription(),response.getReply().getDescription());
 	}
 
 	//@Test
 	public void testSignUpUser() 
 	{
-		SecurityRemoteService securityRemoteService = new SecurityRemoteServiceProxy();
+		SecurityRemoteService securityRemoteService = SecurityServiceConnector.getServicePort();
 		
 		SignUpUserRequest request = new SignUpUserRequest();
-		SignUpUserResponse response = new SignUpUserResponse();
+		SignUpUserReply response = new SignUpUserReply();
 		
 		try
 		{ 
@@ -196,16 +196,16 @@ public class SecurityServiceTest
 		{
 			e.printStackTrace();
 		}
-	   // assertEquals("Result", SERVRESPONSE.Successful.getDescription(),response.getResponse().getDescription());
+	   // assertEquals("Result", SERVRESPONSE.Successful.getDescription(),response.getReply().getDescription());
 	}
 
 	//@Test
 	public void testSignIn() 
 	{
-		SecurityRemoteService securityRemoteService = new SecurityRemoteServiceProxy();
+		SecurityRemoteService securityRemoteService = SecurityServiceConnector.getServicePort();
 		
 		SignInRequest request = new SignInRequest();
-		SignInResponse response = new SignInResponse();
+		SignInReply response = new SignInReply();
 		
 		try
 		{ 
@@ -214,16 +214,16 @@ public class SecurityServiceTest
 		{
 			e.printStackTrace();
 		}
-	   // assertEquals("Result", SERVRESPONSE.Successful.getDescription(),response.getResponse().getDescription());
+	   // assertEquals("Result", SERVRESPONSE.Successful.getDescription(),response.getReply().getDescription());
 	}
 
 	//@Test
 	public void testForgotPassword() 
 	{
-		SecurityRemoteService securityRemoteService = new SecurityRemoteServiceProxy();
+		SecurityRemoteService securityRemoteService = SecurityServiceConnector.getServicePort();
 		
 		ForgotPasswordRequest request = new ForgotPasswordRequest();
-		ForgotPasswordResponse response = new ForgotPasswordResponse();
+		ForgotPasswordReply response = new ForgotPasswordReply();
 		
 		try
 		{ 
@@ -232,16 +232,16 @@ public class SecurityServiceTest
 		{
 			e.printStackTrace();
 		}
-	    //assertEquals("Result", SERVRESPONSE.Successful.getDescription(),response.getResponse().getDescription());
+	    //assertEquals("Result", SERVRESPONSE.Successful.getDescription(),response.getReply().getDescription());
 	}
 
 	//@Test
 	public void testGetUserInfo() 
 	{
-		SecurityRemoteService securityRemoteService = new SecurityRemoteServiceProxy();
+		SecurityRemoteService securityRemoteService = SecurityServiceConnector.getServicePort();
 		
 		GetUserInfoRequest request = new GetUserInfoRequest();
-		GetUserInfoResponse response = new GetUserInfoResponse();
+		GetUserInfoReply response = new GetUserInfoReply();
 		
 		try
 		{ 
@@ -250,7 +250,7 @@ public class SecurityServiceTest
 		{
 			e.printStackTrace();
 		}
-	   // assertEquals("Result", SERVRESPONSE.Successful.getDescription(),response.getResponse().getDescription());
+	   // assertEquals("Result", SERVRESPONSE.Successful.getDescription(),response.getReply().getDescription());
 	}
 
 	@After

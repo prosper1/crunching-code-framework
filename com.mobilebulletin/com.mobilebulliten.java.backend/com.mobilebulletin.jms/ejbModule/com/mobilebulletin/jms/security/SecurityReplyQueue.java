@@ -144,61 +144,61 @@ public void setCreateReplyObjectMessage(ObjectMessage replyMessage,ObjectMessage
 
               if(receivedObject.getObject() instanceof ActivateAccountRequest)
                {
-	                 ActivateAccountResponse response = new ActivateAccountResponse();	
+	                 ActivateAccountReply response = new ActivateAccountReply();	
 	                 ActivateAccountRequest request = (ActivateAccountRequest)receivedObject.getObject();
 	                 response = securityLocalService.activateAccount(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof ChangePasswordRequest)
                {
-	                 ChangePasswordResponse response = new ChangePasswordResponse();	
+	                 ChangePasswordReply response = new ChangePasswordReply();	
 	                 ChangePasswordRequest request = (ChangePasswordRequest)receivedObject.getObject();
 	                 response = securityLocalService.changePassword(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof CheckUserRequest)
                {
-	                 CheckUserResponse response = new CheckUserResponse();	
+	                 CheckUserReply response = new CheckUserReply();	
 	                 CheckUserRequest request = (CheckUserRequest)receivedObject.getObject();
 	                 response = securityLocalService.checkUser(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof UpdateUserRoleRequest)
                {
-	                 UpdateUserRoleResponse response = new UpdateUserRoleResponse();	
+	                 UpdateUserRoleReply response = new UpdateUserRoleReply();	
 	                 UpdateUserRoleRequest request = (UpdateUserRoleRequest)receivedObject.getObject();
 	                 response = securityLocalService.updateUserRole(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof GenerateTypesRequest)
                {
-	                 GenerateTypesResponse response = new GenerateTypesResponse();	
+	                 GenerateTypesReply response = new GenerateTypesReply();	
 	                 GenerateTypesRequest request = (GenerateTypesRequest)receivedObject.getObject();
 	                 response = securityLocalService.generateTypes(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof UpdateUserInfoRequest)
                {
-	                 UpdateUserInfoResponse response = new UpdateUserInfoResponse();	
+	                 UpdateUserInfoReply response = new UpdateUserInfoReply();	
 	                 UpdateUserInfoRequest request = (UpdateUserInfoRequest)receivedObject.getObject();
 	                 response = securityLocalService.updateUserInfo(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof SignUpUserRequest)
                {
-	                 SignUpUserResponse response = new SignUpUserResponse();	
+	                 SignUpUserReply response = new SignUpUserReply();	
 	                 SignUpUserRequest request = (SignUpUserRequest)receivedObject.getObject();
 	                 response = securityLocalService.signUpUser(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof SignInRequest)
                {
-	                 SignInResponse response = new SignInResponse();	
+	                 SignInReply response = new SignInReply();	
 	                 SignInRequest request = (SignInRequest)receivedObject.getObject();
 	                 response = securityLocalService.signIn(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof ForgotPasswordRequest)
                {
-	                 ForgotPasswordResponse response = new ForgotPasswordResponse();	
+	                 ForgotPasswordReply response = new ForgotPasswordReply();	
 	                 ForgotPasswordRequest request = (ForgotPasswordRequest)receivedObject.getObject();
 	                 response = securityLocalService.forgotPassword(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof GetUserInfoRequest)
                {
-	                 GetUserInfoResponse response = new GetUserInfoResponse();	
+	                 GetUserInfoReply response = new GetUserInfoReply();	
 	                 GetUserInfoRequest request = (GetUserInfoRequest)receivedObject.getObject();
 	                 response = securityLocalService.getUserInfo(request);	
 	                 replyMessage.setObject(response);

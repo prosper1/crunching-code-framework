@@ -23,7 +23,7 @@ import org.jboss.logging.Logger;
 
 
 import com.mobilebulletin.request.group.*;
-import com.mobilebulletin.response.group.GetGroupsByCompanyIdResponse;
+import com.mobilebulletin.response.group.GetGroupsByCompanyIdReply;
 
 
 

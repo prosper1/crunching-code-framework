@@ -144,37 +144,37 @@ public void setCreateReplyObjectMessage(ObjectMessage replyMessage,ObjectMessage
 
               if(receivedObject.getObject() instanceof AddDepartmentRequest)
                {
-	                 AddDepartmentResponse response = new AddDepartmentResponse();	
+	                 AddDepartmentReply response = new AddDepartmentReply();	
 	                 AddDepartmentRequest request = (AddDepartmentRequest)receivedObject.getObject();
 	                 response = departmentLocalService.addDepartment(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof UpdateDepartmentMembersRequest)
                {
-	                 UpdateDepartmentMembersResponse response = new UpdateDepartmentMembersResponse();	
+	                 UpdateDepartmentMembersReply response = new UpdateDepartmentMembersReply();	
 	                 UpdateDepartmentMembersRequest request = (UpdateDepartmentMembersRequest)receivedObject.getObject();
 	                 response = departmentLocalService.updateDepartmentMembers(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof UpdateDepartmentInfoRequest)
                {
-	                 UpdateDepartmentInfoResponse response = new UpdateDepartmentInfoResponse();	
+	                 UpdateDepartmentInfoReply response = new UpdateDepartmentInfoReply();	
 	                 UpdateDepartmentInfoRequest request = (UpdateDepartmentInfoRequest)receivedObject.getObject();
 	                 response = departmentLocalService.updateDepartmentInfo(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof GetDepartmentByIdRequest)
                {
-	                 GetDepartmentByIdResponse response = new GetDepartmentByIdResponse();	
+	                 GetDepartmentByIdReply response = new GetDepartmentByIdReply();	
 	                 GetDepartmentByIdRequest request = (GetDepartmentByIdRequest)receivedObject.getObject();
 	                 response = departmentLocalService.getDepartmentById(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof ImportDepartmentFromExcelRequest)
                {
-	                 ImportDepartmentFromExcelResponse response = new ImportDepartmentFromExcelResponse();	
+	                 ImportDepartmentFromExcelReply response = new ImportDepartmentFromExcelReply();	
 	                 ImportDepartmentFromExcelRequest request = (ImportDepartmentFromExcelRequest)receivedObject.getObject();
 	                 response = departmentLocalService.importDepartmentFromExcel(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof GetDepartmentsByCompanyIdRequest)
                 {
-                	GetDepartmentsByCompanyIdResponse response = new GetDepartmentsByCompanyIdResponse();	
+                	GetDepartmentsByCompanyIdReply response = new GetDepartmentsByCompanyIdReply();	
 	                 GetDepartmentsByCompanyIdRequest request = (GetDepartmentsByCompanyIdRequest)receivedObject.getObject();
 	                 response = departmentLocalService.getDepartmentsByCompanyId(request);	
 	                 replyMessage.setObject(response);

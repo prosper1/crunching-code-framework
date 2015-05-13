@@ -30,25 +30,25 @@ public interface USSDLocalService
 	
 
 
-          public SignUpUSSDResponse signUpUSSD(SignUpUSSDRequest request) throws Exception;
+          public SignUpUSSDReply signUpUSSD(SignUpUSSDRequest request) throws Exception;
 
-          public InitialRequestUSSDResponse initialRequestUSSD(InitialRequestUSSDRequest request) throws Exception;
+          public InitialRequestUSSDReply initialRequestUSSD(InitialRequestUSSDRequest request) throws Exception;
 
-          public SignInUSSDResponse signInUSSD(SignInUSSDRequest request) throws Exception;
+          public SignInUSSDReply signInUSSD(SignInUSSDRequest request) throws Exception;
 
-          public ForgotPinUSSDResponse forgotPinUSSD(ForgotPinUSSDRequest request) throws Exception;
+          public ForgotPinUSSDReply forgotPinUSSD(ForgotPinUSSDRequest request) throws Exception;
 
-          public UpdateLangaugeUSSDResponse updateLangaugeUSSD(UpdateLangaugeUSSDRequest request) throws Exception;
+          public UpdateLangaugeUSSDReply updateLangaugeUSSD(UpdateLangaugeUSSDRequest request) throws Exception;
 
-          public StopSMSNotificationUSSDResponse stopSMSNotificationUSSD(StopSMSNotificationUSSDRequest request) throws Exception;
+          public StopSMSNotificationUSSDReply stopSMSNotificationUSSD(StopSMSNotificationUSSDRequest request) throws Exception;
 
-          public SendSMSToDepartmentHeadUSSDResponse sendSMSToDepartmentHeadUSSD(SendSMSToDepartmentHeadUSSDRequest request) throws Exception;
+          public SendSMSToDepartmentHeadUSSDReply sendSMSToDepartmentHeadUSSD(SendSMSToDepartmentHeadUSSDRequest request) throws Exception;
 
-          public SendSMSToGroupHeadUSSDResponse sendSMSToGroupHeadUSSD(SendSMSToGroupHeadUSSDRequest request) throws Exception;
+          public SendSMSToGroupHeadUSSDReply sendSMSToGroupHeadUSSD(SendSMSToGroupHeadUSSDRequest request) throws Exception;
 
-          public SupportQueryUSSDResponse supportQueryUSSD(SupportQueryUSSDRequest request) throws Exception;
+          public SupportQueryUSSDReply supportQueryUSSD(SupportQueryUSSDRequest request) throws Exception;
 
-          public GetEmployeeInfoUSSDResponse getEmployeeInfoUSSD(GetEmployeeInfoUSSDRequest request) throws Exception;
+          public GetEmployeeInfoUSSDReply getEmployeeInfoUSSD(GetEmployeeInfoUSSDRequest request) throws Exception;
 }	  
 
 

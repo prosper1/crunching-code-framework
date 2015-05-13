@@ -8,6 +8,7 @@ import javax.ejb.Stateless;
 
 
 
+import javax.jws.HandlerChain;
 import javax.jws.WebService;
 
 import com.mobilebulletin.request.employee.*;
@@ -26,18 +27,18 @@ import com.mobilebulletin.response.employee.*;
 
 
 
-@WebService(endpointInterface = "com.mobilebulletin.remote.employee.EmployeeRemoteService")
+@WebService(serviceName = "MobileBulletin", portName = "EmployeeService", targetNamespace = "mobilebulletin")
 @Stateless
 public class EmployeeRemoteBean implements EmployeeRemoteService
 {
 
 
-    public AddEmployeeResponse addEmployee(AddEmployeeRequest request) throws Exception{
-	    AddEmployeeResponse response = new AddEmployeeResponse();
+    public AddEmployeeReply addEmployee(AddEmployeeRequest request) throws Exception{
+	    AddEmployeeReply response = new AddEmployeeReply();
 		
 		try
 		{
-			response = (AddEmployeeResponse) new EmployeeRequestQueue().send2Queue(request);
+			response = (AddEmployeeReply) new EmployeeRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -45,12 +46,12 @@ public class EmployeeRemoteBean implements EmployeeRemoteService
 		return response;
     }	  
 
-    public RemoveEmployeeResponse removeEmployee(RemoveEmployeeRequest request) throws Exception{
-	    RemoveEmployeeResponse response = new RemoveEmployeeResponse();
+    public RemoveEmployeeReply removeEmployee(RemoveEmployeeRequest request) throws Exception{
+	    RemoveEmployeeReply response = new RemoveEmployeeReply();
 		
 		try
 		{
-			response = (RemoveEmployeeResponse) new EmployeeRequestQueue().send2Queue(request);
+			response = (RemoveEmployeeReply) new EmployeeRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -58,12 +59,12 @@ public class EmployeeRemoteBean implements EmployeeRemoteService
 		return response;
     }	  
 
-    public UpdateEmployeeResponse updateEmployee(UpdateEmployeeRequest request) throws Exception{
-	    UpdateEmployeeResponse response = new UpdateEmployeeResponse();
+    public UpdateEmployeeReply updateEmployee(UpdateEmployeeRequest request) throws Exception{
+	    UpdateEmployeeReply response = new UpdateEmployeeReply();
 		
 		try
 		{
-			response = (UpdateEmployeeResponse) new EmployeeRequestQueue().send2Queue(request);
+			response = (UpdateEmployeeReply) new EmployeeRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -71,12 +72,12 @@ public class EmployeeRemoteBean implements EmployeeRemoteService
 		return response;
     }	  
 
-    public ImportEmployeesResponse importEmployees(ImportEmployeesRequest request) throws Exception{
-	    ImportEmployeesResponse response = new ImportEmployeesResponse();
+    public ImportEmployeesReply importEmployees(ImportEmployeesRequest request) throws Exception{
+	    ImportEmployeesReply response = new ImportEmployeesReply();
 		
 		try
 		{
-			response = (ImportEmployeesResponse) new EmployeeRequestQueue().send2Queue(request);
+			response = (ImportEmployeesReply) new EmployeeRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -84,12 +85,12 @@ public class EmployeeRemoteBean implements EmployeeRemoteService
 		return response;
     }	  
 
-    public ImportEmployeesFromDatabaseResponse importEmployeesFromDatabase(ImportEmployeesFromDatabaseRequest request) throws Exception{
-	    ImportEmployeesFromDatabaseResponse response = new ImportEmployeesFromDatabaseResponse();
+    public ImportEmployeesFromDatabaseReply importEmployeesFromDatabase(ImportEmployeesFromDatabaseRequest request) throws Exception{
+	    ImportEmployeesFromDatabaseReply response = new ImportEmployeesFromDatabaseReply();
 		
 		try
 		{
-			response = (ImportEmployeesFromDatabaseResponse) new EmployeeRequestQueue().send2Queue(request);
+			response = (ImportEmployeesFromDatabaseReply) new EmployeeRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -97,12 +98,12 @@ public class EmployeeRemoteBean implements EmployeeRemoteService
 		return response;
     }	  
 
-    public GetEmployeeByIdResponse getEmployeeById(GetEmployeeByIdRequest request) throws Exception{
-	    GetEmployeeByIdResponse response = new GetEmployeeByIdResponse();
+    public GetEmployeeByIdReply getEmployeeById(GetEmployeeByIdRequest request) throws Exception{
+	    GetEmployeeByIdReply response = new GetEmployeeByIdReply();
 		
 		try
 		{
-			response = (GetEmployeeByIdResponse) new EmployeeRequestQueue().send2Queue(request);
+			response = (GetEmployeeByIdReply) new EmployeeRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -110,12 +111,12 @@ public class EmployeeRemoteBean implements EmployeeRemoteService
 		return response;
     }	  
 
-    public GetEmployeesFromCompanyResponse getEmployeesFromCompany(GetEmployeesFromCompanyRequest request) throws Exception{
-	    GetEmployeesFromCompanyResponse response = new GetEmployeesFromCompanyResponse();
+    public GetEmployeesFromCompanyReply getEmployeesFromCompany(GetEmployeesFromCompanyRequest request) throws Exception{
+	    GetEmployeesFromCompanyReply response = new GetEmployeesFromCompanyReply();
 		
 		try
 		{
-			response = (GetEmployeesFromCompanyResponse) new EmployeeRequestQueue().send2Queue(request);
+			response = (GetEmployeesFromCompanyReply) new EmployeeRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();

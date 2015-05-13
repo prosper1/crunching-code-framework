@@ -2,16 +2,22 @@ package com.mobilebulletin.remote.support;
 
 
 
-import com.mobilebulletin.jms.support.SupportRequestQueue;
-
 import javax.ejb.Stateless;
-
-
-
 import javax.jws.WebService;
 
-import com.mobilebulletin.request.support.*;
-import com.mobilebulletin.response.support.*;
+import com.mobilebulletin.jms.support.SupportRequestQueue;
+import com.mobilebulletin.request.support.AddGuestSupportQueryRequest;
+import com.mobilebulletin.request.support.AddUserSupportQueryRequest;
+import com.mobilebulletin.request.support.GetSupportStartUpRequest;
+import com.mobilebulletin.request.support.GetSupportTicketByIdRequest;
+import com.mobilebulletin.request.support.GetSupportTicketsByStatusRequest;
+import com.mobilebulletin.request.support.UpdateSupportQueryRequest;
+import com.mobilebulletin.response.support.AddGuestSupportQueryReply;
+import com.mobilebulletin.response.support.AddUserSupportQueryReply;
+import com.mobilebulletin.response.support.GetSupportStartUpReply;
+import com.mobilebulletin.response.support.GetSupportTicketByIdReply;
+import com.mobilebulletin.response.support.GetSupportTicketsByStatusReply;
+import com.mobilebulletin.response.support.UpdateSupportQueryReply;
 
 
 
@@ -26,18 +32,18 @@ import com.mobilebulletin.response.support.*;
 
 
 
-@WebService(endpointInterface = "com.mobilebulletin.remote.support.SupportRemoteService")
+@WebService(serviceName = "MobileBulletin", portName = "SupportService", targetNamespace = "mobilebulletin")
 @Stateless
 public class SupportRemoteBean implements SupportRemoteService
 {
 
 
-    public AddGuestSupportQueryResponse addGuestSupportQuery(AddGuestSupportQueryRequest request) throws Exception{
-	    AddGuestSupportQueryResponse response = new AddGuestSupportQueryResponse();
+    public AddGuestSupportQueryReply addGuestSupportQuery(AddGuestSupportQueryRequest request) throws Exception{
+	    AddGuestSupportQueryReply response = new AddGuestSupportQueryReply();
 		
 		try
 		{
-			response = (AddGuestSupportQueryResponse) new SupportRequestQueue().send2Queue(request);
+			response = (AddGuestSupportQueryReply) new SupportRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -45,12 +51,12 @@ public class SupportRemoteBean implements SupportRemoteService
 		return response;
     }	  
 
-    public AddUserSupportQueryResponse addUserSupportQuery(AddUserSupportQueryRequest request) throws Exception{
-	    AddUserSupportQueryResponse response = new AddUserSupportQueryResponse();
+    public AddUserSupportQueryReply addUserSupportQuery(AddUserSupportQueryRequest request) throws Exception{
+	    AddUserSupportQueryReply response = new AddUserSupportQueryReply();
 		
 		try
 		{
-			response = (AddUserSupportQueryResponse) new SupportRequestQueue().send2Queue(request);
+			response = (AddUserSupportQueryReply) new SupportRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -58,12 +64,12 @@ public class SupportRemoteBean implements SupportRemoteService
 		return response;
     }	  
 
-    public UpdateSupportQueryResponse updateSupportQuery(UpdateSupportQueryRequest request) throws Exception{
-	    UpdateSupportQueryResponse response = new UpdateSupportQueryResponse();
+    public UpdateSupportQueryReply updateSupportQuery(UpdateSupportQueryRequest request) throws Exception{
+	    UpdateSupportQueryReply response = new UpdateSupportQueryReply();
 		
 		try
 		{
-			response = (UpdateSupportQueryResponse) new SupportRequestQueue().send2Queue(request);
+			response = (UpdateSupportQueryReply) new SupportRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -71,12 +77,12 @@ public class SupportRemoteBean implements SupportRemoteService
 		return response;
     }	  
 
-    public GetSupportTicketByIdResponse getSupportTicketById(GetSupportTicketByIdRequest request) throws Exception{
-	    GetSupportTicketByIdResponse response = new GetSupportTicketByIdResponse();
+    public GetSupportTicketByIdReply getSupportTicketById(GetSupportTicketByIdRequest request) throws Exception{
+	    GetSupportTicketByIdReply response = new GetSupportTicketByIdReply();
 		
 		try
 		{
-			response = (GetSupportTicketByIdResponse) new SupportRequestQueue().send2Queue(request);
+			response = (GetSupportTicketByIdReply) new SupportRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -84,12 +90,12 @@ public class SupportRemoteBean implements SupportRemoteService
 		return response;
     }	  
 
-    public GetSupportStartUpResponse getSupportStartUp(GetSupportStartUpRequest request) throws Exception{
-	    GetSupportStartUpResponse response = new GetSupportStartUpResponse();
+    public GetSupportStartUpReply getSupportStartUp(GetSupportStartUpRequest request) throws Exception{
+	    GetSupportStartUpReply response = new GetSupportStartUpReply();
 		
 		try
 		{
-			response = (GetSupportStartUpResponse) new SupportRequestQueue().send2Queue(request);
+			response = (GetSupportStartUpReply) new SupportRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -97,12 +103,12 @@ public class SupportRemoteBean implements SupportRemoteService
 		return response;
     }	  
 
-    public GetSupportTicketsByStatusResponse getSupportTicketsByStatus(GetSupportTicketsByStatusRequest request) throws Exception{
-	    GetSupportTicketsByStatusResponse response = new GetSupportTicketsByStatusResponse();
+    public GetSupportTicketsByStatusReply getSupportTicketsByStatus(GetSupportTicketsByStatusRequest request) throws Exception{
+	    GetSupportTicketsByStatusReply response = new GetSupportTicketsByStatusReply();
 		
 		try
 		{
-			response = (GetSupportTicketsByStatusResponse) new SupportRequestQueue().send2Queue(request);
+			response = (GetSupportTicketsByStatusReply) new SupportRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();

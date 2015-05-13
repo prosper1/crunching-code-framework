@@ -4,6 +4,7 @@
 	<comment></comment>
 	<projects>
 		<project>com.mobilebulletin.jms</project>
+		<project>com.mobilebulletin.remote.client</project>
 		<project>com.mobilebulletin.request.reply</project>
 	</projects>
 	<buildSpec>

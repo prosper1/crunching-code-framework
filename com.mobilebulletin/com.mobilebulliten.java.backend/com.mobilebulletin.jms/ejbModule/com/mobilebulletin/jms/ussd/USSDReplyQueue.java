@@ -144,61 +144,61 @@ public void setCreateReplyObjectMessage(ObjectMessage replyMessage,ObjectMessage
 
               if(receivedObject.getObject() instanceof SignUpUSSDRequest)
                {
-	                 SignUpUSSDResponse response = new SignUpUSSDResponse();	
+	                 SignUpUSSDReply response = new SignUpUSSDReply();	
 	                 SignUpUSSDRequest request = (SignUpUSSDRequest)receivedObject.getObject();
 	                 response = USSDLocalService.signUpUSSD(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof InitialRequestUSSDRequest)
                {
-	                 InitialRequestUSSDResponse response = new InitialRequestUSSDResponse();	
+	                 InitialRequestUSSDReply response = new InitialRequestUSSDReply();	
 	                 InitialRequestUSSDRequest request = (InitialRequestUSSDRequest)receivedObject.getObject();
 	                 response = USSDLocalService.initialRequestUSSD(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof SignInUSSDRequest)
                {
-	                 SignInUSSDResponse response = new SignInUSSDResponse();	
+	                 SignInUSSDReply response = new SignInUSSDReply();	
 	                 SignInUSSDRequest request = (SignInUSSDRequest)receivedObject.getObject();
 	                 response = USSDLocalService.signInUSSD(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof ForgotPinUSSDRequest)
                {
-	                 ForgotPinUSSDResponse response = new ForgotPinUSSDResponse();	
+	                 ForgotPinUSSDReply response = new ForgotPinUSSDReply();	
 	                 ForgotPinUSSDRequest request = (ForgotPinUSSDRequest)receivedObject.getObject();
 	                 response = USSDLocalService.forgotPinUSSD(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof UpdateLangaugeUSSDRequest)
                {
-	                 UpdateLangaugeUSSDResponse response = new UpdateLangaugeUSSDResponse();	
+	                 UpdateLangaugeUSSDReply response = new UpdateLangaugeUSSDReply();	
 	                 UpdateLangaugeUSSDRequest request = (UpdateLangaugeUSSDRequest)receivedObject.getObject();
 	                 response = USSDLocalService.updateLangaugeUSSD(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof StopSMSNotificationUSSDRequest)
                {
-	                 StopSMSNotificationUSSDResponse response = new StopSMSNotificationUSSDResponse();	
+	                 StopSMSNotificationUSSDReply response = new StopSMSNotificationUSSDReply();	
 	                 StopSMSNotificationUSSDRequest request = (StopSMSNotificationUSSDRequest)receivedObject.getObject();
 	                 response = USSDLocalService.stopSMSNotificationUSSD(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof SendSMSToDepartmentHeadUSSDRequest)
                {
-	                 SendSMSToDepartmentHeadUSSDResponse response = new SendSMSToDepartmentHeadUSSDResponse();	
+	                 SendSMSToDepartmentHeadUSSDReply response = new SendSMSToDepartmentHeadUSSDReply();	
 	                 SendSMSToDepartmentHeadUSSDRequest request = (SendSMSToDepartmentHeadUSSDRequest)receivedObject.getObject();
 	                 response = USSDLocalService.sendSMSToDepartmentHeadUSSD(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof SendSMSToGroupHeadUSSDRequest)
                {
-	                 SendSMSToGroupHeadUSSDResponse response = new SendSMSToGroupHeadUSSDResponse();	
+	                 SendSMSToGroupHeadUSSDReply response = new SendSMSToGroupHeadUSSDReply();	
 	                 SendSMSToGroupHeadUSSDRequest request = (SendSMSToGroupHeadUSSDRequest)receivedObject.getObject();
 	                 response = USSDLocalService.sendSMSToGroupHeadUSSD(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof SupportQueryUSSDRequest)
                {
-	                 SupportQueryUSSDResponse response = new SupportQueryUSSDResponse();	
+	                 SupportQueryUSSDReply response = new SupportQueryUSSDReply();	
 	                 SupportQueryUSSDRequest request = (SupportQueryUSSDRequest)receivedObject.getObject();
 	                 response = USSDLocalService.supportQueryUSSD(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof GetEmployeeInfoUSSDRequest)
                {
-	                 GetEmployeeInfoUSSDResponse response = new GetEmployeeInfoUSSDResponse();	
+	                 GetEmployeeInfoUSSDReply response = new GetEmployeeInfoUSSDReply();	
 	                 GetEmployeeInfoUSSDRequest request = (GetEmployeeInfoUSSDRequest)receivedObject.getObject();
 	                 response = USSDLocalService.getEmployeeInfoUSSD(request);	
 	                 replyMessage.setObject(response);

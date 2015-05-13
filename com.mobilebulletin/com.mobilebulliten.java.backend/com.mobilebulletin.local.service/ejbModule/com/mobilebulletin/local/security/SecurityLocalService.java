@@ -30,25 +30,25 @@ public interface SecurityLocalService
 	
 
 
-          public ActivateAccountResponse activateAccount(ActivateAccountRequest request) throws Exception;
+          public ActivateAccountReply activateAccount(ActivateAccountRequest request) throws Exception;
 
-          public ChangePasswordResponse changePassword(ChangePasswordRequest request) throws Exception;
+          public ChangePasswordReply changePassword(ChangePasswordRequest request) throws Exception;
 
-          public CheckUserResponse checkUser(CheckUserRequest request) throws Exception;
+          public CheckUserReply checkUser(CheckUserRequest request) throws Exception;
 
-          public UpdateUserRoleResponse updateUserRole(UpdateUserRoleRequest request) throws Exception;
+          public UpdateUserRoleReply updateUserRole(UpdateUserRoleRequest request) throws Exception;
 
-          public GenerateTypesResponse generateTypes(GenerateTypesRequest request) throws Exception;
+          public GenerateTypesReply generateTypes(GenerateTypesRequest request) throws Exception;
 
-          public UpdateUserInfoResponse updateUserInfo(UpdateUserInfoRequest request) throws Exception;
+          public UpdateUserInfoReply updateUserInfo(UpdateUserInfoRequest request) throws Exception;
 
-          public SignUpUserResponse signUpUser(SignUpUserRequest request) throws Exception;
+          public SignUpUserReply signUpUser(SignUpUserRequest request) throws Exception;
 
-          public SignInResponse signIn(SignInRequest request) throws Exception;
+          public SignInReply signIn(SignInRequest request) throws Exception;
 
-          public ForgotPasswordResponse forgotPassword(ForgotPasswordRequest request) throws Exception;
+          public ForgotPasswordReply forgotPassword(ForgotPasswordRequest request) throws Exception;
 
-          public GetUserInfoResponse getUserInfo(GetUserInfoRequest request) throws Exception;
+          public GetUserInfoReply getUserInfo(GetUserInfoRequest request) throws Exception;
 }	  
 
 

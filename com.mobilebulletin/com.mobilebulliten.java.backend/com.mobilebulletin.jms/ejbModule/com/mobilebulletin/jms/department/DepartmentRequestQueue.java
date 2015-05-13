@@ -23,7 +23,7 @@ import org.jboss.logging.Logger;
 
 
 import com.mobilebulletin.request.department.*;
-import com.mobilebulletin.response.department.GetDepartmentsByCompanyIdResponse;
+import com.mobilebulletin.response.department.GetDepartmentsByCompanyIdReply;
 
 
 

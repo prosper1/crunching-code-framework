@@ -1244,3 +1244,6 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-07 19:23:44.630
 !MESSAGE /wse/wsdl/wsdl_result_content.jsp
+
+!ENTRY org.eclipse.jdt.ui 2 0 2015-05-13 18:37:44.599
+!MESSAGE The 'org.eclipse.mylyn.java.ui.javaAllCompletionProposalComputer' proposal computer from the 'org.eclipse.mylyn.java.ui' plug-in did not complete normally. The extension took too long to return from the 'computeCompletionProposals()' operation.

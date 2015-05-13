@@ -8,6 +8,7 @@ import javax.ejb.Stateless;
 
 
 
+import javax.jws.HandlerChain;
 import javax.jws.WebService;
 
 import com.mobilebulletin.request.group.*;
@@ -26,18 +27,18 @@ import com.mobilebulletin.response.group.*;
 
 
 
-@WebService(endpointInterface = "com.mobilebulletin.remote.group.GroupRemoteService")
+@WebService(serviceName = "MobileBulletin", portName = "GroupService", targetNamespace = "mobilebulletin")
 @Stateless
 public class GroupRemoteBean implements GroupRemoteService
 {
 
 
-    public AddGroupResponse addGroup(AddGroupRequest request) throws Exception{
-	    AddGroupResponse response = new AddGroupResponse();
+    public AddGroupReply addGroup(AddGroupRequest request) throws Exception{
+	    AddGroupReply response = new AddGroupReply();
 		
 		try
 		{
-			response = (AddGroupResponse) new GroupRequestQueue().send2Queue(request);
+			response = (AddGroupReply) new GroupRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -45,12 +46,12 @@ public class GroupRemoteBean implements GroupRemoteService
 		return response;
     }	  
 
-    public UpdateGroupMembersResponse updateGroupMembers(UpdateGroupMembersRequest request) throws Exception{
-	    UpdateGroupMembersResponse response = new UpdateGroupMembersResponse();
+    public UpdateGroupMembersReply updateGroupMembers(UpdateGroupMembersRequest request) throws Exception{
+	    UpdateGroupMembersReply response = new UpdateGroupMembersReply();
 		
 		try
 		{
-			response = (UpdateGroupMembersResponse) new GroupRequestQueue().send2Queue(request);
+			response = (UpdateGroupMembersReply) new GroupRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -58,12 +59,12 @@ public class GroupRemoteBean implements GroupRemoteService
 		return response;
     }	  
 
-    public UpdateGroupInfoResponse updateGroupInfo(UpdateGroupInfoRequest request) throws Exception{
-	    UpdateGroupInfoResponse response = new UpdateGroupInfoResponse();
+    public UpdateGroupInfoReply updateGroupInfo(UpdateGroupInfoRequest request) throws Exception{
+	    UpdateGroupInfoReply response = new UpdateGroupInfoReply();
 		
 		try
 		{
-			response = (UpdateGroupInfoResponse) new GroupRequestQueue().send2Queue(request);
+			response = (UpdateGroupInfoReply) new GroupRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -71,12 +72,12 @@ public class GroupRemoteBean implements GroupRemoteService
 		return response;
     }	  
 
-    public GetGroupByIdResponse getGroupById(GetGroupByIdRequest request) throws Exception{
-	    GetGroupByIdResponse response = new GetGroupByIdResponse();
+    public GetGroupByIdReply getGroupById(GetGroupByIdRequest request) throws Exception{
+	    GetGroupByIdReply response = new GetGroupByIdReply();
 		
 		try
 		{
-			response = (GetGroupByIdResponse) new GroupRequestQueue().send2Queue(request);
+			response = (GetGroupByIdReply) new GroupRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -84,12 +85,12 @@ public class GroupRemoteBean implements GroupRemoteService
 		return response;
     }	  
 
-    public ImportGroupFromExcelResponse importGroupFromExcel(ImportGroupFromExcelRequest request) throws Exception{
-	    ImportGroupFromExcelResponse response = new ImportGroupFromExcelResponse();
+    public ImportGroupFromExcelReply importGroupFromExcel(ImportGroupFromExcelRequest request) throws Exception{
+	    ImportGroupFromExcelReply response = new ImportGroupFromExcelReply();
 		
 		try
 		{
-			response = (ImportGroupFromExcelResponse) new GroupRequestQueue().send2Queue(request);
+			response = (ImportGroupFromExcelReply) new GroupRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -98,13 +99,13 @@ public class GroupRemoteBean implements GroupRemoteService
     }
 
 	@Override
-	public GetGroupsByCompanyIdResponse getGroupsByCompanyId(
+	public GetGroupsByCompanyIdReply getGroupsByCompanyId(
 			GetGroupsByCompanyIdRequest request) throws Exception {
-		GetGroupsByCompanyIdResponse response = new GetGroupsByCompanyIdResponse();
+		GetGroupsByCompanyIdReply response = new GetGroupsByCompanyIdReply();
 		
 		try
 		{
-			response = (GetGroupsByCompanyIdResponse) new GroupRequestQueue().send2Queue(request);
+			response = (GetGroupsByCompanyIdReply) new GroupRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();

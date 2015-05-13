@@ -37,7 +37,7 @@ import com.mobilebulletin.response.util.SERVRESPONSE;
 import com.mobilebulletin.request.department.model.DepartmentMemberInfo;
 import com.mobilebulletin.request.group.*;
 import com.mobilebulletin.request.group.model.GroupMemberInfo;
-import com.mobilebulletin.response.department.GetDepartmentsByCompanyIdResponse;
+import com.mobilebulletin.response.department.GetDepartmentsByCompanyIdReply;
 import com.mobilebulletin.response.department.model.DepartmentInfo;
 import com.mobilebulletin.response.employee.model.EmployeeInfo;
 import com.mobilebulletin.response.group.*;
@@ -70,8 +70,8 @@ public class GroupLocalBean implements GroupLocalService
 	private CommonLocalService commonLocalService;
 
 
-    public AddGroupResponse addGroup(AddGroupRequest request) throws Exception{
-	      		AddGroupResponse response = new AddGroupResponse();
+    public AddGroupReply addGroup(AddGroupRequest request) throws Exception{
+	      		AddGroupReply response = new AddGroupReply();
 		
 		try
 		{
@@ -103,8 +103,8 @@ public class GroupLocalBean implements GroupLocalService
 		return response;
     }	  
 
-    public UpdateGroupMembersResponse updateGroupMembers(UpdateGroupMembersRequest request) throws Exception{
-	      		UpdateGroupMembersResponse response = new UpdateGroupMembersResponse();
+    public UpdateGroupMembersReply updateGroupMembers(UpdateGroupMembersRequest request) throws Exception{
+	      		UpdateGroupMembersReply response = new UpdateGroupMembersReply();
 		
 		try
 		{
@@ -163,8 +163,8 @@ public class GroupLocalBean implements GroupLocalService
 		return response;
     }	  
 
-    public UpdateGroupInfoResponse updateGroupInfo(UpdateGroupInfoRequest request) throws Exception{
-	      		UpdateGroupInfoResponse response = new UpdateGroupInfoResponse();
+    public UpdateGroupInfoReply updateGroupInfo(UpdateGroupInfoRequest request) throws Exception{
+	      		UpdateGroupInfoReply response = new UpdateGroupInfoReply();
 		
 		try
 		{
@@ -181,8 +181,8 @@ public class GroupLocalBean implements GroupLocalService
 		return response;
     }	  
 
-    public GetGroupByIdResponse getGroupById(GetGroupByIdRequest request) throws Exception{
-	      		GetGroupByIdResponse response = new GetGroupByIdResponse();
+    public GetGroupByIdReply getGroupById(GetGroupByIdRequest request) throws Exception{
+	      		GetGroupByIdReply response = new GetGroupByIdReply();
 		
 		try
 		{
@@ -234,8 +234,8 @@ public class GroupLocalBean implements GroupLocalService
 		return response;
     }	  
 
-    public ImportGroupFromExcelResponse importGroupFromExcel(ImportGroupFromExcelRequest request) throws Exception{
-	      		ImportGroupFromExcelResponse response = new ImportGroupFromExcelResponse();
+    public ImportGroupFromExcelReply importGroupFromExcel(ImportGroupFromExcelRequest request) throws Exception{
+	      		ImportGroupFromExcelReply response = new ImportGroupFromExcelReply();
 		
 		try
 		{
@@ -253,9 +253,9 @@ public class GroupLocalBean implements GroupLocalService
     }
 
 	@Override
-	public GetGroupsByCompanyIdResponse getGroupsByCompanyId(
+	public GetGroupsByCompanyIdReply getGroupsByCompanyId(
 			GetGroupsByCompanyIdRequest request) throws Exception {
-		GetGroupsByCompanyIdResponse response = new GetGroupsByCompanyIdResponse();
+		GetGroupsByCompanyIdReply response = new GetGroupsByCompanyIdReply();
 		
 		try
 		{

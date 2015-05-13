@@ -3,9 +3,13 @@ package com.mobilebulletin.remote.ussd;
 
 
 import com.mobilebulletin.jms.ussd.USSDRequestQueue;
+
 import javax.ejb.Stateless;
 
 
+
+import javax.jws.HandlerChain;
+import javax.jws.WebService;
 
 import com.mobilebulletin.request.ussd.*;
 import com.mobilebulletin.response.ussd.*;
@@ -23,18 +27,18 @@ import com.mobilebulletin.response.ussd.*;
 
 
 
-
+@WebService(serviceName = "MobileBulletin", portName = "USSDService", targetNamespace = "mobilebulletin")
 @Stateless
 public class USSDRemoteBean implements USSDRemoteService
 {
 
 
-    public SignUpUSSDResponse signUpUSSD(SignUpUSSDRequest request) throws Exception{
-	    SignUpUSSDResponse response = new SignUpUSSDResponse();
+    public SignUpUSSDReply signUpUSSD(SignUpUSSDRequest request) throws Exception{
+	    SignUpUSSDReply response = new SignUpUSSDReply();
 		
 		try
 		{
-			response = (SignUpUSSDResponse) new USSDRequestQueue().send2Queue(request);
+			response = (SignUpUSSDReply) new USSDRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -42,12 +46,12 @@ public class USSDRemoteBean implements USSDRemoteService
 		return response;
     }	  
 
-    public InitialRequestUSSDResponse initialRequestUSSD(InitialRequestUSSDRequest request) throws Exception{
-	    InitialRequestUSSDResponse response = new InitialRequestUSSDResponse();
+    public InitialRequestUSSDReply initialRequestUSSD(InitialRequestUSSDRequest request) throws Exception{
+	    InitialRequestUSSDReply response = new InitialRequestUSSDReply();
 		
 		try
 		{
-			response = (InitialRequestUSSDResponse) new USSDRequestQueue().send2Queue(request);
+			response = (InitialRequestUSSDReply) new USSDRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -55,12 +59,12 @@ public class USSDRemoteBean implements USSDRemoteService
 		return response;
     }	  
 
-    public SignInUSSDResponse signInUSSD(SignInUSSDRequest request) throws Exception{
-	    SignInUSSDResponse response = new SignInUSSDResponse();
+    public SignInUSSDReply signInUSSD(SignInUSSDRequest request) throws Exception{
+	    SignInUSSDReply response = new SignInUSSDReply();
 		
 		try
 		{
-			response = (SignInUSSDResponse) new USSDRequestQueue().send2Queue(request);
+			response = (SignInUSSDReply) new USSDRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -68,12 +72,12 @@ public class USSDRemoteBean implements USSDRemoteService
 		return response;
     }	  
 
-    public ForgotPinUSSDResponse forgotPinUSSD(ForgotPinUSSDRequest request) throws Exception{
-	    ForgotPinUSSDResponse response = new ForgotPinUSSDResponse();
+    public ForgotPinUSSDReply forgotPinUSSD(ForgotPinUSSDRequest request) throws Exception{
+	    ForgotPinUSSDReply response = new ForgotPinUSSDReply();
 		
 		try
 		{
-			response = (ForgotPinUSSDResponse) new USSDRequestQueue().send2Queue(request);
+			response = (ForgotPinUSSDReply) new USSDRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -81,12 +85,12 @@ public class USSDRemoteBean implements USSDRemoteService
 		return response;
     }	  
 
-    public UpdateLangaugeUSSDResponse updateLangaugeUSSD(UpdateLangaugeUSSDRequest request) throws Exception{
-	    UpdateLangaugeUSSDResponse response = new UpdateLangaugeUSSDResponse();
+    public UpdateLangaugeUSSDReply updateLangaugeUSSD(UpdateLangaugeUSSDRequest request) throws Exception{
+	    UpdateLangaugeUSSDReply response = new UpdateLangaugeUSSDReply();
 		
 		try
 		{
-			response = (UpdateLangaugeUSSDResponse) new USSDRequestQueue().send2Queue(request);
+			response = (UpdateLangaugeUSSDReply) new USSDRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -94,12 +98,12 @@ public class USSDRemoteBean implements USSDRemoteService
 		return response;
     }	  
 
-    public StopSMSNotificationUSSDResponse stopSMSNotificationUSSD(StopSMSNotificationUSSDRequest request) throws Exception{
-	    StopSMSNotificationUSSDResponse response = new StopSMSNotificationUSSDResponse();
+    public StopSMSNotificationUSSDReply stopSMSNotificationUSSD(StopSMSNotificationUSSDRequest request) throws Exception{
+	    StopSMSNotificationUSSDReply response = new StopSMSNotificationUSSDReply();
 		
 		try
 		{
-			response = (StopSMSNotificationUSSDResponse) new USSDRequestQueue().send2Queue(request);
+			response = (StopSMSNotificationUSSDReply) new USSDRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -107,12 +111,12 @@ public class USSDRemoteBean implements USSDRemoteService
 		return response;
     }	  
 
-    public SendSMSToDepartmentHeadUSSDResponse sendSMSToDepartmentHeadUSSD(SendSMSToDepartmentHeadUSSDRequest request) throws Exception{
-	    SendSMSToDepartmentHeadUSSDResponse response = new SendSMSToDepartmentHeadUSSDResponse();
+    public SendSMSToDepartmentHeadUSSDReply sendSMSToDepartmentHeadUSSD(SendSMSToDepartmentHeadUSSDRequest request) throws Exception{
+	    SendSMSToDepartmentHeadUSSDReply response = new SendSMSToDepartmentHeadUSSDReply();
 		
 		try
 		{
-			response = (SendSMSToDepartmentHeadUSSDResponse) new USSDRequestQueue().send2Queue(request);
+			response = (SendSMSToDepartmentHeadUSSDReply) new USSDRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -120,12 +124,12 @@ public class USSDRemoteBean implements USSDRemoteService
 		return response;
     }	  
 
-    public SendSMSToGroupHeadUSSDResponse sendSMSToGroupHeadUSSD(SendSMSToGroupHeadUSSDRequest request) throws Exception{
-	    SendSMSToGroupHeadUSSDResponse response = new SendSMSToGroupHeadUSSDResponse();
+    public SendSMSToGroupHeadUSSDReply sendSMSToGroupHeadUSSD(SendSMSToGroupHeadUSSDRequest request) throws Exception{
+	    SendSMSToGroupHeadUSSDReply response = new SendSMSToGroupHeadUSSDReply();
 		
 		try
 		{
-			response = (SendSMSToGroupHeadUSSDResponse) new USSDRequestQueue().send2Queue(request);
+			response = (SendSMSToGroupHeadUSSDReply) new USSDRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -133,12 +137,12 @@ public class USSDRemoteBean implements USSDRemoteService
 		return response;
     }	  
 
-    public SupportQueryUSSDResponse supportQueryUSSD(SupportQueryUSSDRequest request) throws Exception{
-	    SupportQueryUSSDResponse response = new SupportQueryUSSDResponse();
+    public SupportQueryUSSDReply supportQueryUSSD(SupportQueryUSSDRequest request) throws Exception{
+	    SupportQueryUSSDReply response = new SupportQueryUSSDReply();
 		
 		try
 		{
-			response = (SupportQueryUSSDResponse) new USSDRequestQueue().send2Queue(request);
+			response = (SupportQueryUSSDReply) new USSDRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -146,12 +150,12 @@ public class USSDRemoteBean implements USSDRemoteService
 		return response;
     }	  
 
-    public GetEmployeeInfoUSSDResponse getEmployeeInfoUSSD(GetEmployeeInfoUSSDRequest request) throws Exception{
-	    GetEmployeeInfoUSSDResponse response = new GetEmployeeInfoUSSDResponse();
+    public GetEmployeeInfoUSSDReply getEmployeeInfoUSSD(GetEmployeeInfoUSSDRequest request) throws Exception{
+	    GetEmployeeInfoUSSDReply response = new GetEmployeeInfoUSSDReply();
 		
 		try
 		{
-			response = (GetEmployeeInfoUSSDResponse) new USSDRequestQueue().send2Queue(request);
+			response = (GetEmployeeInfoUSSDReply) new USSDRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();

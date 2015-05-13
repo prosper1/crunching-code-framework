@@ -32,17 +32,17 @@ public interface GroupLocalService
 	
 
 
-          public AddGroupResponse addGroup(AddGroupRequest request) throws Exception;
+          public AddGroupReply addGroup(AddGroupRequest request) throws Exception;
 
-          public UpdateGroupMembersResponse updateGroupMembers(UpdateGroupMembersRequest request) throws Exception;
+          public UpdateGroupMembersReply updateGroupMembers(UpdateGroupMembersRequest request) throws Exception;
 
-          public UpdateGroupInfoResponse updateGroupInfo(UpdateGroupInfoRequest request) throws Exception;
+          public UpdateGroupInfoReply updateGroupInfo(UpdateGroupInfoRequest request) throws Exception;
 
-          public GetGroupByIdResponse getGroupById(GetGroupByIdRequest request) throws Exception;
+          public GetGroupByIdReply getGroupById(GetGroupByIdRequest request) throws Exception;
 
-          public ImportGroupFromExcelResponse importGroupFromExcel(ImportGroupFromExcelRequest request) throws Exception;
+          public ImportGroupFromExcelReply importGroupFromExcel(ImportGroupFromExcelRequest request) throws Exception;
           
-          public GetGroupsByCompanyIdResponse getGroupsByCompanyId(GetGroupsByCompanyIdRequest request) throws Exception;
+          public GetGroupsByCompanyIdReply getGroupsByCompanyId(GetGroupsByCompanyIdRequest request) throws Exception;
 }	  
 
 

@@ -13,6 +13,7 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/com.mobilebulletin.jms"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/com.mobilebulletin.remote.client"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/com.mobilebulletin.request.reply"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

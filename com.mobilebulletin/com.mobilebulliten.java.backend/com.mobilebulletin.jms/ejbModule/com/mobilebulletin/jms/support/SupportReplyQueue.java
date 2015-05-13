@@ -144,37 +144,37 @@ public void setCreateReplyObjectMessage(ObjectMessage replyMessage,ObjectMessage
 
               if(receivedObject.getObject() instanceof AddGuestSupportQueryRequest)
                {
-	                 AddGuestSupportQueryResponse response = new AddGuestSupportQueryResponse();	
+	                 AddGuestSupportQueryReply response = new AddGuestSupportQueryReply();	
 	                 AddGuestSupportQueryRequest request = (AddGuestSupportQueryRequest)receivedObject.getObject();
 	                 response = supportLocalService.addGuestSupportQuery(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof AddUserSupportQueryRequest)
                {
-	                 AddUserSupportQueryResponse response = new AddUserSupportQueryResponse();	
+	                 AddUserSupportQueryReply response = new AddUserSupportQueryReply();	
 	                 AddUserSupportQueryRequest request = (AddUserSupportQueryRequest)receivedObject.getObject();
 	                 response = supportLocalService.addUserSupportQuery(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof UpdateSupportQueryRequest)
                {
-	                 UpdateSupportQueryResponse response = new UpdateSupportQueryResponse();	
+	                 UpdateSupportQueryReply response = new UpdateSupportQueryReply();	
 	                 UpdateSupportQueryRequest request = (UpdateSupportQueryRequest)receivedObject.getObject();
 	                 response = supportLocalService.updateSupportQuery(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof GetSupportTicketByIdRequest)
                {
-	                 GetSupportTicketByIdResponse response = new GetSupportTicketByIdResponse();	
+	                 GetSupportTicketByIdReply response = new GetSupportTicketByIdReply();	
 	                 GetSupportTicketByIdRequest request = (GetSupportTicketByIdRequest)receivedObject.getObject();
 	                 response = supportLocalService.getSupportTicketById(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof GetSupportStartUpRequest)
                {
-	                 GetSupportStartUpResponse response = new GetSupportStartUpResponse();	
+	                 GetSupportStartUpReply response = new GetSupportStartUpReply();	
 	                 GetSupportStartUpRequest request = (GetSupportStartUpRequest)receivedObject.getObject();
 	                 response = supportLocalService.getSupportStartUp(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof GetSupportTicketsByStatusRequest)
                {
-	                 GetSupportTicketsByStatusResponse response = new GetSupportTicketsByStatusResponse();	
+	                 GetSupportTicketsByStatusReply response = new GetSupportTicketsByStatusReply();	
 	                 GetSupportTicketsByStatusRequest request = (GetSupportTicketsByStatusRequest)receivedObject.getObject();
 	                 response = supportLocalService.getSupportTicketsByStatus(request);	
 	                 replyMessage.setObject(response);

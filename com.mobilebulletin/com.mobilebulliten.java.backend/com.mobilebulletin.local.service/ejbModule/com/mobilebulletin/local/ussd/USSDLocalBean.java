@@ -57,8 +57,8 @@ public class USSDLocalBean implements USSDLocalService
 	private CommonLocalService commonLocalService;
 
 
-    public SignUpUSSDResponse signUpUSSD(SignUpUSSDRequest request) throws Exception{
-	      		SignUpUSSDResponse response = new SignUpUSSDResponse();
+    public SignUpUSSDReply signUpUSSD(SignUpUSSDRequest request) throws Exception{
+	      		SignUpUSSDReply response = new SignUpUSSDReply();
 		
 		try
 		{
@@ -75,8 +75,8 @@ public class USSDLocalBean implements USSDLocalService
 		return response;
     }	  
 
-    public InitialRequestUSSDResponse initialRequestUSSD(InitialRequestUSSDRequest request) throws Exception{
-	      		InitialRequestUSSDResponse response = new InitialRequestUSSDResponse();
+    public InitialRequestUSSDReply initialRequestUSSD(InitialRequestUSSDRequest request) throws Exception{
+	      		InitialRequestUSSDReply response = new InitialRequestUSSDReply();
 		
 		try
 		{
@@ -93,8 +93,8 @@ public class USSDLocalBean implements USSDLocalService
 		return response;
     }	  
 
-    public SignInUSSDResponse signInUSSD(SignInUSSDRequest request) throws Exception{
-	      		SignInUSSDResponse response = new SignInUSSDResponse();
+    public SignInUSSDReply signInUSSD(SignInUSSDRequest request) throws Exception{
+	      		SignInUSSDReply response = new SignInUSSDReply();
 		
 		try
 		{
@@ -111,8 +111,8 @@ public class USSDLocalBean implements USSDLocalService
 		return response;
     }	  
 
-    public ForgotPinUSSDResponse forgotPinUSSD(ForgotPinUSSDRequest request) throws Exception{
-	      		ForgotPinUSSDResponse response = new ForgotPinUSSDResponse();
+    public ForgotPinUSSDReply forgotPinUSSD(ForgotPinUSSDRequest request) throws Exception{
+	      		ForgotPinUSSDReply response = new ForgotPinUSSDReply();
 		
 		try
 		{
@@ -129,8 +129,8 @@ public class USSDLocalBean implements USSDLocalService
 		return response;
     }	  
 
-    public UpdateLangaugeUSSDResponse updateLangaugeUSSD(UpdateLangaugeUSSDRequest request) throws Exception{
-	      		UpdateLangaugeUSSDResponse response = new UpdateLangaugeUSSDResponse();
+    public UpdateLangaugeUSSDReply updateLangaugeUSSD(UpdateLangaugeUSSDRequest request) throws Exception{
+	      		UpdateLangaugeUSSDReply response = new UpdateLangaugeUSSDReply();
 		
 		try
 		{
@@ -156,8 +156,8 @@ public class USSDLocalBean implements USSDLocalService
 		return response;
     }	  
 
-    public StopSMSNotificationUSSDResponse stopSMSNotificationUSSD(StopSMSNotificationUSSDRequest request) throws Exception{
-	      		StopSMSNotificationUSSDResponse response = new StopSMSNotificationUSSDResponse();
+    public StopSMSNotificationUSSDReply stopSMSNotificationUSSD(StopSMSNotificationUSSDRequest request) throws Exception{
+	      		StopSMSNotificationUSSDReply response = new StopSMSNotificationUSSDReply();
 		
 		try
 		{
@@ -174,8 +174,8 @@ public class USSDLocalBean implements USSDLocalService
 		return response;
     }	  
 
-    public SendSMSToDepartmentHeadUSSDResponse sendSMSToDepartmentHeadUSSD(SendSMSToDepartmentHeadUSSDRequest request) throws Exception{
-	      		SendSMSToDepartmentHeadUSSDResponse response = new SendSMSToDepartmentHeadUSSDResponse();
+    public SendSMSToDepartmentHeadUSSDReply sendSMSToDepartmentHeadUSSD(SendSMSToDepartmentHeadUSSDRequest request) throws Exception{
+	      		SendSMSToDepartmentHeadUSSDReply response = new SendSMSToDepartmentHeadUSSDReply();
 		
 		try
 		{
@@ -192,8 +192,8 @@ public class USSDLocalBean implements USSDLocalService
 		return response;
     }	  
 
-    public SendSMSToGroupHeadUSSDResponse sendSMSToGroupHeadUSSD(SendSMSToGroupHeadUSSDRequest request) throws Exception{
-	      		SendSMSToGroupHeadUSSDResponse response = new SendSMSToGroupHeadUSSDResponse();
+    public SendSMSToGroupHeadUSSDReply sendSMSToGroupHeadUSSD(SendSMSToGroupHeadUSSDRequest request) throws Exception{
+	      		SendSMSToGroupHeadUSSDReply response = new SendSMSToGroupHeadUSSDReply();
 		
 		try
 		{
@@ -210,8 +210,8 @@ public class USSDLocalBean implements USSDLocalService
 		return response;
     }	  
 
-    public SupportQueryUSSDResponse supportQueryUSSD(SupportQueryUSSDRequest request) throws Exception{
-	      		SupportQueryUSSDResponse response = new SupportQueryUSSDResponse();
+    public SupportQueryUSSDReply supportQueryUSSD(SupportQueryUSSDRequest request) throws Exception{
+	      		SupportQueryUSSDReply response = new SupportQueryUSSDReply();
 		
 		try
 		{
@@ -228,8 +228,8 @@ public class USSDLocalBean implements USSDLocalService
 		return response;
     }	  
 
-    public GetEmployeeInfoUSSDResponse getEmployeeInfoUSSD(GetEmployeeInfoUSSDRequest request) throws Exception{
-	      		GetEmployeeInfoUSSDResponse response = new GetEmployeeInfoUSSDResponse();
+    public GetEmployeeInfoUSSDReply getEmployeeInfoUSSD(GetEmployeeInfoUSSDRequest request) throws Exception{
+	      		GetEmployeeInfoUSSDReply response = new GetEmployeeInfoUSSDReply();
 		
 		try
 		{

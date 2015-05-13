@@ -20,5 +20,9 @@
         <dependent-module archiveName="com.mobilebulletin.model.jar" deploy-path="/lib" handle="module:/resource/com.mobilebulletin.model/com.mobilebulletin.model">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="com.mobilebulletin.remote.client.jar" deploy-path="/" handle="module:/resource/com.mobilebulletin.remote.client/com.mobilebulletin.remote.client">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
     </wb-module>
 </project-modules>

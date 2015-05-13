@@ -34,13 +34,13 @@ import com.mobilebulletin.request.support.GetSupportStartUpRequest;
 import com.mobilebulletin.request.support.GetSupportTicketByIdRequest;
 import com.mobilebulletin.request.support.GetSupportTicketsByStatusRequest;
 import com.mobilebulletin.request.support.UpdateSupportQueryRequest;
-import com.mobilebulletin.response.security.CheckUserResponse;
-import com.mobilebulletin.response.support.AddGuestSupportQueryResponse;
-import com.mobilebulletin.response.support.AddUserSupportQueryResponse;
-import com.mobilebulletin.response.support.GetSupportStartUpResponse;
-import com.mobilebulletin.response.support.GetSupportTicketByIdResponse;
-import com.mobilebulletin.response.support.GetSupportTicketsByStatusResponse;
-import com.mobilebulletin.response.support.UpdateSupportQueryResponse;
+import com.mobilebulletin.response.security.CheckUserReply;
+import com.mobilebulletin.response.support.AddGuestSupportQueryReply;
+import com.mobilebulletin.response.support.AddUserSupportQueryReply;
+import com.mobilebulletin.response.support.GetSupportStartUpReply;
+import com.mobilebulletin.response.support.GetSupportTicketByIdReply;
+import com.mobilebulletin.response.support.GetSupportTicketsByStatusReply;
+import com.mobilebulletin.response.support.UpdateSupportQueryReply;
 import com.mobilebulletin.response.util.SERVRESPONSE;
 
 
@@ -71,8 +71,8 @@ public class SupportLocalBean implements SupportLocalService
 	@EJB
 	private SecurityLocalService securityLocalService;
 
-    public AddGuestSupportQueryResponse addGuestSupportQuery(AddGuestSupportQueryRequest request) throws Exception{
-	      		AddGuestSupportQueryResponse response = new AddGuestSupportQueryResponse();
+    public AddGuestSupportQueryReply addGuestSupportQuery(AddGuestSupportQueryRequest request) throws Exception{
+	      		AddGuestSupportQueryReply response = new AddGuestSupportQueryReply();
 		
 		try
 		{
@@ -85,7 +85,7 @@ public class SupportLocalBean implements SupportLocalService
 			 
 			 CheckUserRequest userExistRequest = new CheckUserRequest();
 			 userExistRequest.setUsername(request.getEmail());
-			 CheckUserResponse userExistResponse = securityLocalService.checkUser(userExistRequest);
+			 CheckUserReply userExistResponse = securityLocalService.checkUser(userExistRequest);
 			 GuestInformation userInformation = null;
 			 SupportTicket supportTicket = new SupportTicket();
 			 Long userId = 0L;
@@ -163,8 +163,8 @@ public class SupportLocalBean implements SupportLocalService
 		return response;
     }	  
 
-    public AddUserSupportQueryResponse addUserSupportQuery(AddUserSupportQueryRequest request) throws Exception{
-	      		AddUserSupportQueryResponse response = new AddUserSupportQueryResponse();
+    public AddUserSupportQueryReply addUserSupportQuery(AddUserSupportQueryRequest request) throws Exception{
+	      		AddUserSupportQueryReply response = new AddUserSupportQueryReply();
 		
 	    		Person user = commonLocalService.getPersonById(FreshHelper.decryptPrimaryKeyBytes(request.getRequestUserId()));
 	    		
@@ -223,8 +223,8 @@ public class SupportLocalBean implements SupportLocalService
 		return response;
     }	  
 
-    public UpdateSupportQueryResponse updateSupportQuery(UpdateSupportQueryRequest request) throws Exception{
-	      		UpdateSupportQueryResponse response = new UpdateSupportQueryResponse();
+    public UpdateSupportQueryReply updateSupportQuery(UpdateSupportQueryRequest request) throws Exception{
+	      		UpdateSupportQueryReply response = new UpdateSupportQueryReply();
 		
 		try
 		{
@@ -267,8 +267,8 @@ public class SupportLocalBean implements SupportLocalService
 		return response;
     }	  
 
-    public GetSupportTicketByIdResponse getSupportTicketById(GetSupportTicketByIdRequest request) throws Exception{
-	      		GetSupportTicketByIdResponse response = new GetSupportTicketByIdResponse();
+    public GetSupportTicketByIdReply getSupportTicketById(GetSupportTicketByIdRequest request) throws Exception{
+	      		GetSupportTicketByIdReply response = new GetSupportTicketByIdReply();
 		
 		try
 		{
@@ -285,8 +285,8 @@ public class SupportLocalBean implements SupportLocalService
 		return response;
     }	  
 
-    public GetSupportStartUpResponse getSupportStartUp(GetSupportStartUpRequest request) throws Exception{
-	      		GetSupportStartUpResponse response = new GetSupportStartUpResponse();
+    public GetSupportStartUpReply getSupportStartUp(GetSupportStartUpRequest request) throws Exception{
+	      		GetSupportStartUpReply response = new GetSupportStartUpReply();
 		
 		try
 		{
@@ -303,8 +303,8 @@ public class SupportLocalBean implements SupportLocalService
 		return response;
     }	  
 
-    public GetSupportTicketsByStatusResponse getSupportTicketsByStatus(GetSupportTicketsByStatusRequest request) throws Exception{
-	      		GetSupportTicketsByStatusResponse response = new GetSupportTicketsByStatusResponse();
+    public GetSupportTicketsByStatusReply getSupportTicketsByStatus(GetSupportTicketsByStatusRequest request) throws Exception{
+	      		GetSupportTicketsByStatusReply response = new GetSupportTicketsByStatusReply();
 		
 		try
 		{

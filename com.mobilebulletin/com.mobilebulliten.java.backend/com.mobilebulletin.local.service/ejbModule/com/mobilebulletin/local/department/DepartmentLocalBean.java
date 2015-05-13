@@ -67,8 +67,8 @@ public class DepartmentLocalBean implements DepartmentLocalService
 	@EJB
 	private CommonLocalService commonLocalService;
 	
-    public AddDepartmentResponse addDepartment(AddDepartmentRequest request) throws Exception{
-	      		AddDepartmentResponse response = new AddDepartmentResponse();
+    public AddDepartmentReply addDepartment(AddDepartmentRequest request) throws Exception{
+	      		AddDepartmentReply response = new AddDepartmentReply();
 		
 		try
 		{
@@ -99,8 +99,8 @@ public class DepartmentLocalBean implements DepartmentLocalService
 		return response;
     }	  
 
-    public UpdateDepartmentMembersResponse updateDepartmentMembers(UpdateDepartmentMembersRequest request) throws Exception{
-	      		UpdateDepartmentMembersResponse response = new UpdateDepartmentMembersResponse();
+    public UpdateDepartmentMembersReply updateDepartmentMembers(UpdateDepartmentMembersRequest request) throws Exception{
+	      		UpdateDepartmentMembersReply response = new UpdateDepartmentMembersReply();
 		
 		try
 		{
@@ -159,8 +159,8 @@ public class DepartmentLocalBean implements DepartmentLocalService
 		return response;
     }	  
 
-    public UpdateDepartmentInfoResponse updateDepartmentInfo(UpdateDepartmentInfoRequest request) throws Exception{
-	      		UpdateDepartmentInfoResponse response = new UpdateDepartmentInfoResponse();
+    public UpdateDepartmentInfoReply updateDepartmentInfo(UpdateDepartmentInfoRequest request) throws Exception{
+	      		UpdateDepartmentInfoReply response = new UpdateDepartmentInfoReply();
 		
 		try
 		{
@@ -177,8 +177,8 @@ public class DepartmentLocalBean implements DepartmentLocalService
 		return response;
     }	  
 
-    public GetDepartmentByIdResponse getDepartmentById(GetDepartmentByIdRequest request) throws Exception{
-	      		GetDepartmentByIdResponse response = new GetDepartmentByIdResponse();
+    public GetDepartmentByIdReply getDepartmentById(GetDepartmentByIdRequest request) throws Exception{
+	      		GetDepartmentByIdReply response = new GetDepartmentByIdReply();
 		
 		try
 		{
@@ -229,8 +229,8 @@ public class DepartmentLocalBean implements DepartmentLocalService
 		return response;
     }	  
 
-    public ImportDepartmentFromExcelResponse importDepartmentFromExcel(ImportDepartmentFromExcelRequest request) throws Exception{
-	      		ImportDepartmentFromExcelResponse response = new ImportDepartmentFromExcelResponse();
+    public ImportDepartmentFromExcelReply importDepartmentFromExcel(ImportDepartmentFromExcelRequest request) throws Exception{
+	      		ImportDepartmentFromExcelReply response = new ImportDepartmentFromExcelReply();
 		
 		try
 		{
@@ -248,9 +248,9 @@ public class DepartmentLocalBean implements DepartmentLocalService
     }
 
 	@Override
-	public GetDepartmentsByCompanyIdResponse getDepartmentsByCompanyId(
+	public GetDepartmentsByCompanyIdReply getDepartmentsByCompanyId(
 			GetDepartmentsByCompanyIdRequest request) throws Exception {
-		GetDepartmentsByCompanyIdResponse response = new GetDepartmentsByCompanyIdResponse();
+		GetDepartmentsByCompanyIdReply response = new GetDepartmentsByCompanyIdReply();
 		
 		try
 		{

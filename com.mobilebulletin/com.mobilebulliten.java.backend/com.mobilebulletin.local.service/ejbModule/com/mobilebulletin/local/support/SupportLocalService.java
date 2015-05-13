@@ -30,17 +30,17 @@ public interface SupportLocalService
 	
 
 
-          public AddGuestSupportQueryResponse addGuestSupportQuery(AddGuestSupportQueryRequest request) throws Exception;
+          public AddGuestSupportQueryReply addGuestSupportQuery(AddGuestSupportQueryRequest request) throws Exception;
 
-          public AddUserSupportQueryResponse addUserSupportQuery(AddUserSupportQueryRequest request) throws Exception;
+          public AddUserSupportQueryReply addUserSupportQuery(AddUserSupportQueryRequest request) throws Exception;
 
-          public UpdateSupportQueryResponse updateSupportQuery(UpdateSupportQueryRequest request) throws Exception;
+          public UpdateSupportQueryReply updateSupportQuery(UpdateSupportQueryRequest request) throws Exception;
 
-          public GetSupportTicketByIdResponse getSupportTicketById(GetSupportTicketByIdRequest request) throws Exception;
+          public GetSupportTicketByIdReply getSupportTicketById(GetSupportTicketByIdRequest request) throws Exception;
 
-          public GetSupportStartUpResponse getSupportStartUp(GetSupportStartUpRequest request) throws Exception;
+          public GetSupportStartUpReply getSupportStartUp(GetSupportStartUpRequest request) throws Exception;
 
-          public GetSupportTicketsByStatusResponse getSupportTicketsByStatus(GetSupportTicketsByStatusRequest request) throws Exception;
+          public GetSupportTicketsByStatusReply getSupportTicketsByStatus(GetSupportTicketsByStatusRequest request) throws Exception;
 }	  
 
 

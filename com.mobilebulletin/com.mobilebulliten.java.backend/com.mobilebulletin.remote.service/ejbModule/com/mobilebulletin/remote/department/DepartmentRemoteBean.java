@@ -8,6 +8,7 @@ import javax.ejb.Stateless;
 
 
 
+import javax.jws.HandlerChain;
 import javax.jws.WebService;
 
 import com.mobilebulletin.request.department.*;
@@ -25,19 +26,18 @@ import com.mobilebulletin.response.department.*;
  ***************************************************************************************************/
 
 
-
-@WebService(endpointInterface = "com.mobilebulletin.remote.department.DepartmentRemoteService")
+@WebService(serviceName = "MobileBulletin", portName = "DepartmentService", targetNamespace = "mobilebulletin")
 @Stateless
 public class DepartmentRemoteBean implements DepartmentRemoteService
 {
 
 
-    public AddDepartmentResponse addDepartment(AddDepartmentRequest request) throws Exception{
-	    AddDepartmentResponse response = new AddDepartmentResponse();
+    public AddDepartmentReply addDepartment(AddDepartmentRequest request) throws Exception{
+	    AddDepartmentReply response = new AddDepartmentReply();
 		
 		try
 		{
-			response = (AddDepartmentResponse) new DepartmentRequestQueue().send2Queue(request);
+			response = (AddDepartmentReply) new DepartmentRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -45,12 +45,12 @@ public class DepartmentRemoteBean implements DepartmentRemoteService
 		return response;
     }	  
 
-    public UpdateDepartmentMembersResponse updateDepartmentMembers(UpdateDepartmentMembersRequest request) throws Exception{
-	    UpdateDepartmentMembersResponse response = new UpdateDepartmentMembersResponse();
+    public UpdateDepartmentMembersReply updateDepartmentMembers(UpdateDepartmentMembersRequest request) throws Exception{
+	    UpdateDepartmentMembersReply response = new UpdateDepartmentMembersReply();
 		
 		try
 		{
-			response = (UpdateDepartmentMembersResponse) new DepartmentRequestQueue().send2Queue(request);
+			response = (UpdateDepartmentMembersReply) new DepartmentRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -58,12 +58,12 @@ public class DepartmentRemoteBean implements DepartmentRemoteService
 		return response;
     }	  
 
-    public UpdateDepartmentInfoResponse updateDepartmentInfo(UpdateDepartmentInfoRequest request) throws Exception{
-	    UpdateDepartmentInfoResponse response = new UpdateDepartmentInfoResponse();
+    public UpdateDepartmentInfoReply updateDepartmentInfo(UpdateDepartmentInfoRequest request) throws Exception{
+	    UpdateDepartmentInfoReply response = new UpdateDepartmentInfoReply();
 		
 		try
 		{
-			response = (UpdateDepartmentInfoResponse) new DepartmentRequestQueue().send2Queue(request);
+			response = (UpdateDepartmentInfoReply) new DepartmentRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -71,12 +71,12 @@ public class DepartmentRemoteBean implements DepartmentRemoteService
 		return response;
     }	  
 
-    public GetDepartmentByIdResponse getDepartmentById(GetDepartmentByIdRequest request) throws Exception{
-	    GetDepartmentByIdResponse response = new GetDepartmentByIdResponse();
+    public GetDepartmentByIdReply getDepartmentById(GetDepartmentByIdRequest request) throws Exception{
+	    GetDepartmentByIdReply response = new GetDepartmentByIdReply();
 		
 		try
 		{
-			response = (GetDepartmentByIdResponse) new DepartmentRequestQueue().send2Queue(request);
+			response = (GetDepartmentByIdReply) new DepartmentRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -84,12 +84,12 @@ public class DepartmentRemoteBean implements DepartmentRemoteService
 		return response;
     }	  
 
-    public ImportDepartmentFromExcelResponse importDepartmentFromExcel(ImportDepartmentFromExcelRequest request) throws Exception{
-	    ImportDepartmentFromExcelResponse response = new ImportDepartmentFromExcelResponse();
+    public ImportDepartmentFromExcelReply importDepartmentFromExcel(ImportDepartmentFromExcelRequest request) throws Exception{
+	    ImportDepartmentFromExcelReply response = new ImportDepartmentFromExcelReply();
 		
 		try
 		{
-			response = (ImportDepartmentFromExcelResponse) new DepartmentRequestQueue().send2Queue(request);
+			response = (ImportDepartmentFromExcelReply) new DepartmentRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -98,13 +98,13 @@ public class DepartmentRemoteBean implements DepartmentRemoteService
     }
 
 	@Override
-	public GetDepartmentsByCompanyIdResponse getDepartmentsByCompanyId(
+	public GetDepartmentsByCompanyIdReply getDepartmentsByCompanyId(
 			GetDepartmentsByCompanyIdRequest request) throws Exception {
-		GetDepartmentsByCompanyIdResponse response = new GetDepartmentsByCompanyIdResponse();
+		GetDepartmentsByCompanyIdReply response = new GetDepartmentsByCompanyIdReply();
 		
 		try
 		{
-			response = (GetDepartmentsByCompanyIdResponse) new DepartmentRequestQueue().send2Queue(request);
+			response = (GetDepartmentsByCompanyIdReply) new DepartmentRequestQueue().send2Queue(request);
 		}catch(Exception e)
 		{
 			e.printStackTrace();

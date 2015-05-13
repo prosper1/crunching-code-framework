@@ -30,19 +30,19 @@ public interface EmployeeLocalService
 	
 
 
-          public AddEmployeeResponse addEmployee(AddEmployeeRequest request) throws Exception;
+          public AddEmployeeReply addEmployee(AddEmployeeRequest request) throws Exception;
 
-          public RemoveEmployeeResponse removeEmployee(RemoveEmployeeRequest request) throws Exception;
+          public RemoveEmployeeReply removeEmployee(RemoveEmployeeRequest request) throws Exception;
 
-          public UpdateEmployeeResponse updateEmployee(UpdateEmployeeRequest request) throws Exception;
+          public UpdateEmployeeReply updateEmployee(UpdateEmployeeRequest request) throws Exception;
 
-          public ImportEmployeesResponse importEmployees(ImportEmployeesRequest request) throws Exception;
+          public ImportEmployeesReply importEmployees(ImportEmployeesRequest request) throws Exception;
 
-          public ImportEmployeesFromDatabaseResponse importEmployeesFromDatabase(ImportEmployeesFromDatabaseRequest request) throws Exception;
+          public ImportEmployeesFromDatabaseReply importEmployeesFromDatabase(ImportEmployeesFromDatabaseRequest request) throws Exception;
 
-          public GetEmployeeByIdResponse getEmployeeById(GetEmployeeByIdRequest request) throws Exception;
+          public GetEmployeeByIdReply getEmployeeById(GetEmployeeByIdRequest request) throws Exception;
 
-          public GetEmployeesFromCompanyResponse getEmployeesFromCompany(GetEmployeesFromCompanyRequest request) throws Exception;
+          public GetEmployeesFromCompanyReply getEmployeesFromCompany(GetEmployeesFromCompanyRequest request) throws Exception;
 }	  
 
 

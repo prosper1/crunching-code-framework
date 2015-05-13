@@ -44,16 +44,16 @@ import com.mobilebulletin.request.security.SignInRequest;
 import com.mobilebulletin.request.security.SignUpUserRequest;
 import com.mobilebulletin.request.security.UpdateUserInfoRequest;
 import com.mobilebulletin.request.security.UpdateUserRoleRequest;
-import com.mobilebulletin.response.security.ActivateAccountResponse;
-import com.mobilebulletin.response.security.ChangePasswordResponse;
-import com.mobilebulletin.response.security.CheckUserResponse;
-import com.mobilebulletin.response.security.ForgotPasswordResponse;
-import com.mobilebulletin.response.security.GenerateTypesResponse;
-import com.mobilebulletin.response.security.GetUserInfoResponse;
-import com.mobilebulletin.response.security.SignInResponse;
-import com.mobilebulletin.response.security.SignUpUserResponse;
-import com.mobilebulletin.response.security.UpdateUserInfoResponse;
-import com.mobilebulletin.response.security.UpdateUserRoleResponse;
+import com.mobilebulletin.response.security.ActivateAccountReply;
+import com.mobilebulletin.response.security.ChangePasswordReply;
+import com.mobilebulletin.response.security.CheckUserReply;
+import com.mobilebulletin.response.security.ForgotPasswordReply;
+import com.mobilebulletin.response.security.GenerateTypesReply;
+import com.mobilebulletin.response.security.GetUserInfoReply;
+import com.mobilebulletin.response.security.SignInReply;
+import com.mobilebulletin.response.security.SignUpUserReply;
+import com.mobilebulletin.response.security.UpdateUserInfoReply;
+import com.mobilebulletin.response.security.UpdateUserRoleReply;
 import com.mobilebulletin.response.util.SERVRESPONSE;
 
 
@@ -83,8 +83,8 @@ public class SecurityLocalBean implements SecurityLocalService
 	@EJB
 	private SecurityLocalService securityLocalService;
 
-    public ActivateAccountResponse activateAccount(ActivateAccountRequest request) throws Exception{
-	      		ActivateAccountResponse response = new ActivateAccountResponse();
+    public ActivateAccountReply activateAccount(ActivateAccountRequest request) throws Exception{
+	      		ActivateAccountReply response = new ActivateAccountReply();
 		
 		try
 		{
@@ -101,8 +101,8 @@ public class SecurityLocalBean implements SecurityLocalService
 		return response;
     }	  
 
-    public ChangePasswordResponse changePassword(ChangePasswordRequest request) throws Exception{
-	      		ChangePasswordResponse response = new ChangePasswordResponse();
+    public ChangePasswordReply changePassword(ChangePasswordRequest request) throws Exception{
+	      		ChangePasswordReply response = new ChangePasswordReply();
 		
 		try
 		{
@@ -119,8 +119,8 @@ public class SecurityLocalBean implements SecurityLocalService
 		return response;
     }	  
 
-    public CheckUserResponse checkUser(CheckUserRequest request) throws Exception{
-	      		CheckUserResponse response = new CheckUserResponse();
+    public CheckUserReply checkUser(CheckUserRequest request) throws Exception{
+	      		CheckUserReply response = new CheckUserReply();
 		
 		try
 		{
@@ -198,8 +198,8 @@ public class SecurityLocalBean implements SecurityLocalService
 		return response;
     }	  
 
-    public UpdateUserRoleResponse updateUserRole(UpdateUserRoleRequest request) throws Exception{
-	      		UpdateUserRoleResponse response = new UpdateUserRoleResponse();
+    public UpdateUserRoleReply updateUserRole(UpdateUserRoleRequest request) throws Exception{
+	      		UpdateUserRoleReply response = new UpdateUserRoleReply();
 		
 		try
 		{
@@ -216,8 +216,8 @@ public class SecurityLocalBean implements SecurityLocalService
 		return response;
     }	  
 
-    public GenerateTypesResponse generateTypes(GenerateTypesRequest request) throws Exception{
-	      		GenerateTypesResponse response = new GenerateTypesResponse();
+    public GenerateTypesReply generateTypes(GenerateTypesRequest request) throws Exception{
+	      		GenerateTypesReply response = new GenerateTypesReply();
 		
 		try
 		{
@@ -352,8 +352,8 @@ public class SecurityLocalBean implements SecurityLocalService
 		return response;
     }	  
 
-    public UpdateUserInfoResponse updateUserInfo(UpdateUserInfoRequest request) throws Exception{
-	      		UpdateUserInfoResponse response = new UpdateUserInfoResponse();
+    public UpdateUserInfoReply updateUserInfo(UpdateUserInfoRequest request) throws Exception{
+	      		UpdateUserInfoReply response = new UpdateUserInfoReply();
 		
 		try
 		{
@@ -370,14 +370,14 @@ public class SecurityLocalBean implements SecurityLocalService
 		return response;
     }	  
 
-    public SignUpUserResponse signUpUser(SignUpUserRequest request) throws Exception{
-	      		SignUpUserResponse response = new SignUpUserResponse();
+    public SignUpUserReply signUpUser(SignUpUserRequest request) throws Exception{
+	      		SignUpUserReply response = new SignUpUserReply();
 		
 		try
 		{
 			if(request.getCompanyName() != null && !commonLocalService.checkCompanyExistByName(request.getCompanyName())){
 				CheckUserRequest userExistRequest = new CheckUserRequest();
-				CheckUserResponse userExistResponse = null;
+				CheckUserReply userExistResponse = null;
 	
 //				if (request.getEmail() != null) {
 //					userExistRequest.setUsername(request.getEmail());
@@ -498,8 +498,8 @@ public class SecurityLocalBean implements SecurityLocalService
 		return response;
     }	  
 
-    public SignInResponse signIn(SignInRequest request) throws Exception{
-	      		SignInResponse response = new SignInResponse();
+    public SignInReply signIn(SignInRequest request) throws Exception{
+	      		SignInReply response = new SignInReply();
 		
 		try
 		{
@@ -593,8 +593,8 @@ public class SecurityLocalBean implements SecurityLocalService
 		return response;
     }	  
 
-    public ForgotPasswordResponse forgotPassword(ForgotPasswordRequest request) throws Exception{
-	      		ForgotPasswordResponse response = new ForgotPasswordResponse();
+    public ForgotPasswordReply forgotPassword(ForgotPasswordRequest request) throws Exception{
+	      		ForgotPasswordReply response = new ForgotPasswordReply();
 		
 		try
 		{
@@ -643,8 +643,8 @@ public class SecurityLocalBean implements SecurityLocalService
 		return response;
     }	  
 
-    public GetUserInfoResponse getUserInfo(GetUserInfoRequest request) throws Exception{
-	      		GetUserInfoResponse response = new GetUserInfoResponse();
+    public GetUserInfoReply getUserInfo(GetUserInfoRequest request) throws Exception{
+	      		GetUserInfoReply response = new GetUserInfoReply();
 		
 		try
 		{

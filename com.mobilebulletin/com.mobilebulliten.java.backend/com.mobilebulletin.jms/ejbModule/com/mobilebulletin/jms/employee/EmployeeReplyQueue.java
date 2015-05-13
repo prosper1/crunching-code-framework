@@ -144,43 +144,43 @@ public void setCreateReplyObjectMessage(ObjectMessage replyMessage,ObjectMessage
 
               if(receivedObject.getObject() instanceof AddEmployeeRequest)
                {
-	                 AddEmployeeResponse response = new AddEmployeeResponse();	
+	                 AddEmployeeReply response = new AddEmployeeReply();	
 	                 AddEmployeeRequest request = (AddEmployeeRequest)receivedObject.getObject();
 	                 response = employeeLocalService.addEmployee(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof RemoveEmployeeRequest)
                {
-	                 RemoveEmployeeResponse response = new RemoveEmployeeResponse();	
+	                 RemoveEmployeeReply response = new RemoveEmployeeReply();	
 	                 RemoveEmployeeRequest request = (RemoveEmployeeRequest)receivedObject.getObject();
 	                 response = employeeLocalService.removeEmployee(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof UpdateEmployeeRequest)
                {
-	                 UpdateEmployeeResponse response = new UpdateEmployeeResponse();	
+	                 UpdateEmployeeReply response = new UpdateEmployeeReply();	
 	                 UpdateEmployeeRequest request = (UpdateEmployeeRequest)receivedObject.getObject();
 	                 response = employeeLocalService.updateEmployee(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof ImportEmployeesRequest)
                {
-	                 ImportEmployeesResponse response = new ImportEmployeesResponse();	
+	                 ImportEmployeesReply response = new ImportEmployeesReply();	
 	                 ImportEmployeesRequest request = (ImportEmployeesRequest)receivedObject.getObject();
 	                 response = employeeLocalService.importEmployees(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof ImportEmployeesFromDatabaseRequest)
                {
-	                 ImportEmployeesFromDatabaseResponse response = new ImportEmployeesFromDatabaseResponse();	
+	                 ImportEmployeesFromDatabaseReply response = new ImportEmployeesFromDatabaseReply();	
 	                 ImportEmployeesFromDatabaseRequest request = (ImportEmployeesFromDatabaseRequest)receivedObject.getObject();
 	                 response = employeeLocalService.importEmployeesFromDatabase(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof GetEmployeeByIdRequest)
                {
-	                 GetEmployeeByIdResponse response = new GetEmployeeByIdResponse();	
+	                 GetEmployeeByIdReply response = new GetEmployeeByIdReply();	
 	                 GetEmployeeByIdRequest request = (GetEmployeeByIdRequest)receivedObject.getObject();
 	                 response = employeeLocalService.getEmployeeById(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof GetEmployeesFromCompanyRequest)
                {
-	                 GetEmployeesFromCompanyResponse response = new GetEmployeesFromCompanyResponse();	
+	                 GetEmployeesFromCompanyReply response = new GetEmployeesFromCompanyReply();	
 	                 GetEmployeesFromCompanyRequest request = (GetEmployeesFromCompanyRequest)receivedObject.getObject();
 	                 response = employeeLocalService.getEmployeesFromCompany(request);	
 	                 replyMessage.setObject(response);

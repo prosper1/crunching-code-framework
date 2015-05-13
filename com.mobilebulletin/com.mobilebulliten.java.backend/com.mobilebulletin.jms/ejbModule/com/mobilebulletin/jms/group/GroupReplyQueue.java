@@ -144,37 +144,37 @@ public void setCreateReplyObjectMessage(ObjectMessage replyMessage,ObjectMessage
 
               if(receivedObject.getObject() instanceof AddGroupRequest)
                {
-	                 AddGroupResponse response = new AddGroupResponse();	
+	                 AddGroupReply response = new AddGroupReply();	
 	                 AddGroupRequest request = (AddGroupRequest)receivedObject.getObject();
 	                 response = groupLocalService.addGroup(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof UpdateGroupMembersRequest)
                {
-	                 UpdateGroupMembersResponse response = new UpdateGroupMembersResponse();	
+	                 UpdateGroupMembersReply response = new UpdateGroupMembersReply();	
 	                 UpdateGroupMembersRequest request = (UpdateGroupMembersRequest)receivedObject.getObject();
 	                 response = groupLocalService.updateGroupMembers(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof UpdateGroupInfoRequest)
                {
-	                 UpdateGroupInfoResponse response = new UpdateGroupInfoResponse();	
+	                 UpdateGroupInfoReply response = new UpdateGroupInfoReply();	
 	                 UpdateGroupInfoRequest request = (UpdateGroupInfoRequest)receivedObject.getObject();
 	                 response = groupLocalService.updateGroupInfo(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof GetGroupByIdRequest)
                {
-	                 GetGroupByIdResponse response = new GetGroupByIdResponse();	
+	                 GetGroupByIdReply response = new GetGroupByIdReply();	
 	                 GetGroupByIdRequest request = (GetGroupByIdRequest)receivedObject.getObject();
 	                 response = groupLocalService.getGroupById(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof ImportGroupFromExcelRequest)
                {
-	                 ImportGroupFromExcelResponse response = new ImportGroupFromExcelResponse();	
+	                 ImportGroupFromExcelReply response = new ImportGroupFromExcelReply();	
 	                 ImportGroupFromExcelRequest request = (ImportGroupFromExcelRequest)receivedObject.getObject();
 	                 response = groupLocalService.importGroupFromExcel(request);	
 	                 replyMessage.setObject(response);
                 }else               if(receivedObject.getObject() instanceof GetGroupsByCompanyIdRequest)
                 {
-                	GetGroupsByCompanyIdResponse response = new GetGroupsByCompanyIdResponse();	
+                	GetGroupsByCompanyIdReply response = new GetGroupsByCompanyIdReply();	
 	                 GetGroupsByCompanyIdRequest request = (GetGroupsByCompanyIdRequest)receivedObject.getObject();
 	                 response = groupLocalService.getGroupsByCompanyId(request);	
 	                 replyMessage.setObject(response);
