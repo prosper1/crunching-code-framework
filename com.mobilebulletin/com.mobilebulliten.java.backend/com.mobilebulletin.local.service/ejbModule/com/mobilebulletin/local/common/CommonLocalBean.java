@@ -585,5 +585,62 @@ public class CommonLocalBean implements CommonLocalService{
 	}
 
 
+	@Override
+	public UserInformation getEmployeeByCellNo(String cellNo) throws Exception {
+		UserInformation employee = null;
+		
+		try
+		{
+			String sql = "select distinct(p.id) from " +
+					"commdb.contact_reference cr1," +
+					"typedb.type_hier tp1," +
+					"commdb.contactinfo_contactref cicr1,cmsdb.person p,cmsdb.user_info u   " +
+					"where cr1.contact_type_id = tp1.id and " +
+					"cicr1.contactref_id = cr1.id and " +
+					"p.contactinformation_id = cicr1.contactinfo_id " +
+					"and tp1.description = 'Cell' and p.id = u.id and lower(cr1.contact) = ?1";;
+			Query query =  em.createNativeQuery(sql);
+			query.setParameter(1, cellNo);
+			long id = (Long)query.getSingleResult();
+			
+			employee = getUserById(id);
+		}catch(Exception e)
+		{
+			String errorMessage = e.getMessage();
+			log.error(errorMessage);
+		}
+		return employee;
+	}
+
+
+	@Override
+	public UserInformation getEmployeeByEmployeeNo(String employeeNo)
+			throws Exception {
+		UserInformation employeeInfo = null;
+		try
+		{
+			String queryString = "SELECT x FROM UserInformation x where lower(x.employeeNo) = :employeeNoParam";    	
+			Query query =  em.createQuery(queryString);
+			query.setParameter("employeeNoParam", employeeNo.toLowerCase().trim());
+			List<Object> objList = (List<Object>)query.getResultList();
+			
+			if(objList.size() > 0)
+			{
+				for(Object o : objList)
+				{
+					employeeInfo = (UserInformation)o;
+					return employeeInfo;
+				}
+			}
+		}catch (Exception e) 
+		{
+			String errorMessage = e.getMessage();
+			log.error(errorMessage);
+			
+		}
+		return null;
+	}
+
+
 	
 }

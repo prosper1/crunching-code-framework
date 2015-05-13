@@ -62,5 +62,8 @@ public interface CommonLocalService {
 	
 	public List<EmployeeCompanyInformation> getCompanyMembers(long companyId) throws Exception;
 	
+	public UserInformation getEmployeeByCellNo(String cellNo) throws Exception;
+	
+	public UserInformation getEmployeeByEmployeeNo(String employeeNo) throws Exception;
 	
 }

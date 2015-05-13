@@ -5,11 +5,11 @@ import java.util.List;
 import com.mobilebulletin.util.RemoteUtil;
 
 public class UssdRemoteUtil extends RemoteUtil{
-	private static String _PACKAGE_LINE = "package com.mobilebulletin.remote.support;";
-	private static String _PATH_LINE = "/opt/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.java.backend/com.mobilebulletin.remote.service/ejbModule/com/mobilebulletin/remote/support";
-	private static String _CATEGORY_LINE = "Support";
-	private static String _REQUEST_PACKAGE_IMPORT = "import com.mobilebulletin.request.support.*;";
-	private static String _RESPONSE_PACKAGE_IMPORT = "import com.mobilebulletin.response.support.*;";
+	private static String _PACKAGE_LINE = "package com.mobilebulletin.remote.ussd;";
+	private static String _PATH_LINE = "/opt/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.java.backend/com.mobilebulletin.remote.service/ejbModule/com/mobilebulletin/remote/ussd";
+	private static String _CATEGORY_LINE = "USSD";
+	private static String _REQUEST_PACKAGE_IMPORT = "import com.mobilebulletin.request.ussd.*;";
+	private static String _RESPONSE_PACKAGE_IMPORT = "import com.mobilebulletin.response.ussd.*;";
 	
 	public UssdRemoteUtil(List<String> replyRequestObjects, String packageName,
 			String packageLocation, String category,

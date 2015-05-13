@@ -13,7 +13,7 @@ public class UssdRequestReplyUtil extends RequestReplyUtil{
 	}
 	private static String _PACKAGE_LINE = "package com.mobilebulletin";
 	private static String _PATH_LINE = "/opt/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.java.backend/com.mobilebulletin.request.reply/src/com/mobilebulletin";
-	private static String _CATEGORY_LINE = "Support";
+	private static String _CATEGORY_LINE = "USSD";
 	private static List<String> constractList(){		
 		return UssdListObjects.constractList();
 	}

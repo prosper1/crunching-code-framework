@@ -7,15 +7,20 @@ public class UssdListObjects {
 	
 	public static List<String> constractList(){
 		List<String> list = new ArrayList<String>();
-		list.add("AddGuestSupportQuery");
+		list.add("SignUpUSSD");
 		
-		list.add("AddUserSupportQuery");
-		list.add("UpdateSupportQuery");
-		list.add("GetSupportTicketById");
+		list.add("InitialRequestUSSD");
+		list.add("SignInUSSD");
+		list.add("ForgotPinUSSD");
 		
-		list.add("GetSupportStartUp");
+		list.add("UpdateLangaugeUSSD");
 	
-		list.add("GetSupportNameIdList");
+		list.add("StopSMSNotificationUSSD");
+		list.add("SendSMSToDepartmentHeadUSSD");
+		list.add("SendSMSToGroupHeadUSSD");
+		list.add("SupportQueryUSSD");
+		list.add("GetEmployeeInfoUSSD");
+		
 		
 		//5 last visited places
 		
