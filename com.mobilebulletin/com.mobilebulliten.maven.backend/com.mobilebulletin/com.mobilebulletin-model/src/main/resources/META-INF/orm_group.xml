@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings version="2.0" xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_2_0.xsd">
+	
+	<entity class="com.mobilebulletin.group.GroupInformation">
+		<table schema="GRPDB" name="GROUP_INFORMATION"/>
+		<attributes>
+			<id name="id">
+			<generated-value strategy="SEQUENCE" generator="seq_group_info"/>
+				<sequence-generator allocation-size="1" initial-value="1" name="seq_group_info" sequence-name="seq_group_info"></sequence-generator>
+			</id>
+			
+			<basic name="name"></basic>
+			<basic name="description"></basic>
+			<many-to-one name="companyInformation" target-entity="com.mobilebulletin.company.CompanyInformation" fetch="LAZY" >
+				<join-column name="COMPANYINFO_ID"/>
+				<cascade>
+					<cascade-persist/>
+					<cascade-refresh/>
+					<cascade-detach/>
+				</cascade>
+			</many-to-one>	
+			<one-to-one name="logActivity" target-entity="com.common.log.LogActivity" fetch="LAZY" >
+				<cascade>
+					<cascade-all/>
+				</cascade>
+			</one-to-one>
+			
+		</attributes>
+	</entity>
+	
+	<entity class="com.mobilebulletin.group.EmployeeGroupInformation">
+		<table schema="GRPDB" name="EMPLOYEE_GROUP_INFORMATION"/>
+		<attributes>
+			<id name="id">
+			<generated-value strategy="SEQUENCE" generator="seq_emp_group_info"/>
+				<sequence-generator allocation-size="1" initial-value="1" name="seq_emp_group_info" sequence-name="seq_emp_group_info"></sequence-generator>
+			</id>
+			
+			
+			<many-to-one name="groupInformation" target-entity="com.mobilebulletin.group.GroupInformation" fetch="LAZY" >
+				<join-column name="GROUPINFO_ID"/>
+				<cascade>
+					<cascade-refresh/>
+					<cascade-detach/>
+				</cascade>
+			</many-to-one>	
+			<many-to-one name="userInformation" target-entity="com.common.cms.UserInformation" fetch="LAZY" >
+				<join-column name="USERINFO_ID"/>
+				<cascade>
+					<cascade-refresh/>
+					<cascade-detach/>
+				</cascade>
+			</many-to-one>	
+			
+			<many-to-one name="groupRole" target-entity="com.common.type.TypeHierarchy" fetch="LAZY" >
+				<join-column name="GROUPROLE_ID"/>
+				<cascade>
+					<cascade-refresh/>
+					<cascade-detach/>
+				</cascade>
+			</many-to-one>	
+			<one-to-one name="logActivity" target-entity="com.common.log.LogActivity" fetch="LAZY" >
+				<cascade>
+					<cascade-all/>
+				</cascade>
+			</one-to-one>
+	
+		</attributes>
+	</entity>
+</entity-mappings>
