@@ -16,7 +16,7 @@ public class SecurityServiceConnector {
 
 	public static SecurityRemoteService getServicePort(){
 		try {
-            URL wsdlLocation = new URL("http://localhost:8080/com.mobilebulletin.remote.service/MobileBulletin/SecurityRemoteBean?wsdl");
+            URL wsdlLocation = new URL("http://localhost:8080/com.mobilebulletin-remote/MobileBulletin/SecurityRemoteBean?wsdl");
 
             QName qName = new QName("mobilebulletin", "MobileBulletin");
 

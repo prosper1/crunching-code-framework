@@ -46,14 +46,12 @@ import com.mobilebulletin.response.security.*;
 
 
 
-@MessageDriven(name = "SecurityMOBBReplyQueue",  
-        activationConfig =  
+@MessageDriven(activationConfig =  
              {  
                  @ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Queue"), 
                  @ActivationConfigProperty(propertyName = "destination", propertyValue = "queue/SecurityMOBBReplyQueue"),
                  @ActivationConfigProperty(propertyName = "destination", propertyValue = "queue/SecurityMOBBRequestQueue"), 
               })  
-@ResourceAdapter("jms-ra.rar") 
 @SuppressWarnings("serial")
 
 

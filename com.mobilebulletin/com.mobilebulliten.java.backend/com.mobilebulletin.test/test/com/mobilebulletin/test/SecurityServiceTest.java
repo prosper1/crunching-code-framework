@@ -57,18 +57,18 @@ public class SecurityServiceTest
 	@Before
 	public void setUp() throws Exception 
 	{
-		  final String jndiName = "com.mobilebulletin/SecurityRemoteBean/remote";
-		  Properties properties = new Properties();
-		  properties.put("java.naming.factory.initial","org.jnp.interfaces.NamingContextFactory");
-		  properties.put("java.naming.factory.url.pkgs","=org.jboss.naming:org.jnp.interfaces");
-		  properties.put("java.naming.provider.url","localhost:1099");
-		  //properties.put("java.naming.provider.url","192.168.10.10:1099");
-		  Context ic = new InitialContext(properties);
-		  
-		  System.out.println("about to look up jndi name " + jndiName);
-		  obj = ic.lookup(jndiName);
-		  System.out.println("lookup returned " + obj);
-		  
+//		  final String jndiName = "com.mobilebulletin/SecurityRemoteBean/remote";
+//		  Properties properties = new Properties();
+//		  properties.put("java.naming.factory.initial","org.jnp.interfaces.NamingContextFactory");
+//		  properties.put("java.naming.factory.url.pkgs","=org.jboss.naming:org.jnp.interfaces");
+//		  properties.put("java.naming.provider.url","localhost:1099");
+//		  //properties.put("java.naming.provider.url","192.168.10.10:1099");
+//		  Context ic = new InitialContext(properties);
+//		  
+//		  System.out.println("about to look up jndi name " + jndiName);
+//		  obj = ic.lookup(jndiName);
+//		  System.out.println("lookup returned " + obj);
+//		  
 	}	
 
 
@@ -256,7 +256,7 @@ public class SecurityServiceTest
 	@After
 	public void tearDown() throws Exception 
 	{
-		obj = null;
+//		obj = null;
 	}
 
 }	  

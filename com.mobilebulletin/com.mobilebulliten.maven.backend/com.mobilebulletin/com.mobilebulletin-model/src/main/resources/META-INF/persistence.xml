@@ -21,8 +21,16 @@
                       value="org.jboss.as.jpa.openjpa.OpenJPAPersistenceProviderAdaptor"/>
 			<property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(foreignKeys=true, SchemaAction='add')"/>
 			<!-- <property name="openjpa.Log" value="DefaultLevel=Trace, Runtime=TRACE"/>-->
-			<property name="openjpa.Log" value="none"/>
+			<!-- <property name="openjpa.Log" value="none"/> -->
 			<property name="openjpa.RetryClassRegistration" value="true"/>
+			
+			<!--  <property name="jboss.as.jpa.providerModule" value="org.apache.openjpa" />-->
+	          <property name="openjpa.Log" value="DefaultLevel=TRACE, Tool=INFO"/>
+	 
+	 <property name="openjpa.MetaDataFactory" value="jpa(ClasspathScan=build;lib.jar)"/> 
+	           <!--   IMPORTANT PROPERTIES   
+	           <property name="openjpa.DynamicEnhancementAgent" value="false"/>
+	           <property name="openjpa.RuntimeUnenhancedClasses" value="supported" />-->
 		</properties>
 	</persistence-unit>
 </persistence>

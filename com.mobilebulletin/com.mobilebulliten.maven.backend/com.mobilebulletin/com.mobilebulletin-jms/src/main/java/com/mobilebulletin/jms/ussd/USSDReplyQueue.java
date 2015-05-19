@@ -46,14 +46,12 @@ import com.mobilebulletin.response.ussd.*;
 
 
 
-@MessageDriven(name = "USSDMOBBReplyQueue",  
-        activationConfig =  
+@MessageDriven(activationConfig =  
              {  
                  @ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Queue"), 
                  @ActivationConfigProperty(propertyName = "destination", propertyValue = "queue/USSDMOBBReplyQueue"),
                  @ActivationConfigProperty(propertyName = "destination", propertyValue = "queue/USSDMOBBRequestQueue"), 
               })  
-@ResourceAdapter("jms-ra.rar") 
 @SuppressWarnings("serial")
 
 

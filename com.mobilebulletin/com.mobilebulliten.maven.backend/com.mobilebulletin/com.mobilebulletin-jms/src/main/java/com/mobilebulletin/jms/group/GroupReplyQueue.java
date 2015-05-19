@@ -47,14 +47,13 @@ import com.mobilebulletin.response.group.*;
 
 
 
-@MessageDriven(name = "GroupMOBBReplyQueue",  
-        activationConfig =  
+@MessageDriven(activationConfig =  
              {  
                  @ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Queue"), 
                  @ActivationConfigProperty(propertyName = "destination", propertyValue = "queue/GroupMOBBReplyQueue"),
                  @ActivationConfigProperty(propertyName = "destination", propertyValue = "queue/GroupMOBBRequestQueue"), 
               })  
-@ResourceAdapter("jms-ra.rar") 
+
 @SuppressWarnings("serial")
 
 

@@ -46,14 +46,13 @@ import com.mobilebulletin.response.employee.*;
 
 
 
-@MessageDriven(name = "EmployeeMOBBReplyQueue",  
-        activationConfig =  
+@MessageDriven(activationConfig =  
              {  
                  @ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Queue"), 
                  @ActivationConfigProperty(propertyName = "destination", propertyValue = "queue/EmployeeMOBBReplyQueue"),
                  @ActivationConfigProperty(propertyName = "destination", propertyValue = "queue/EmployeeMOBBRequestQueue"), 
               })  
-@ResourceAdapter("jms-ra.rar") 
+
 @SuppressWarnings("serial")
 
 
