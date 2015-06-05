@@ -1,0 +1,513 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+<!-- meta -->
+<meta charset="utf-8">
+<meta name="description"
+	content="Direct and Effective Corporate Communication">
+<meta name="viewport"
+	content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+<!-- /meta -->
+
+<title>MobileBulletin - Direct &amp; effective corporate
+	communication</title>
+
+<!-- page level plugin styles -->
+<!-- /page level plugin styles -->
+
+<!-- core styles -->
+<link rel="stylesheet" href="/vendors/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="/vendors/sublime/admin/css/font-awesome.css">
+<link rel="stylesheet"
+	href="/vendors/sublime/admin/css/themify-icons.css">
+<link rel="stylesheet" href="/vendors/sublime/admin/css/animate.min.css">
+<!-- /core styles -->
+
+<!-- template styles -->
+<link rel="stylesheet"
+	href="/vendors/sublime/admin/css/skins/palette.css">
+<link rel="stylesheet" href="/vendors/sublime/admin/css/fonts/font.css">
+<link rel="stylesheet" href="/vendors/sublime/admin/css/main.css">
+<!-- template styles -->
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<!-- load modernizer -->
+<script src="/vendors/sublime/admin/plugins/modernizr.js"></script>
+</head>
+
+<!-- body -->
+
+<body>
+
+	<div class="app">
+		<!-- top header -->
+		<header class="header header-fixed navbar">
+
+			<div class="brand">
+				<!-- toggle offscreen menu -->
+				<a href="javascript:;" class="ti-menu off-left visible-xs"
+					data-toggle="offscreen" data-move="ltr"></a>
+				<!-- /toggle offscreen menu -->
+
+				<!-- logo -->
+				<a href="dashboard" class="navbar-brand"> <span
+					class="heading-font"> MobileBulletin </span>
+				</a>
+				<!-- /logo -->
+			</div>
+
+			<ul class="nav navbar-nav">
+				<li class="hidden-xs">
+					<!-- toggle small menu --> <a href="javascript:;"
+					class="toggle-sidebar"> <i class="ti-menu"></i>
+				</a> <!-- /toggle small menu -->
+				</li>
+				<li class="header-search">
+					<!-- toggle search --> <a href="javascript:;" class="toggle-search">
+						<i class="ti-search"></i>
+				</a> <!-- /toggle search -->
+					<div class="search-container">
+						<form role="search">
+							<input type="text" class="form-control search"
+								placeholder="type and press enter">
+						</form>
+					</div>
+				</li>
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+
+				<li class="dropdown hidden-xs"><a href="javascript:;"
+					data-toggle="dropdown"> <i class="ti-more-alt"></i>
+				</a>
+					<ul class="dropdown-menu animated zoomIn">
+						<li class="dropdown-header">Quick Links</li>
+						<li><a href="/admin/create-employee">Create New Employee</a></li>
+						<li><a href="/admin/create-department">Create New Department</a></li>
+						<li><a href="/admin/create-group">Create New Group</a></li>
+						<li class="divider"></li>
+						<li><a href="/admin/create-email">Send New Email</a></li>
+						<li><a href="/admin/create-sms">Send New SMS</a></li>
+						<li class="divider"></li>
+						<li><a href="/admin/activity-log">Activity Log</a></li>
+						<li><a href="/admin/settings">Settings</a></li>
+						<li class="divider"></li>
+						<li><a href="/admin/help">Help</a></li>
+						<li><a href="/admin/report-bug">Report a Problem</a></li>
+					</ul></li>
+
+				<li class="notifications dropdown"><a href="javascript:;"
+					data-toggle="dropdown"> <i class="ti-bell"></i>
+						<div class="badge badge-top bg-danger animated flash">
+							<span>3</span>
+						</div>
+				</a>
+					<div class="dropdown-menu animated fadeInLeft">
+						<div class="panel panel-default no-m">
+							<div class="panel-heading small">
+								<b>Notifications</b>
+							</div>
+							<ul class="list-group">
+								<li class="list-group-item"><a href="javascript:;"> <span
+										class="pull-left mt5 mr15"> <img
+											src="/vendors/sublime/admin/img/faceless.jpg"
+											class="avatar avatar-sm img-circle" alt="">
+									</span>
+										<div class="m-body">
+											<div class="">
+												<small><b>MAZI MUHLARI</b></small> <span
+													class="label label-danger pull-right">MANAGER</span>
+											</div>
+											<span>Opened an email</span> <span class="time small">2
+												mins ago</span>
+										</div>
+								</a></li>
+								<li class="list-group-item"><a href="javascript:;"> <span
+										class="pull-left mt5 mr15"> <img
+											src="/vendors/sublime/admin/img/faceless.jpg"
+											class="avatar avatar-sm img-circle" alt="">
+									</span>
+										<div class="m-body">
+											<em>Status Update:</em> <span>All servers now online</span> <span
+												class="time small">5 days ago</span>
+										</div>
+								</a></li>
+							</ul>
+
+							<div class="panel-footer">
+								<a href="javascript:;">See all notifications</a>
+							</div>
+						</div>
+					</div></li>
+
+				<li class="off-right"><a href="javascript:;"
+					data-toggle="dropdown"> <img
+						src="/vendors/sublime/admin/img/faceless.jpg"
+						class="header-avatar img-circle" alt="user" title="user"> <span
+						class="hidden-xs ml10">Beau Dumezulu</span> <i
+						class="ti-angle-down ti-caret hidden-xs"></i>
+				</a>
+					<ul class="dropdown-menu animated fadeInRight">
+						<li><a href="javascript:;">Settings</a></li>
+						<li><a href="javascript:;">Upgrade</a></li>
+						<li><a href="javascript:;">
+								<div class="badge bg-danger pull-right">3</div> <span>Notifications</span>
+						</a></li>
+						<li><a href="javascript:;">Help</a></li>
+						<li><a href="signin.html">Logout</a></li>
+					</ul></li>
+			</ul>
+		</header>
+		<!-- /top header -->
+
+		<section class="layout">
+			<!-- sidebar menu -->
+			<aside class="sidebar offscreen-left">
+				<!-- main navigation -->
+				<nav class="main-navigation" data-height="auto" data-size="6px"
+					data-distance="0" data-rail-visible="true" data-wheel-step="10">
+					<p class="nav-title">MENU</p>
+					<ul class="nav">
+						<!-- dashboard -->
+						<li><a href="/admin/dashboard"> <i class="ti-home"></i> <span>Dashboard</span>
+						</a></li>
+						<!-- /dashboard -->
+
+						<!-- Organisation -->
+						<li class="open"><a href="javascript:;"> <i
+								class="toggle-accordion"></i> <i class="ti-support"></i> <span>Organisation</span>
+						</a>
+							<ul class="sub-menu">
+								<li class="active"><a href="employees"> <span>Employees</span>
+								</a></li>
+								<li><a href="departments"> <span>Departments</span>
+								</a></li>
+								<li><a href="groups"> <span>Groups</span>
+								</a></li>
+							</ul></li>
+						<!-- /Organisation -->
+
+						<!-- Communications -->
+						<li><a href="javascript:;"> <i class="toggle-accordion"></i>
+								<i class="ti-layout-media-overlay-alt-2"></i> <span>Communications</span>
+						</a>
+							<ul class="sub-menu">
+								<li><a href="email"> <span>Email</span>
+								</a></li>
+								<li><a href="sms"> <span>SMS</span>
+								</a></li>
+								<li><a href="ussd"> <span>USSD</span>
+								</a></li>
+							</ul></li>
+						<!-- /Communications -->
+
+					</ul>
+
+					<p class="nav-title">REPORTS</p>
+					<ul class="nav">
+
+						<!-- Organisation -->
+						<li><a href="javascript:;"> <i class="toggle-accordion"></i>
+								<i class="ti-layers"></i> <span>Organisation</span>
+						</a>
+							<ul class="sub-menu">
+								<li><a href="javascript:;"> <span>Summary</span>
+								</a></li>
+								<li><a href="javascript:;"> <i class="toggle-accordion"></i>
+										<span>Employees</span>
+								</a>
+									<ul class="sub-menu">
+										<li><a href="javascript:;"> <span>Summary</span>
+										</a></li>
+										<li><a href="javascript:;"> <span>Monthly</span>
+										</a></li>
+										<li><a href="javascript:;"> <span>Quarterly</span>
+										</a></li>
+										<li><a href="javascript:;"> <span>Yearly</span>
+										</a></li>
+									</ul></li>
+								<li><a href="javascript:;"> <i class="toggle-accordion"></i>
+										<span>Departments</span>
+								</a>
+									<ul class="sub-menu">
+										<li><a href="javascript:;"> <span>Summary</span>
+										</a></li>
+										<li><a href="javascript:;"> <span>Monthly</span>
+										</a></li>
+										<li><a href="javascript:;"> <span>Quarterly</span>
+										</a></li>
+										<li><a href="javascript:;"> <span>Yearly</span>
+										</a></li>
+									</ul></li>
+								<li><a href="javascript:;"> <i class="toggle-accordion"></i>
+										<span>Groups</span>
+								</a>
+									<ul class="sub-menu">
+										<li><a href="javascript:;"> <span>Summary</span>
+										</a></li>
+										<li><a href="javascript:;"> <span>Monthly</span>
+										</a></li>
+										<li><a href="javascript:;"> <span>Quarterly</span>
+										</a></li>
+										<li><a href="javascript:;"> <span>Yearly</span>
+										</a></li>
+									</ul></li>
+							</ul></li>
+						<!-- /Organisation -->
+
+						<!-- Communications -->
+						<li><a href="javascript:;"> <i class="toggle-accordion"></i>
+								<i class="ti-layers"></i> <span>Communications</span>
+						</a>
+							<ul class="sub-menu">
+								<li><a href="javascript:;"> <span>Summary</span>
+								</a></li>
+								<li><a href="javascript:;"> <i class="toggle-accordion"></i>
+										<span>Email</span>
+								</a>
+									<ul class="sub-menu">
+										<li><a href="javascript:;"> <span>Summary</span>
+										</a></li>
+										<li><a href="javascript:;"> <span>Monthly</span>
+										</a></li>
+										<li><a href="javascript:;"> <span>Quarterly</span>
+										</a></li>
+										<li><a href="javascript:;"> <span>Yearly</span>
+										</a></li>
+									</ul></li>
+								<li><a href="javascript:;"> <i class="toggle-accordion"></i>
+										<span>SMS</span>
+								</a>
+									<ul class="sub-menu">
+										<li><a href="javascript:;"> <span>Summary</span>
+										</a></li>
+										<li><a href="javascript:;"> <span>Monthly</span>
+										</a></li>
+										<li><a href="javascript:;"> <span>Quarterly</span>
+										</a></li>
+										<li><a href="javascript:;"> <span>Yearly</span>
+										</a></li>
+									</ul></li>
+								<li><a href="javascript:;"> <i class="toggle-accordion"></i>
+										<span>USSD</span>
+								</a>
+									<ul class="sub-menu">
+										<li><a href="javascript:;"> <span>Summary</span>
+										</a></li>
+										<li><a href="javascript:;"> <span>Monthly</span>
+										</a></li>
+										<li><a href="javascript:;"> <span>Quarterly</span>
+										</a></li>
+										<li><a href="javascript:;"> <span>Yearly</span>
+										</a></li>
+									</ul></li>
+							</ul></li>
+						<!-- /Communications -->
+
+						<!-- Account -->
+						<li><a href="javascript:;"> <i class="toggle-accordion"></i>
+								<i class="ti-layers"></i> <span>Account</span>
+						</a>
+							<ul class="sub-menu">
+								<li><a href="javascript:;"> <span>Summary</span>
+								</a></li>
+								<li><a href="javascript:;"> <i class="toggle-accordion"></i>
+										<span>Activity</span>
+								</a>
+									<ul class="sub-menu">
+										<li><a href="javascript:;"> <span>Summary</span>
+										</a></li>
+										<li><a href="javascript:;"> <span>Monthly</span>
+										</a></li>
+										<li><a href="javascript:;"> <span>Quarterly</span>
+										</a></li>
+										<li><a href="javascript:;"> <span>Yearly</span>
+										</a></li>
+									</ul></li>
+							</ul></li>
+						<!-- /Account -->
+
+						<!-- System -->
+						<li><a href="javascript:;"> <i class="toggle-accordion"></i>
+								<i class="ti-layers"></i> <span>System</span>
+						</a>
+							<ul class="sub-menu">
+								<li><a href="javascript:;"> <span>Summary</span>
+								</a></li>
+								<li><a href="javascript:;"> <i class="toggle-accordion"></i>
+										<span>Availibility</span>
+								</a>
+									<ul class="sub-menu">
+										<li><a href="javascript:;"> <span>Summary</span>
+										</a></li>
+										<li><a href="javascript:;"> <span>Monthly</span>
+										</a></li>
+										<li><a href="javascript:;"> <span>Quarterly</span>
+										</a></li>
+										<li><a href="javascript:;"> <span>Yearly</span>
+										</a></li>
+									</ul></li>
+							</ul></li>
+						<!-- /Account -->
+
+					</ul>
+					<p class="nav-title">LABELS</p>
+					<ul class="nav">
+						<li><a href="javascript:;"> <i
+								class="ti-control-record text-warning"></i> <span>Strikes</span>
+						</a></li>
+						<li><a href="javascript:;"> <i
+								class="ti-control-record text-success"></i> <span>Birthdays</span>
+						</a></li>
+						<li><a href="javascript:;"> <i
+								class="ti-control-record text-danger"></i> <span>Announcements</span>
+						</a></li>
+					</ul>
+				</nav>
+			</aside>
+			<!-- /sidebar menu -->
+
+			<!-- main content -->
+			<section class="main-content">
+
+				<!-- content wrapper -->
+				<div class="content-wrap">
+
+					<!-- inner content wrapper -->
+					<div class="wrapper">
+
+						<ol class="breadcrumb">
+							<li><a href="javascript:;"><i class="ti-home mr5"></i>Organisation</a>
+							</li>
+							<li class="active">Create Employee</li>
+						</ol>
+
+						<section class="panel panel-default">
+							<header class="panel-heading">
+								<h5>Create Employee</h5>
+							</header>
+							<div class="panel-body">
+		
+								<form role="form" class="parsley-form" data-parsley-validate>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>First name</label>
+                                                <div>
+                                                    <input type="text" class="form-control" name="firstname" data-parsley-required="true" data-parsley-trigger="change" placeholder="First Name">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Last name</label>
+                                                <div>
+                                                    <input type="text" class="form-control" name="lastname" data-parsley-required="true" data-parsley-trigger="change" placeholder="Last Name">
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label>Initials</label>
+                                                <div>
+                                                    <input type="text" class="form-control" name="initials" data-parsley-required="true" data-parsley-trigger="change" placeholder="Initials">
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label>Cellphone</label>
+                                                <div>
+                                                    <input type="text" class="form-control" name="cellphone" data-parsley-type="digits" data-parsley-minlength="6" data-parsley-minlength="12" data-parsley-required="true" data-parsley-trigger="change" placeholder="e.g. 27720000000">
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                        <div class="col-md-6">
+                                            
+                                            <div class="form-group">
+                                                <label>Email</label>
+                                                <div>
+                                                    <input type="text" class="form-control" name="email" data-parsley-type="email" data-parsley-required="true" data-parsley-trigger="change" placeholder="hello@nyasha.me">
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label>Employee Number</label>
+                                                <div>
+                                                    <input type="text" class="form-control" name="employeeNo" data-parsley-required="true" data-parsley-required="true" data-parsley-trigger="change" placeholder="e.g. ADSGH8695">
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label>Language</label>
+                                                <div>
+                                                	<select class="form-control">
+                                                		<option>English</option>
+                                                		<option>Zulu</option>
+                                                		<option>Sotho</option>
+                                                	</select>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                        <div class="col-md-12">
+                                            <div class="form-group text-center">
+                                                <label></label>
+                                                <div>
+                                                    <button class="btn btn-primary btn-block btn-lg btn-parsley">Create Employee</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </form>
+								
+							</div>
+						</section>
+
+						<!-- /inner content wrapper -->
+
+					</div>
+					<!-- /content wrapper -->
+					<a class="exit-offscreen"></a>
+			</section>
+			<!-- /main content -->
+
+		</section>
+
+	</div>
+
+	<!-- core scripts -->
+	<script src="/vendors/sublime/admin/plugins/jquery-1.11.1.min.js"></script>
+	<script src="/vendors/bootstrap/js/bootstrap.js"></script>
+	<script src="/vendors/sublime/admin/plugins/jquery.slimscroll.min.js"></script>
+	<script src="/vendors/sublime/admin/plugins/jquery.easing.min.js"></script>
+	<script src="/vendors/sublime/admin/plugins/appear/jquery.appear.js"></script>
+	<script src="/vendors/sublime/admin/plugins/jquery.placeholder.js"></script>
+	<script src="/vendors/sublime/admin/plugins/fastclick.js"></script>
+	<!-- /core scripts -->
+
+	<!-- page level scripts -->
+	<script src="/vendors/sublime/admin/plugins/parsley.min.js"></script>
+	<!-- /page level scripts -->
+
+	<!-- template scripts -->
+	<script src="/vendors/sublime/admin/js/offscreen.js"></script>
+	<script src="/vendors/sublime/admin/js/main.js"></script>
+	<!-- /template scripts -->
+
+	<!-- page script -->
+	<!-- /page script -->
+
+</body>
+<!-- /body -->
+
+</html>

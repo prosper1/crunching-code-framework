@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1433534786523_0" label="com.mobilebulletin" name="com.mobilebulletin">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/com.mobilebulletin" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/com.mobilebulletin-jms" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/com.mobilebulletin-model" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/com.mobilebulletin-remote" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/com.mobilebulletin-local" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/com.mobilebulletin-client" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/com.mobilebulletin-request_reply" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/com.mobilebulletin-ear" type="4"/>
+</workingSet>
+</workingSetManager>
