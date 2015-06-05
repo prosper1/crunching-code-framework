@@ -578,3 +578,103 @@
 2015-06-05 22:15:54,864 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 755 resources
 2015-06-05 22:16:09,144 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2015-06-05 22:16:09,148 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /opt/crunch-mobile/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.maven.frontend/net.mobilebulletin.spring/src/test/resources
+2015-06-05 22:19:56,759 [Worker-3] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: net.mobilebulletin.spring:mobile-bulletin-spring:0.0.1-SNAPSHOT @ /opt/crunch-mobile/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.maven.frontend/net.mobilebulletin.spring/pom.xml.
+2015-06-05 22:19:57,754 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 22:19:57,756 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-06-05 22:19:57,756 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-06-05 22:19:57,758 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 22:19:57,758 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /opt/crunch-mobile/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.maven.frontend/net.mobilebulletin.spring/src/test/resources
+2015-06-05 22:19:57,760 [Worker-3] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of mobile-bulletin-spring
+2015-06-05 22:19:57,761 [Worker-3] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for mobile-bulletin-spring
+2015-06-05 22:19:57,764 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.apache.maven.plugins:maven-clean-plugin:jar:2.5 is missing, no dependency information available
+2015-06-05 22:19:57,769 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.apache.maven.plugins:maven-install-plugin:jar:2.5.2 is missing, no dependency information available
+2015-06-05 22:19:57,777 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 22:19:59,131 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: net.mobilebulletin.spring:mobile-bulletin-spring:0.0.1-SNAPSHOT @ /opt/crunch-mobile/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.maven.frontend/net.mobilebulletin.spring/pom.xml.
+2015-06-05 22:19:59,349 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 22:19:59,398 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-06-05 22:19:59,432 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 755 resources
+2015-06-05 22:20:01,502 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 22:20:01,502 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /opt/crunch-mobile/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.maven.frontend/net.mobilebulletin.spring/src/test/resources
+2015-06-05 22:20:16,457 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-06-05 22:20:16,460 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-06-05 22:20:16,462 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-06-05 22:20:16,462 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /opt/crunch-mobile/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.maven.backend/com.mobilebulletin/com.mobilebulletin-model/src/test/resources
+2015-06-05 22:20:16,483 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-06-05 22:20:16,484 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /opt/crunch-mobile/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.maven.backend/com.mobilebulletin/com.mobilebulletin-request_reply/src/main/resources
+2015-06-05 22:20:16,485 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-06-05 22:20:16,486 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /opt/crunch-mobile/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.maven.backend/com.mobilebulletin/com.mobilebulletin-request_reply/src/test/resources
+2015-06-05 22:20:16,565 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-06-05 22:20:16,566 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-06-05 22:20:16,567 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-06-05 22:20:16,568 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /opt/crunch-mobile/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.maven.backend/com.mobilebulletin/com.mobilebulletin-local/src/test/resources
+2015-06-05 22:20:16,660 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-06-05 22:20:16,660 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /opt/crunch-mobile/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.maven.backend/com.mobilebulletin/com.mobilebulletin-jms/src/main/resources
+2015-06-05 22:20:16,662 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-06-05 22:20:16,663 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /opt/crunch-mobile/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.maven.backend/com.mobilebulletin/com.mobilebulletin-jms/src/test/resources
+2015-06-05 22:20:16,668 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-06-05 22:20:16,668 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-06-05 22:20:16,669 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-06-05 22:20:16,670 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /opt/crunch-mobile/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.maven.backend/com.mobilebulletin/com.mobilebulletin-client/src/test/resources
+2015-06-05 22:20:16,760 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-06-05 22:20:16,760 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /opt/crunch-mobile/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.maven.backend/com.mobilebulletin/com.mobilebulletin-remote/src/main/resources
+2015-06-05 22:20:16,762 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-06-05 22:20:16,762 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /opt/crunch-mobile/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.maven.backend/com.mobilebulletin/com.mobilebulletin-remote/src/test/resources
+2015-06-05 22:20:16,981 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 22:20:16,981 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-06-05 22:20:16,981 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-06-05 22:20:16,984 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 22:20:16,984 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /opt/crunch-mobile/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.maven.frontend/net.mobilebulletin.spring/src/test/resources
+2015-06-05 22:20:58,335 [Worker-9] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2015-06-05 22:20:58,506 [Worker-9] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: net.mobilebulletin.spring:mobile-bulletin-spring:0.0.1-SNAPSHOT @ /opt/crunch-mobile/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.maven.frontend/net.mobilebulletin.spring/pom.xml.
+2015-06-05 22:20:58,792 [Worker-9] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /mobile-bulletin-spring/src/main/java
+2015-06-05 22:20:58,792 [Worker-9] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /mobile-bulletin-spring/src/main/resources
+2015-06-05 22:20:58,803 [Worker-9] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /mobile-bulletin-spring/src/main/resources
+2015-06-05 22:20:58,812 [Worker-9] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /mobile-bulletin-spring/src/test/java
+2015-06-05 22:20:59,600 [Worker-9] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: net.mobilebulletin.spring:mobile-bulletin-spring:0.0.1-SNAPSHOT @ /opt/crunch-mobile/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.maven.frontend/net.mobilebulletin.spring/pom.xml.
+2015-06-05 22:20:59,921 [Worker-9] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for mobile-bulletin-spring
+2015-06-05 22:20:59,982 [Worker-9] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 1 sec
+2015-06-05 22:21:00,730 [Worker-6] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: net.mobilebulletin.spring:mobile-bulletin-spring:0.0.1-SNAPSHOT @ /opt/crunch-mobile/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.maven.frontend/net.mobilebulletin.spring/pom.xml.
+2015-06-05 22:21:01,234 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 22:21:01,239 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-06-05 22:21:01,251 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 755 resources
+2015-06-05 22:21:03,199 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 22:21:03,199 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /opt/crunch-mobile/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.maven.frontend/net.mobilebulletin.spring/src/test/resources
+2015-06-05 22:22:46,209 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 22:22:46,248 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-06-05 22:22:46,269 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 755 resources
+2015-06-05 22:22:46,293 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 22:22:46,293 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /opt/crunch-mobile/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.maven.frontend/net.mobilebulletin.spring/src/test/resources
+2015-06-05 22:23:20,708 [Worker-7] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for com.mobilebulletin-ear
+2015-06-05 22:23:21,263 [Worker-7] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for mobile-bulletin-spring
+2015-06-05 22:23:22,204 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Generating application.xml
+2015-06-05 22:23:22,209 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 22:23:22,209 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /opt/crunch-mobile/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.maven.backend/com.mobilebulletin/com.mobilebulletin-ear/src/main/resources
+2015-06-05 22:23:22,374 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-06-05 22:23:22,375 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2015-06-05 22:23:22,380 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-06-05 22:23:22,381 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /opt/crunch-mobile/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.maven.backend/com.mobilebulletin/com.mobilebulletin-model/src/test/resources
+2015-06-05 22:23:22,800 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-06-05 22:23:22,801 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /opt/crunch-mobile/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.maven.backend/com.mobilebulletin/com.mobilebulletin-request_reply/src/main/resources
+2015-06-05 22:23:22,802 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-06-05 22:23:22,803 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /opt/crunch-mobile/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.maven.backend/com.mobilebulletin/com.mobilebulletin-request_reply/src/test/resources
+2015-06-05 22:23:23,109 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-06-05 22:23:23,109 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2015-06-05 22:23:23,111 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-06-05 22:23:23,111 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /opt/crunch-mobile/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.maven.backend/com.mobilebulletin/com.mobilebulletin-local/src/test/resources
+2015-06-05 22:23:23,322 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-06-05 22:23:23,322 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /opt/crunch-mobile/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.maven.backend/com.mobilebulletin/com.mobilebulletin-jms/src/main/resources
+2015-06-05 22:23:23,323 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-06-05 22:23:23,323 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /opt/crunch-mobile/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.maven.backend/com.mobilebulletin/com.mobilebulletin-jms/src/test/resources
+2015-06-05 22:23:23,413 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-06-05 22:23:23,413 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2015-06-05 22:23:23,417 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-06-05 22:23:23,417 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /opt/crunch-mobile/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.maven.backend/com.mobilebulletin/com.mobilebulletin-client/src/test/resources
+2015-06-05 22:23:23,913 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-06-05 22:23:23,913 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /opt/crunch-mobile/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.maven.backend/com.mobilebulletin/com.mobilebulletin-remote/src/main/resources
+2015-06-05 22:23:23,914 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-06-05 22:23:23,915 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /opt/crunch-mobile/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.maven.backend/com.mobilebulletin/com.mobilebulletin-remote/src/test/resources
+2015-06-05 22:23:24,081 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 22:23:24,085 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-06-05 22:23:24,092 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 755 resources
+2015-06-05 22:23:26,209 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 22:23:26,209 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /opt/crunch-mobile/crunching-code-framework/com.mobilebulletin/com.mobilebulliten.maven.frontend/net.mobilebulletin.spring/src/test/resources
